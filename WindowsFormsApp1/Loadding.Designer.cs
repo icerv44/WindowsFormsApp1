@@ -38,7 +38,7 @@
             // 
             this.progressBarLoadding.ForeColor = System.Drawing.Color.Yellow;
             this.progressBarLoadding.Location = new System.Drawing.Point(155, 158);
-            this.progressBarLoadding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressBarLoadding.Margin = new System.Windows.Forms.Padding(2);
             this.progressBarLoadding.Name = "progressBarLoadding";
             this.progressBarLoadding.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.progressBarLoadding.Size = new System.Drawing.Size(254, 41);
@@ -58,7 +58,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 25;
+            this.timer1.Interval = 15;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Loadding
@@ -69,7 +69,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBarLoadding);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Loadding";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loadding";
