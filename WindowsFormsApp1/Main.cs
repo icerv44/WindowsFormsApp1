@@ -31,5 +31,9 @@ namespace WindowsFormsApp1
 
         }
 
+        private void button_Retail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

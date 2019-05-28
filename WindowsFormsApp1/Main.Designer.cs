@@ -50,12 +50,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Print = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_Retail = new System.Windows.Forms.Button();
+            this.button_WholeSale = new System.Windows.Forms.Button();
+            this.button_StockIn = new System.Windows.Forms.Button();
             this.Panel_Main.SuspendLayout();
             this.Panel_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel_Main
             // 
+            this.Panel_Main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Panel_Main.AutoSize = true;
             this.Panel_Main.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.Panel_Main.Controls.Add(this.textBox8);
             this.Panel_Main.Controls.Add(this.label7);
@@ -75,16 +82,16 @@
             this.Panel_Main.Controls.Add(this.Lable_BookNum);
             this.Panel_Main.Controls.Add(this.Label_RecieptNo);
             this.Panel_Main.Location = new System.Drawing.Point(211, 11);
-            this.Panel_Main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Panel_Main.Margin = new System.Windows.Forms.Padding(2);
             this.Panel_Main.Name = "Panel_Main";
-            this.Panel_Main.Size = new System.Drawing.Size(765, 184);
+            this.Panel_Main.Size = new System.Drawing.Size(1212, 184);
             this.Panel_Main.TabIndex = 0;
             this.Panel_Main.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Main_Paint);
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(644, 146);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(76, 20);
             this.textBox8.TabIndex = 16;
@@ -104,7 +111,7 @@
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(622, 55);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(76, 20);
             this.textBox7.TabIndex = 14;
@@ -124,7 +131,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(199, 150);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(76, 20);
             this.textBox6.TabIndex = 12;
@@ -144,7 +151,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(55, 149);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(76, 20);
             this.textBox5.TabIndex = 10;
@@ -164,7 +171,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(83, 111);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(76, 20);
             this.textBox4.TabIndex = 8;
@@ -172,7 +179,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(83, 88);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(76, 20);
             this.textBox3.TabIndex = 7;
@@ -192,7 +199,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(68, 56);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(76, 20);
             this.textBox2.TabIndex = 5;
@@ -212,7 +219,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(657, 16);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 3;
@@ -221,7 +228,7 @@
             // 
             this.BookNum.ForeColor = System.Drawing.Color.Black;
             this.BookNum.Location = new System.Drawing.Point(108, 16);
-            this.BookNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BookNum.Margin = new System.Windows.Forms.Padding(2);
             this.BookNum.Name = "BookNum";
             this.BookNum.Size = new System.Drawing.Size(76, 20);
             this.BookNum.TabIndex = 2;
@@ -252,15 +259,21 @@
             // 
             // Panel_Menu
             // 
+            this.Panel_Menu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Panel_Menu.AutoSize = true;
             this.Panel_Menu.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Panel_Menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Panel_Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel_Menu.Controls.Add(this.button_StockIn);
+            this.Panel_Menu.Controls.Add(this.button_WholeSale);
+            this.Panel_Menu.Controls.Add(this.button_Retail);
             this.Panel_Menu.Controls.Add(this.label1);
             this.Panel_Menu.Controls.Add(this.Print);
             this.Panel_Menu.Location = new System.Drawing.Point(16, 10);
-            this.Panel_Menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Panel_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.Panel_Menu.Name = "Panel_Menu";
-            this.Panel_Menu.Size = new System.Drawing.Size(178, 603);
+            this.Panel_Menu.Size = new System.Drawing.Size(178, 710);
             this.Panel_Menu.TabIndex = 0;
             this.Panel_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Menu_Paint);
             // 
@@ -277,8 +290,8 @@
             // 
             // Print
             // 
-            this.Print.Location = new System.Drawing.Point(16, 42);
-            this.Print.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Print.Location = new System.Drawing.Point(16, 188);
+            this.Print.Margin = new System.Windows.Forms.Padding(2);
             this.Print.Name = "Print";
             this.Print.Size = new System.Drawing.Size(147, 39);
             this.Print.TabIndex = 0;
@@ -287,12 +300,47 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Moccasin;
             this.panel1.Location = new System.Drawing.Point(211, 199);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 439);
+            this.panel1.Size = new System.Drawing.Size(1212, 521);
             this.panel1.TabIndex = 1;
+            // 
+            // button_Retail
+            // 
+            this.button_Retail.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button_Retail.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.button_Retail.FlatAppearance.BorderSize = 3;
+            this.button_Retail.Location = new System.Drawing.Point(16, 50);
+            this.button_Retail.Name = "button_Retail";
+            this.button_Retail.Size = new System.Drawing.Size(147, 39);
+            this.button_Retail.TabIndex = 1;
+            this.button_Retail.Text = "Retail";
+            this.button_Retail.UseVisualStyleBackColor = false;
+            this.button_Retail.Click += new System.EventHandler(this.button_Retail_Click);
+            // 
+            // button_WholeSale
+            // 
+            this.button_WholeSale.Location = new System.Drawing.Point(16, 92);
+            this.button_WholeSale.Name = "button_WholeSale";
+            this.button_WholeSale.Size = new System.Drawing.Size(147, 39);
+            this.button_WholeSale.TabIndex = 2;
+            this.button_WholeSale.Text = "WholeSale";
+            this.button_WholeSale.UseVisualStyleBackColor = true;
+            // 
+            // button_StockIn
+            // 
+            this.button_StockIn.Location = new System.Drawing.Point(16, 138);
+            this.button_StockIn.Name = "button_StockIn";
+            this.button_StockIn.Size = new System.Drawing.Size(147, 39);
+            this.button_StockIn.TabIndex = 3;
+            this.button_StockIn.Text = "Stock In";
+            this.button_StockIn.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -302,7 +350,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Panel_Menu);
             this.Controls.Add(this.Panel_Main);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice Program";
@@ -312,6 +360,7 @@
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Menu.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -339,6 +388,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button_WholeSale;
+        private System.Windows.Forms.Button button_Retail;
+        private System.Windows.Forms.Button button_StockIn;
     }
 }
 
