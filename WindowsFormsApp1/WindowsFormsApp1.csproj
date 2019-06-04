@@ -97,6 +97,18 @@
     <Compile Include="Retail.Designer.cs">
       <DependentUpon>Retail.cs</DependentUpon>
     </Compile>
+    <Compile Include="StockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockIn.Designer.cs">
+      <DependentUpon>StockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WholeSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WholeSale.Designer.cs">
+      <DependentUpon>WholeSale.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +130,12 @@
     </Compile>
     <EmbeddedResource Include="Retail.resx">
       <DependentUpon>Retail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockIn.resx">
+      <DependentUpon>StockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WholeSale.resx">
+      <DependentUpon>WholeSale.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
