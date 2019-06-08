@@ -42,6 +42,7 @@
             this.dgv1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Panel_Menu.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -209,6 +210,10 @@
             this.tabPage3.Text = "StockIn";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,6 +252,7 @@
         private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
