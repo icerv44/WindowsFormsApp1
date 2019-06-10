@@ -31,16 +31,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_InvNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_Name = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox_RetailNo = new System.Windows.Forms.TextBox();
+            this.dateTimePickerRetail = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_CusAddress = new System.Windows.Forms.TextBox();
+            this.textBox_CusTell = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -50,127 +50,127 @@
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.textBox84 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_SumWeight = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.textBox83 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_SumCount = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox82 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_SumItem = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.textBox81 = new System.Windows.Forms.TextBox();
-            this.textBox80 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Amount = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_ThaiPrice = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount15 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox66 = new System.Windows.Forms.TextBox();
-            this.textBox50 = new System.Windows.Forms.TextBox();
-            this.textBox67 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price15 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount12 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Type15 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox68 = new System.Windows.Forms.TextBox();
-            this.textBox51 = new System.Windows.Forms.TextBox();
-            this.textBox69 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.textBox52 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count15 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price12 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item15 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount9 = new System.Windows.Forms.TextBox();
+            this.combo_Retail_Item15 = new System.Windows.Forms.ComboBox();
+            this.textBox_Retail_Type12 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox70 = new System.Windows.Forms.TextBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.textBox71 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox72 = new System.Windows.Forms.TextBox();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.textBox73 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox74 = new System.Windows.Forms.TextBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount14 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count12 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price14 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price9 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Type14 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item12 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count14 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount6 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item14 = new System.Windows.Forms.TextBox();
+            this.combo_Retail_Item12 = new System.Windows.Forms.ComboBox();
+            this.combo_Retail_Item14 = new System.Windows.Forms.ComboBox();
+            this.textBox_Retail_Type9 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox75 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox76 = new System.Windows.Forms.TextBox();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.textBox77 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox78 = new System.Windows.Forms.TextBox();
-            this.textBox56 = new System.Windows.Forms.TextBox();
-            this.textBox79 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
-            this.textBox57 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox59 = new System.Windows.Forms.TextBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount13 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount3 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price13 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount11 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Type13 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count9 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count13 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price11 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item13 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price6 = new System.Windows.Forms.TextBox();
+            this.combo_Retail_Item13 = new System.Windows.Forms.ComboBox();
+            this.textBox_Retail_Type11 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item9 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count11 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price3 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item11 = new System.Windows.Forms.TextBox();
+            this.combo_Retail_Item9 = new System.Windows.Forms.ComboBox();
+            this.combo_Retail_Item11 = new System.Windows.Forms.ComboBox();
+            this.textBox_Retail_Type6 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox61 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox62 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox63 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox64 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.textBox_Retail_PriceAmount10 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Type3 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price10 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount8 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Type10 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count6 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count10 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price8 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item10 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count3 = new System.Windows.Forms.TextBox();
+            this.combo_Retail_Item10 = new System.Windows.Forms.ComboBox();
+            this.textBox_Retail_Type8 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item6 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count8 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item3 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item8 = new System.Windows.Forms.TextBox();
+            this.combo_Retail_Item6 = new System.Windows.Forms.ComboBox();
+            this.combo_Retail_Item8 = new System.Windows.Forms.ComboBox();
+            this.combo_Retail_Item3 = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox45 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount7 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox49 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox_Retail_Price7 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount5 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Type7 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount2 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count7 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price5 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item7 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price2 = new System.Windows.Forms.TextBox();
+            this.combo_Retail_Item7 = new System.Windows.Forms.ComboBox();
+            this.textBox_Retail_Type5 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Type2 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count5 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count2 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item5 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item2 = new System.Windows.Forms.TextBox();
+            this.combo_Retail_Item5 = new System.Windows.Forms.ComboBox();
+            this.combo_Retail_Item2 = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_PriceAmount4 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price4 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Type4 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count4 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.textBox_Retail_item4 = new System.Windows.Forms.TextBox();
+            this.combo_Retail_Item4 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox_Retail_PriceAmount1 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Price1 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Type1 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_Count1 = new System.Windows.Forms.TextBox();
+            this.textBox_Retail_item1 = new System.Windows.Forms.TextBox();
+            this.combo_Retail_Item1 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -206,13 +206,14 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "ผู้ซื้อ Name  :";
             // 
-            // comboBox1
+            // comboBox_Name
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(246, 21);
-            this.comboBox1.TabIndex = 7;
+            this.comboBox_Name.FormattingEnabled = true;
+            this.comboBox_Name.Location = new System.Drawing.Point(112, 32);
+            this.comboBox_Name.Name = "comboBox_Name";
+            this.comboBox_Name.Size = new System.Drawing.Size(246, 21);
+            this.comboBox_Name.TabIndex = 7;
+            this.comboBox_Name.SelectedIndexChanged += new System.EventHandler(this.comboBox_Name_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -245,19 +246,19 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "เล่มที่  :";
             // 
-            // textBox1
+            // textBox_RetailNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 20);
-            this.textBox1.TabIndex = 4;
+            this.textBox_RetailNo.Location = new System.Drawing.Point(99, 3);
+            this.textBox_RetailNo.Name = "textBox_RetailNo";
+            this.textBox_RetailNo.Size = new System.Drawing.Size(105, 20);
+            this.textBox_RetailNo.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // dateTimePickerRetail
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(99, 29);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePickerRetail.Location = new System.Drawing.Point(99, 29);
+            this.dateTimePickerRetail.Name = "dateTimePickerRetail";
+            this.dateTimePickerRetail.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerRetail.TabIndex = 7;
             // 
             // tableLayoutPanel1
             // 
@@ -268,10 +269,10 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox_InvNo, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox_Name, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBox_CusAddress, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBox_CusTell, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -293,19 +294,19 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "โทรศัพท์ Tel :";
             // 
-            // textBox2
+            // textBox_CusAddress
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 20);
-            this.textBox2.TabIndex = 10;
+            this.textBox_CusAddress.Location = new System.Drawing.Point(112, 61);
+            this.textBox_CusAddress.Name = "textBox_CusAddress";
+            this.textBox_CusAddress.Size = new System.Drawing.Size(308, 20);
+            this.textBox_CusAddress.TabIndex = 10;
             // 
-            // textBox3
+            // textBox_CusTell
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 90);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 11;
+            this.textBox_CusTell.Location = new System.Drawing.Point(112, 90);
+            this.textBox_CusTell.Name = "textBox_CusTell";
+            this.textBox_CusTell.Size = new System.Drawing.Size(100, 20);
+            this.textBox_CusTell.TabIndex = 11;
             // 
             // tableLayoutPanel2
             // 
@@ -313,8 +314,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.textBox_RetailNo, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dateTimePickerRetail, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label14, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.textBox4, 1, 4);
@@ -397,127 +398,127 @@
             this.groupBox1.BackColor = System.Drawing.Color.LightBlue;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.groupBox1.Controls.Add(this.label41);
-            this.groupBox1.Controls.Add(this.textBox84);
+            this.groupBox1.Controls.Add(this.textBox_Retail_SumWeight);
             this.groupBox1.Controls.Add(this.label40);
-            this.groupBox1.Controls.Add(this.textBox83);
+            this.groupBox1.Controls.Add(this.textBox_Retail_SumCount);
             this.groupBox1.Controls.Add(this.label39);
-            this.groupBox1.Controls.Add(this.textBox82);
+            this.groupBox1.Controls.Add(this.textBox_Retail_SumItem);
             this.groupBox1.Controls.Add(this.label38);
             this.groupBox1.Controls.Add(this.label37);
-            this.groupBox1.Controls.Add(this.textBox81);
-            this.groupBox1.Controls.Add(this.textBox80);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Amount);
+            this.groupBox1.Controls.Add(this.textBox_Retail_ThaiPrice);
             this.groupBox1.Controls.Add(this.label35);
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.Controls.Add(this.label29);
-            this.groupBox1.Controls.Add(this.textBox65);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount15);
             this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.textBox66);
-            this.groupBox1.Controls.Add(this.textBox50);
-            this.groupBox1.Controls.Add(this.textBox67);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price15);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount12);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type15);
             this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.textBox68);
-            this.groupBox1.Controls.Add(this.textBox51);
-            this.groupBox1.Controls.Add(this.textBox69);
-            this.groupBox1.Controls.Add(this.textBox35);
-            this.groupBox1.Controls.Add(this.comboBox14);
-            this.groupBox1.Controls.Add(this.textBox52);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count15);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price12);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item15);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount9);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item15);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type12);
             this.groupBox1.Controls.Add(this.label33);
             this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.textBox70);
-            this.groupBox1.Controls.Add(this.textBox53);
-            this.groupBox1.Controls.Add(this.textBox71);
-            this.groupBox1.Controls.Add(this.textBox36);
-            this.groupBox1.Controls.Add(this.textBox72);
-            this.groupBox1.Controls.Add(this.textBox54);
-            this.groupBox1.Controls.Add(this.textBox73);
-            this.groupBox1.Controls.Add(this.textBox20);
-            this.groupBox1.Controls.Add(this.textBox74);
-            this.groupBox1.Controls.Add(this.comboBox11);
-            this.groupBox1.Controls.Add(this.comboBox15);
-            this.groupBox1.Controls.Add(this.textBox37);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount14);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count12);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price14);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price9);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type14);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item12);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count14);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount6);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item14);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item12);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item14);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type9);
             this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.label30);
-            this.groupBox1.Controls.Add(this.textBox75);
-            this.groupBox1.Controls.Add(this.textBox15);
-            this.groupBox1.Controls.Add(this.textBox76);
-            this.groupBox1.Controls.Add(this.textBox55);
-            this.groupBox1.Controls.Add(this.textBox77);
-            this.groupBox1.Controls.Add(this.textBox38);
-            this.groupBox1.Controls.Add(this.textBox78);
-            this.groupBox1.Controls.Add(this.textBox56);
-            this.groupBox1.Controls.Add(this.textBox79);
-            this.groupBox1.Controls.Add(this.textBox21);
-            this.groupBox1.Controls.Add(this.comboBox16);
-            this.groupBox1.Controls.Add(this.textBox57);
-            this.groupBox1.Controls.Add(this.textBox39);
-            this.groupBox1.Controls.Add(this.textBox58);
-            this.groupBox1.Controls.Add(this.textBox16);
-            this.groupBox1.Controls.Add(this.textBox59);
-            this.groupBox1.Controls.Add(this.comboBox8);
-            this.groupBox1.Controls.Add(this.comboBox12);
-            this.groupBox1.Controls.Add(this.textBox22);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount13);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount3);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price13);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount11);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type13);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count9);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count13);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price11);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item13);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price6);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item13);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type11);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item9);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count11);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price3);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item11);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item9);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item11);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type6);
             this.groupBox1.Controls.Add(this.label31);
             this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.textBox60);
-            this.groupBox1.Controls.Add(this.textBox17);
-            this.groupBox1.Controls.Add(this.textBox61);
-            this.groupBox1.Controls.Add(this.textBox40);
-            this.groupBox1.Controls.Add(this.textBox62);
-            this.groupBox1.Controls.Add(this.textBox23);
-            this.groupBox1.Controls.Add(this.textBox63);
-            this.groupBox1.Controls.Add(this.textBox41);
-            this.groupBox1.Controls.Add(this.textBox64);
-            this.groupBox1.Controls.Add(this.textBox18);
-            this.groupBox1.Controls.Add(this.comboBox13);
-            this.groupBox1.Controls.Add(this.textBox42);
-            this.groupBox1.Controls.Add(this.textBox24);
-            this.groupBox1.Controls.Add(this.textBox43);
-            this.groupBox1.Controls.Add(this.textBox19);
-            this.groupBox1.Controls.Add(this.textBox44);
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.comboBox9);
-            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount10);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type3);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price10);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount8);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type10);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count6);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count10);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price8);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item10);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count3);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item10);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type8);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item6);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count8);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item3);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item8);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item6);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item8);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item3);
             this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.textBox45);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount7);
             this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.textBox46);
-            this.groupBox1.Controls.Add(this.textBox25);
-            this.groupBox1.Controls.Add(this.textBox47);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox48);
-            this.groupBox1.Controls.Add(this.textBox26);
-            this.groupBox1.Controls.Add(this.textBox49);
-            this.groupBox1.Controls.Add(this.textBox11);
-            this.groupBox1.Controls.Add(this.comboBox10);
-            this.groupBox1.Controls.Add(this.textBox27);
-            this.groupBox1.Controls.Add(this.textBox12);
-            this.groupBox1.Controls.Add(this.textBox28);
-            this.groupBox1.Controls.Add(this.textBox13);
-            this.groupBox1.Controls.Add(this.textBox29);
-            this.groupBox1.Controls.Add(this.textBox14);
-            this.groupBox1.Controls.Add(this.comboBox6);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price7);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount5);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type7);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount2);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count7);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price5);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item7);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price2);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item7);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type5);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type2);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count5);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count2);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item5);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item2);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item5);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item2);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.textBox30);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount4);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.textBox31);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price4);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.textBox32);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type4);
             this.groupBox1.Controls.Add(this.label36);
-            this.groupBox1.Controls.Add(this.textBox33);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count4);
             this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.textBox34);
-            this.groupBox1.Controls.Add(this.comboBox7);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item4);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item4);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.textBox_Retail_PriceAmount1);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Price1);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Type1);
+            this.groupBox1.Controls.Add(this.textBox_Retail_Count1);
+            this.groupBox1.Controls.Add(this.textBox_Retail_item1);
+            this.groupBox1.Controls.Add(this.combo_Retail_Item1);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
@@ -544,12 +545,12 @@
             this.label41.Text = "ก.ก.";
             this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
-            // textBox84
+            // textBox_Retail_SumWeight
             // 
-            this.textBox84.Location = new System.Drawing.Point(480, 722);
-            this.textBox84.Name = "textBox84";
-            this.textBox84.Size = new System.Drawing.Size(159, 22);
-            this.textBox84.TabIndex = 81;
+            this.textBox_Retail_SumWeight.Location = new System.Drawing.Point(480, 722);
+            this.textBox_Retail_SumWeight.Name = "textBox_Retail_SumWeight";
+            this.textBox_Retail_SumWeight.Size = new System.Drawing.Size(159, 22);
+            this.textBox_Retail_SumWeight.TabIndex = 81;
             // 
             // label40
             // 
@@ -561,12 +562,12 @@
             this.label40.TabIndex = 80;
             this.label40.Text = "ชิ้น        น้ำหนัก :";
             // 
-            // textBox83
+            // textBox_Retail_SumCount
             // 
-            this.textBox83.Location = new System.Drawing.Point(227, 722);
-            this.textBox83.Name = "textBox83";
-            this.textBox83.Size = new System.Drawing.Size(114, 22);
-            this.textBox83.TabIndex = 79;
+            this.textBox_Retail_SumCount.Location = new System.Drawing.Point(227, 722);
+            this.textBox_Retail_SumCount.Name = "textBox_Retail_SumCount";
+            this.textBox_Retail_SumCount.Size = new System.Drawing.Size(114, 22);
+            this.textBox_Retail_SumCount.TabIndex = 79;
             // 
             // label39
             // 
@@ -578,12 +579,12 @@
             this.label39.TabIndex = 78;
             this.label39.Text = "รายการ    รวม  : ";
             // 
-            // textBox82
+            // textBox_Retail_SumItem
             // 
-            this.textBox82.Location = new System.Drawing.Point(62, 720);
-            this.textBox82.Name = "textBox82";
-            this.textBox82.Size = new System.Drawing.Size(33, 22);
-            this.textBox82.TabIndex = 77;
+            this.textBox_Retail_SumItem.Location = new System.Drawing.Point(62, 720);
+            this.textBox_Retail_SumItem.Name = "textBox_Retail_SumItem";
+            this.textBox_Retail_SumItem.Size = new System.Drawing.Size(33, 22);
+            this.textBox_Retail_SumItem.TabIndex = 77;
             // 
             // label38
             // 
@@ -605,19 +606,19 @@
             this.label37.TabIndex = 75;
             this.label37.Text = "รวมเป็นเงิน  ";
             // 
-            // textBox81
+            // textBox_Retail_Amount
             // 
-            this.textBox81.Location = new System.Drawing.Point(907, 676);
-            this.textBox81.Name = "textBox81";
-            this.textBox81.Size = new System.Drawing.Size(173, 22);
-            this.textBox81.TabIndex = 74;
+            this.textBox_Retail_Amount.Location = new System.Drawing.Point(907, 676);
+            this.textBox_Retail_Amount.Name = "textBox_Retail_Amount";
+            this.textBox_Retail_Amount.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_Amount.TabIndex = 74;
             // 
-            // textBox80
+            // textBox_Retail_ThaiPrice
             // 
-            this.textBox80.Location = new System.Drawing.Point(15, 681);
-            this.textBox80.Name = "textBox80";
-            this.textBox80.Size = new System.Drawing.Size(288, 22);
-            this.textBox80.TabIndex = 73;
+            this.textBox_Retail_ThaiPrice.Location = new System.Drawing.Point(15, 681);
+            this.textBox_Retail_ThaiPrice.Name = "textBox_Retail_ThaiPrice";
+            this.textBox_Retail_ThaiPrice.Size = new System.Drawing.Size(288, 22);
+            this.textBox_Retail_ThaiPrice.TabIndex = 73;
             // 
             // label35
             // 
@@ -655,12 +656,12 @@
     "--------------------------------------------------------------------------------" +
     "-------------------";
             // 
-            // textBox65
+            // textBox_Retail_PriceAmount15
             // 
-            this.textBox65.Location = new System.Drawing.Point(906, 636);
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(173, 22);
-            this.textBox65.TabIndex = 70;
+            this.textBox_Retail_PriceAmount15.Location = new System.Drawing.Point(906, 636);
+            this.textBox_Retail_PriceAmount15.Name = "textBox_Retail_PriceAmount15";
+            this.textBox_Retail_PriceAmount15.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount15.TabIndex = 70;
             // 
             // label26
             // 
@@ -674,26 +675,26 @@
     "--------------------------------------------------------------------------------" +
     "-------------------";
             // 
-            // textBox66
+            // textBox_Retail_Price15
             // 
-            this.textBox66.Location = new System.Drawing.Point(751, 636);
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(132, 22);
-            this.textBox66.TabIndex = 69;
+            this.textBox_Retail_Price15.Location = new System.Drawing.Point(751, 636);
+            this.textBox_Retail_Price15.Name = "textBox_Retail_Price15";
+            this.textBox_Retail_Price15.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price15.TabIndex = 69;
             // 
-            // textBox50
+            // textBox_Retail_PriceAmount12
             // 
-            this.textBox50.Location = new System.Drawing.Point(906, 514);
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(173, 22);
-            this.textBox50.TabIndex = 70;
+            this.textBox_Retail_PriceAmount12.Location = new System.Drawing.Point(906, 514);
+            this.textBox_Retail_PriceAmount12.Name = "textBox_Retail_PriceAmount12";
+            this.textBox_Retail_PriceAmount12.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount12.TabIndex = 70;
             // 
-            // textBox67
+            // textBox_Retail_Type15
             // 
-            this.textBox67.Location = new System.Drawing.Point(677, 636);
-            this.textBox67.Name = "textBox67";
-            this.textBox67.Size = new System.Drawing.Size(49, 22);
-            this.textBox67.TabIndex = 68;
+            this.textBox_Retail_Type15.Location = new System.Drawing.Point(677, 636);
+            this.textBox_Retail_Type15.Name = "textBox_Retail_Type15";
+            this.textBox_Retail_Type15.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type15.TabIndex = 68;
             // 
             // label23
             // 
@@ -707,49 +708,49 @@
     "--------------------------------------------------------------------------------" +
     "-------------------";
             // 
-            // textBox68
+            // textBox_Retail_Count15
             // 
-            this.textBox68.Location = new System.Drawing.Point(575, 636);
-            this.textBox68.Name = "textBox68";
-            this.textBox68.Size = new System.Drawing.Size(96, 22);
-            this.textBox68.TabIndex = 67;
+            this.textBox_Retail_Count15.Location = new System.Drawing.Point(575, 636);
+            this.textBox_Retail_Count15.Name = "textBox_Retail_Count15";
+            this.textBox_Retail_Count15.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count15.TabIndex = 67;
             // 
-            // textBox51
+            // textBox_Retail_Price12
             // 
-            this.textBox51.Location = new System.Drawing.Point(751, 514);
-            this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new System.Drawing.Size(132, 22);
-            this.textBox51.TabIndex = 69;
+            this.textBox_Retail_Price12.Location = new System.Drawing.Point(751, 514);
+            this.textBox_Retail_Price12.Name = "textBox_Retail_Price12";
+            this.textBox_Retail_Price12.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price12.TabIndex = 69;
             // 
-            // textBox69
+            // textBox_Retail_item15
             // 
-            this.textBox69.Location = new System.Drawing.Point(226, 636);
-            this.textBox69.Name = "textBox69";
-            this.textBox69.Size = new System.Drawing.Size(324, 22);
-            this.textBox69.TabIndex = 66;
+            this.textBox_Retail_item15.Location = new System.Drawing.Point(226, 636);
+            this.textBox_Retail_item15.Name = "textBox_Retail_item15";
+            this.textBox_Retail_item15.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item15.TabIndex = 66;
             // 
-            // textBox35
+            // textBox_Retail_PriceAmount9
             // 
-            this.textBox35.Location = new System.Drawing.Point(906, 392);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(173, 22);
-            this.textBox35.TabIndex = 70;
+            this.textBox_Retail_PriceAmount9.Location = new System.Drawing.Point(906, 392);
+            this.textBox_Retail_PriceAmount9.Name = "textBox_Retail_PriceAmount9";
+            this.textBox_Retail_PriceAmount9.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount9.TabIndex = 70;
             // 
-            // comboBox14
+            // combo_Retail_Item15
             // 
-            this.comboBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(15, 636);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(190, 21);
-            this.comboBox14.TabIndex = 65;
+            this.combo_Retail_Item15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item15.FormattingEnabled = true;
+            this.combo_Retail_Item15.Location = new System.Drawing.Point(15, 636);
+            this.combo_Retail_Item15.Name = "combo_Retail_Item15";
+            this.combo_Retail_Item15.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item15.TabIndex = 65;
             // 
-            // textBox52
+            // textBox_Retail_Type12
             // 
-            this.textBox52.Location = new System.Drawing.Point(677, 514);
-            this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(49, 22);
-            this.textBox52.TabIndex = 68;
+            this.textBox_Retail_Type12.Location = new System.Drawing.Point(677, 514);
+            this.textBox_Retail_Type12.Name = "textBox_Retail_Type12";
+            this.textBox_Retail_Type12.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type12.TabIndex = 68;
             // 
             // label33
             // 
@@ -775,93 +776,93 @@
     "--------------------------------------------------------------------------------" +
     "-------------------";
             // 
-            // textBox70
+            // textBox_Retail_PriceAmount14
             // 
-            this.textBox70.Location = new System.Drawing.Point(907, 595);
-            this.textBox70.Name = "textBox70";
-            this.textBox70.Size = new System.Drawing.Size(173, 22);
-            this.textBox70.TabIndex = 63;
+            this.textBox_Retail_PriceAmount14.Location = new System.Drawing.Point(907, 595);
+            this.textBox_Retail_PriceAmount14.Name = "textBox_Retail_PriceAmount14";
+            this.textBox_Retail_PriceAmount14.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount14.TabIndex = 63;
             // 
-            // textBox53
+            // textBox_Retail_Count12
             // 
-            this.textBox53.Location = new System.Drawing.Point(575, 514);
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(96, 22);
-            this.textBox53.TabIndex = 67;
+            this.textBox_Retail_Count12.Location = new System.Drawing.Point(575, 514);
+            this.textBox_Retail_Count12.Name = "textBox_Retail_Count12";
+            this.textBox_Retail_Count12.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count12.TabIndex = 67;
             // 
-            // textBox71
+            // textBox_Retail_Price14
             // 
-            this.textBox71.Location = new System.Drawing.Point(752, 595);
-            this.textBox71.Name = "textBox71";
-            this.textBox71.Size = new System.Drawing.Size(132, 22);
-            this.textBox71.TabIndex = 62;
+            this.textBox_Retail_Price14.Location = new System.Drawing.Point(752, 595);
+            this.textBox_Retail_Price14.Name = "textBox_Retail_Price14";
+            this.textBox_Retail_Price14.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price14.TabIndex = 62;
             // 
-            // textBox36
+            // textBox_Retail_Price9
             // 
-            this.textBox36.Location = new System.Drawing.Point(751, 392);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(132, 22);
-            this.textBox36.TabIndex = 69;
+            this.textBox_Retail_Price9.Location = new System.Drawing.Point(751, 392);
+            this.textBox_Retail_Price9.Name = "textBox_Retail_Price9";
+            this.textBox_Retail_Price9.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price9.TabIndex = 69;
             // 
-            // textBox72
+            // textBox_Retail_Type14
             // 
-            this.textBox72.Location = new System.Drawing.Point(678, 595);
-            this.textBox72.Name = "textBox72";
-            this.textBox72.Size = new System.Drawing.Size(49, 22);
-            this.textBox72.TabIndex = 61;
+            this.textBox_Retail_Type14.Location = new System.Drawing.Point(678, 595);
+            this.textBox_Retail_Type14.Name = "textBox_Retail_Type14";
+            this.textBox_Retail_Type14.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type14.TabIndex = 61;
             // 
-            // textBox54
+            // textBox_Retail_item12
             // 
-            this.textBox54.Location = new System.Drawing.Point(226, 514);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(324, 22);
-            this.textBox54.TabIndex = 66;
+            this.textBox_Retail_item12.Location = new System.Drawing.Point(226, 514);
+            this.textBox_Retail_item12.Name = "textBox_Retail_item12";
+            this.textBox_Retail_item12.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item12.TabIndex = 66;
             // 
-            // textBox73
+            // textBox_Retail_Count14
             // 
-            this.textBox73.Location = new System.Drawing.Point(576, 595);
-            this.textBox73.Name = "textBox73";
-            this.textBox73.Size = new System.Drawing.Size(96, 22);
-            this.textBox73.TabIndex = 60;
+            this.textBox_Retail_Count14.Location = new System.Drawing.Point(576, 595);
+            this.textBox_Retail_Count14.Name = "textBox_Retail_Count14";
+            this.textBox_Retail_Count14.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count14.TabIndex = 60;
             // 
-            // textBox20
+            // textBox_Retail_PriceAmount6
             // 
-            this.textBox20.Location = new System.Drawing.Point(906, 270);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(173, 22);
-            this.textBox20.TabIndex = 70;
+            this.textBox_Retail_PriceAmount6.Location = new System.Drawing.Point(906, 270);
+            this.textBox_Retail_PriceAmount6.Name = "textBox_Retail_PriceAmount6";
+            this.textBox_Retail_PriceAmount6.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount6.TabIndex = 70;
             // 
-            // textBox74
+            // textBox_Retail_item14
             // 
-            this.textBox74.Location = new System.Drawing.Point(227, 595);
-            this.textBox74.Name = "textBox74";
-            this.textBox74.Size = new System.Drawing.Size(324, 22);
-            this.textBox74.TabIndex = 59;
+            this.textBox_Retail_item14.Location = new System.Drawing.Point(227, 595);
+            this.textBox_Retail_item14.Name = "textBox_Retail_item14";
+            this.textBox_Retail_item14.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item14.TabIndex = 59;
             // 
-            // comboBox11
+            // combo_Retail_Item12
             // 
-            this.comboBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(15, 514);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(190, 21);
-            this.comboBox11.TabIndex = 65;
+            this.combo_Retail_Item12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item12.FormattingEnabled = true;
+            this.combo_Retail_Item12.Location = new System.Drawing.Point(15, 514);
+            this.combo_Retail_Item12.Name = "combo_Retail_Item12";
+            this.combo_Retail_Item12.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item12.TabIndex = 65;
             // 
-            // comboBox15
+            // combo_Retail_Item14
             // 
-            this.comboBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(15, 596);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(190, 21);
-            this.comboBox15.TabIndex = 58;
+            this.combo_Retail_Item14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item14.FormattingEnabled = true;
+            this.combo_Retail_Item14.Location = new System.Drawing.Point(15, 596);
+            this.combo_Retail_Item14.Name = "combo_Retail_Item14";
+            this.combo_Retail_Item14.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item14.TabIndex = 58;
             // 
-            // textBox37
+            // textBox_Retail_Type9
             // 
-            this.textBox37.Location = new System.Drawing.Point(677, 392);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(49, 22);
-            this.textBox37.TabIndex = 68;
+            this.textBox_Retail_Type9.Location = new System.Drawing.Point(677, 392);
+            this.textBox_Retail_Type9.Name = "textBox_Retail_Type9";
+            this.textBox_Retail_Type9.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type9.TabIndex = 68;
             // 
             // label34
             // 
@@ -887,144 +888,144 @@
     "--------------------------------------------------------------------------------" +
     "-------------------";
             // 
-            // textBox75
+            // textBox_Retail_PriceAmount13
             // 
-            this.textBox75.Location = new System.Drawing.Point(906, 556);
-            this.textBox75.Name = "textBox75";
-            this.textBox75.Size = new System.Drawing.Size(173, 22);
-            this.textBox75.TabIndex = 56;
+            this.textBox_Retail_PriceAmount13.Location = new System.Drawing.Point(906, 556);
+            this.textBox_Retail_PriceAmount13.Name = "textBox_Retail_PriceAmount13";
+            this.textBox_Retail_PriceAmount13.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount13.TabIndex = 56;
             // 
-            // textBox15
+            // textBox_Retail_PriceAmount3
             // 
-            this.textBox15.Location = new System.Drawing.Point(905, 148);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(173, 22);
-            this.textBox15.TabIndex = 49;
+            this.textBox_Retail_PriceAmount3.Location = new System.Drawing.Point(905, 148);
+            this.textBox_Retail_PriceAmount3.Name = "textBox_Retail_PriceAmount3";
+            this.textBox_Retail_PriceAmount3.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount3.TabIndex = 49;
             // 
-            // textBox76
+            // textBox_Retail_Price13
             // 
-            this.textBox76.Location = new System.Drawing.Point(751, 556);
-            this.textBox76.Name = "textBox76";
-            this.textBox76.Size = new System.Drawing.Size(132, 22);
-            this.textBox76.TabIndex = 55;
+            this.textBox_Retail_Price13.Location = new System.Drawing.Point(751, 556);
+            this.textBox_Retail_Price13.Name = "textBox_Retail_Price13";
+            this.textBox_Retail_Price13.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price13.TabIndex = 55;
             // 
-            // textBox55
+            // textBox_Retail_PriceAmount11
             // 
-            this.textBox55.Location = new System.Drawing.Point(907, 473);
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(173, 22);
-            this.textBox55.TabIndex = 63;
+            this.textBox_Retail_PriceAmount11.Location = new System.Drawing.Point(907, 473);
+            this.textBox_Retail_PriceAmount11.Name = "textBox_Retail_PriceAmount11";
+            this.textBox_Retail_PriceAmount11.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount11.TabIndex = 63;
             // 
-            // textBox77
+            // textBox_Retail_Type13
             // 
-            this.textBox77.Location = new System.Drawing.Point(677, 556);
-            this.textBox77.Name = "textBox77";
-            this.textBox77.Size = new System.Drawing.Size(49, 22);
-            this.textBox77.TabIndex = 54;
+            this.textBox_Retail_Type13.Location = new System.Drawing.Point(677, 556);
+            this.textBox_Retail_Type13.Name = "textBox_Retail_Type13";
+            this.textBox_Retail_Type13.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type13.TabIndex = 54;
             // 
-            // textBox38
+            // textBox_Retail_Count9
             // 
-            this.textBox38.Location = new System.Drawing.Point(575, 392);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(96, 22);
-            this.textBox38.TabIndex = 67;
+            this.textBox_Retail_Count9.Location = new System.Drawing.Point(575, 392);
+            this.textBox_Retail_Count9.Name = "textBox_Retail_Count9";
+            this.textBox_Retail_Count9.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count9.TabIndex = 67;
             // 
-            // textBox78
+            // textBox_Retail_Count13
             // 
-            this.textBox78.Location = new System.Drawing.Point(575, 556);
-            this.textBox78.Name = "textBox78";
-            this.textBox78.Size = new System.Drawing.Size(96, 22);
-            this.textBox78.TabIndex = 53;
+            this.textBox_Retail_Count13.Location = new System.Drawing.Point(575, 556);
+            this.textBox_Retail_Count13.Name = "textBox_Retail_Count13";
+            this.textBox_Retail_Count13.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count13.TabIndex = 53;
             // 
-            // textBox56
+            // textBox_Retail_Price11
             // 
-            this.textBox56.Location = new System.Drawing.Point(752, 473);
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(132, 22);
-            this.textBox56.TabIndex = 62;
+            this.textBox_Retail_Price11.Location = new System.Drawing.Point(752, 473);
+            this.textBox_Retail_Price11.Name = "textBox_Retail_Price11";
+            this.textBox_Retail_Price11.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price11.TabIndex = 62;
             // 
-            // textBox79
+            // textBox_Retail_item13
             // 
-            this.textBox79.Location = new System.Drawing.Point(226, 556);
-            this.textBox79.Name = "textBox79";
-            this.textBox79.Size = new System.Drawing.Size(324, 22);
-            this.textBox79.TabIndex = 52;
+            this.textBox_Retail_item13.Location = new System.Drawing.Point(226, 556);
+            this.textBox_Retail_item13.Name = "textBox_Retail_item13";
+            this.textBox_Retail_item13.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item13.TabIndex = 52;
             // 
-            // textBox21
+            // textBox_Retail_Price6
             // 
-            this.textBox21.Location = new System.Drawing.Point(751, 270);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(132, 22);
-            this.textBox21.TabIndex = 69;
+            this.textBox_Retail_Price6.Location = new System.Drawing.Point(751, 270);
+            this.textBox_Retail_Price6.Name = "textBox_Retail_Price6";
+            this.textBox_Retail_Price6.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price6.TabIndex = 69;
             // 
-            // comboBox16
+            // combo_Retail_Item13
             // 
-            this.comboBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Location = new System.Drawing.Point(15, 556);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(190, 21);
-            this.comboBox16.TabIndex = 51;
+            this.combo_Retail_Item13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item13.FormattingEnabled = true;
+            this.combo_Retail_Item13.Location = new System.Drawing.Point(15, 556);
+            this.combo_Retail_Item13.Name = "combo_Retail_Item13";
+            this.combo_Retail_Item13.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item13.TabIndex = 51;
             // 
-            // textBox57
+            // textBox_Retail_Type11
             // 
-            this.textBox57.Location = new System.Drawing.Point(678, 473);
-            this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new System.Drawing.Size(49, 22);
-            this.textBox57.TabIndex = 61;
+            this.textBox_Retail_Type11.Location = new System.Drawing.Point(678, 473);
+            this.textBox_Retail_Type11.Name = "textBox_Retail_Type11";
+            this.textBox_Retail_Type11.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type11.TabIndex = 61;
             // 
-            // textBox39
+            // textBox_Retail_item9
             // 
-            this.textBox39.Location = new System.Drawing.Point(226, 392);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(324, 22);
-            this.textBox39.TabIndex = 66;
+            this.textBox_Retail_item9.Location = new System.Drawing.Point(226, 392);
+            this.textBox_Retail_item9.Name = "textBox_Retail_item9";
+            this.textBox_Retail_item9.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item9.TabIndex = 66;
             // 
-            // textBox58
+            // textBox_Retail_Count11
             // 
-            this.textBox58.Location = new System.Drawing.Point(576, 473);
-            this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new System.Drawing.Size(96, 22);
-            this.textBox58.TabIndex = 60;
+            this.textBox_Retail_Count11.Location = new System.Drawing.Point(576, 473);
+            this.textBox_Retail_Count11.Name = "textBox_Retail_Count11";
+            this.textBox_Retail_Count11.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count11.TabIndex = 60;
             // 
-            // textBox16
+            // textBox_Retail_Price3
             // 
-            this.textBox16.Location = new System.Drawing.Point(750, 148);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(132, 22);
-            this.textBox16.TabIndex = 48;
+            this.textBox_Retail_Price3.Location = new System.Drawing.Point(750, 148);
+            this.textBox_Retail_Price3.Name = "textBox_Retail_Price3";
+            this.textBox_Retail_Price3.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price3.TabIndex = 48;
             // 
-            // textBox59
+            // textBox_Retail_item11
             // 
-            this.textBox59.Location = new System.Drawing.Point(227, 473);
-            this.textBox59.Name = "textBox59";
-            this.textBox59.Size = new System.Drawing.Size(324, 22);
-            this.textBox59.TabIndex = 59;
+            this.textBox_Retail_item11.Location = new System.Drawing.Point(227, 473);
+            this.textBox_Retail_item11.Name = "textBox_Retail_item11";
+            this.textBox_Retail_item11.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item11.TabIndex = 59;
             // 
-            // comboBox8
+            // combo_Retail_Item9
             // 
-            this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(15, 392);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(190, 21);
-            this.comboBox8.TabIndex = 65;
+            this.combo_Retail_Item9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item9.FormattingEnabled = true;
+            this.combo_Retail_Item9.Location = new System.Drawing.Point(15, 392);
+            this.combo_Retail_Item9.Name = "combo_Retail_Item9";
+            this.combo_Retail_Item9.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item9.TabIndex = 65;
             // 
-            // comboBox12
+            // combo_Retail_Item11
             // 
-            this.comboBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(15, 474);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(190, 21);
-            this.comboBox12.TabIndex = 58;
+            this.combo_Retail_Item11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item11.FormattingEnabled = true;
+            this.combo_Retail_Item11.Location = new System.Drawing.Point(15, 474);
+            this.combo_Retail_Item11.Name = "combo_Retail_Item11";
+            this.combo_Retail_Item11.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item11.TabIndex = 58;
             // 
-            // textBox22
+            // textBox_Retail_Type6
             // 
-            this.textBox22.Location = new System.Drawing.Point(677, 270);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(49, 22);
-            this.textBox22.TabIndex = 68;
+            this.textBox_Retail_Type6.Location = new System.Drawing.Point(677, 270);
+            this.textBox_Retail_Type6.Name = "textBox_Retail_Type6";
+            this.textBox_Retail_Type6.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type6.TabIndex = 68;
             // 
             // label31
             // 
@@ -1050,146 +1051,146 @@
     "--------------------------------------------------------------------------------" +
     "-------------------";
             // 
-            // textBox60
+            // textBox_Retail_PriceAmount10
             // 
-            this.textBox60.Location = new System.Drawing.Point(906, 434);
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(173, 22);
-            this.textBox60.TabIndex = 56;
+            this.textBox_Retail_PriceAmount10.Location = new System.Drawing.Point(906, 434);
+            this.textBox_Retail_PriceAmount10.Name = "textBox_Retail_PriceAmount10";
+            this.textBox_Retail_PriceAmount10.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount10.TabIndex = 56;
             // 
-            // textBox17
+            // textBox_Retail_Type3
             // 
-            this.textBox17.Location = new System.Drawing.Point(676, 148);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(49, 22);
-            this.textBox17.TabIndex = 47;
+            this.textBox_Retail_Type3.Location = new System.Drawing.Point(676, 148);
+            this.textBox_Retail_Type3.Name = "textBox_Retail_Type3";
+            this.textBox_Retail_Type3.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type3.TabIndex = 47;
             // 
-            // textBox61
+            // textBox_Retail_Price10
             // 
-            this.textBox61.Location = new System.Drawing.Point(751, 434);
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(132, 22);
-            this.textBox61.TabIndex = 55;
+            this.textBox_Retail_Price10.Location = new System.Drawing.Point(751, 434);
+            this.textBox_Retail_Price10.Name = "textBox_Retail_Price10";
+            this.textBox_Retail_Price10.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price10.TabIndex = 55;
             // 
-            // textBox40
+            // textBox_Retail_PriceAmount8
             // 
-            this.textBox40.Location = new System.Drawing.Point(907, 351);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(173, 22);
-            this.textBox40.TabIndex = 63;
+            this.textBox_Retail_PriceAmount8.Location = new System.Drawing.Point(907, 351);
+            this.textBox_Retail_PriceAmount8.Name = "textBox_Retail_PriceAmount8";
+            this.textBox_Retail_PriceAmount8.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount8.TabIndex = 63;
             // 
-            // textBox62
+            // textBox_Retail_Type10
             // 
-            this.textBox62.Location = new System.Drawing.Point(677, 434);
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(49, 22);
-            this.textBox62.TabIndex = 54;
+            this.textBox_Retail_Type10.Location = new System.Drawing.Point(677, 434);
+            this.textBox_Retail_Type10.Name = "textBox_Retail_Type10";
+            this.textBox_Retail_Type10.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type10.TabIndex = 54;
             // 
-            // textBox23
+            // textBox_Retail_Count6
             // 
-            this.textBox23.Location = new System.Drawing.Point(575, 270);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(96, 22);
-            this.textBox23.TabIndex = 67;
+            this.textBox_Retail_Count6.Location = new System.Drawing.Point(575, 270);
+            this.textBox_Retail_Count6.Name = "textBox_Retail_Count6";
+            this.textBox_Retail_Count6.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count6.TabIndex = 67;
             // 
-            // textBox63
+            // textBox_Retail_Count10
             // 
-            this.textBox63.Location = new System.Drawing.Point(575, 434);
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(96, 22);
-            this.textBox63.TabIndex = 53;
+            this.textBox_Retail_Count10.Location = new System.Drawing.Point(575, 434);
+            this.textBox_Retail_Count10.Name = "textBox_Retail_Count10";
+            this.textBox_Retail_Count10.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count10.TabIndex = 53;
             // 
-            // textBox41
+            // textBox_Retail_Price8
             // 
-            this.textBox41.Location = new System.Drawing.Point(752, 351);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(132, 22);
-            this.textBox41.TabIndex = 62;
+            this.textBox_Retail_Price8.Location = new System.Drawing.Point(752, 351);
+            this.textBox_Retail_Price8.Name = "textBox_Retail_Price8";
+            this.textBox_Retail_Price8.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price8.TabIndex = 62;
             // 
-            // textBox64
+            // textBox_Retail_item10
             // 
-            this.textBox64.Location = new System.Drawing.Point(226, 434);
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(324, 22);
-            this.textBox64.TabIndex = 52;
+            this.textBox_Retail_item10.Location = new System.Drawing.Point(226, 434);
+            this.textBox_Retail_item10.Name = "textBox_Retail_item10";
+            this.textBox_Retail_item10.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item10.TabIndex = 52;
             // 
-            // textBox18
+            // textBox_Retail_Count3
             // 
-            this.textBox18.Location = new System.Drawing.Point(574, 148);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(96, 22);
-            this.textBox18.TabIndex = 46;
+            this.textBox_Retail_Count3.Location = new System.Drawing.Point(574, 148);
+            this.textBox_Retail_Count3.Name = "textBox_Retail_Count3";
+            this.textBox_Retail_Count3.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count3.TabIndex = 46;
             // 
-            // comboBox13
+            // combo_Retail_Item10
             // 
-            this.comboBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(15, 434);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(190, 21);
-            this.comboBox13.TabIndex = 51;
+            this.combo_Retail_Item10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item10.FormattingEnabled = true;
+            this.combo_Retail_Item10.Location = new System.Drawing.Point(15, 434);
+            this.combo_Retail_Item10.Name = "combo_Retail_Item10";
+            this.combo_Retail_Item10.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item10.TabIndex = 51;
             // 
-            // textBox42
+            // textBox_Retail_Type8
             // 
-            this.textBox42.Location = new System.Drawing.Point(678, 351);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(49, 22);
-            this.textBox42.TabIndex = 61;
+            this.textBox_Retail_Type8.Location = new System.Drawing.Point(678, 351);
+            this.textBox_Retail_Type8.Name = "textBox_Retail_Type8";
+            this.textBox_Retail_Type8.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type8.TabIndex = 61;
             // 
-            // textBox24
+            // textBox_Retail_item6
             // 
-            this.textBox24.Location = new System.Drawing.Point(226, 270);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(324, 22);
-            this.textBox24.TabIndex = 66;
+            this.textBox_Retail_item6.Location = new System.Drawing.Point(226, 270);
+            this.textBox_Retail_item6.Name = "textBox_Retail_item6";
+            this.textBox_Retail_item6.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item6.TabIndex = 66;
             // 
-            // textBox43
+            // textBox_Retail_Count8
             // 
-            this.textBox43.Location = new System.Drawing.Point(576, 351);
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(96, 22);
-            this.textBox43.TabIndex = 60;
+            this.textBox_Retail_Count8.Location = new System.Drawing.Point(576, 351);
+            this.textBox_Retail_Count8.Name = "textBox_Retail_Count8";
+            this.textBox_Retail_Count8.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count8.TabIndex = 60;
             // 
-            // textBox19
+            // textBox_Retail_item3
             // 
-            this.textBox19.Location = new System.Drawing.Point(225, 148);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(324, 22);
-            this.textBox19.TabIndex = 45;
+            this.textBox_Retail_item3.Location = new System.Drawing.Point(225, 148);
+            this.textBox_Retail_item3.Name = "textBox_Retail_item3";
+            this.textBox_Retail_item3.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item3.TabIndex = 45;
             // 
-            // textBox44
+            // textBox_Retail_item8
             // 
-            this.textBox44.Location = new System.Drawing.Point(227, 351);
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(324, 22);
-            this.textBox44.TabIndex = 59;
+            this.textBox_Retail_item8.Location = new System.Drawing.Point(227, 351);
+            this.textBox_Retail_item8.Name = "textBox_Retail_item8";
+            this.textBox_Retail_item8.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item8.TabIndex = 59;
             // 
-            // comboBox5
+            // combo_Retail_Item6
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(15, 270);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(190, 21);
-            this.comboBox5.TabIndex = 65;
+            this.combo_Retail_Item6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item6.FormattingEnabled = true;
+            this.combo_Retail_Item6.Location = new System.Drawing.Point(15, 270);
+            this.combo_Retail_Item6.Name = "combo_Retail_Item6";
+            this.combo_Retail_Item6.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item6.TabIndex = 65;
             // 
-            // comboBox9
+            // combo_Retail_Item8
             // 
-            this.comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(15, 352);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(190, 21);
-            this.comboBox9.TabIndex = 58;
+            this.combo_Retail_Item8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item8.FormattingEnabled = true;
+            this.combo_Retail_Item8.Location = new System.Drawing.Point(15, 352);
+            this.combo_Retail_Item8.Name = "combo_Retail_Item8";
+            this.combo_Retail_Item8.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item8.TabIndex = 58;
             // 
-            // comboBox4
+            // combo_Retail_Item3
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(14, 148);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(190, 21);
-            this.comboBox4.TabIndex = 44;
+            this.combo_Retail_Item3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item3.FormattingEnabled = true;
+            this.combo_Retail_Item3.Location = new System.Drawing.Point(14, 148);
+            this.combo_Retail_Item3.Name = "combo_Retail_Item3";
+            this.combo_Retail_Item3.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item3.TabIndex = 44;
             // 
             // label28
             // 
@@ -1215,12 +1216,12 @@
     "--------------------------------------------------------------------------------" +
     "-------------------";
             // 
-            // textBox45
+            // textBox_Retail_PriceAmount7
             // 
-            this.textBox45.Location = new System.Drawing.Point(906, 312);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(173, 22);
-            this.textBox45.TabIndex = 56;
+            this.textBox_Retail_PriceAmount7.Location = new System.Drawing.Point(906, 312);
+            this.textBox_Retail_PriceAmount7.Name = "textBox_Retail_PriceAmount7";
+            this.textBox_Retail_PriceAmount7.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount7.TabIndex = 56;
             // 
             // label19
             // 
@@ -1234,130 +1235,130 @@
     "--------------------------------------------------------------------------------" +
     "-------------------";
             // 
-            // textBox46
+            // textBox_Retail_Price7
             // 
-            this.textBox46.Location = new System.Drawing.Point(751, 312);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(132, 22);
-            this.textBox46.TabIndex = 55;
+            this.textBox_Retail_Price7.Location = new System.Drawing.Point(751, 312);
+            this.textBox_Retail_Price7.Name = "textBox_Retail_Price7";
+            this.textBox_Retail_Price7.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price7.TabIndex = 55;
             // 
-            // textBox25
+            // textBox_Retail_PriceAmount5
             // 
-            this.textBox25.Location = new System.Drawing.Point(907, 229);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(173, 22);
-            this.textBox25.TabIndex = 63;
+            this.textBox_Retail_PriceAmount5.Location = new System.Drawing.Point(907, 229);
+            this.textBox_Retail_PriceAmount5.Name = "textBox_Retail_PriceAmount5";
+            this.textBox_Retail_PriceAmount5.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount5.TabIndex = 63;
             // 
-            // textBox47
+            // textBox_Retail_Type7
             // 
-            this.textBox47.Location = new System.Drawing.Point(677, 312);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(49, 22);
-            this.textBox47.TabIndex = 54;
+            this.textBox_Retail_Type7.Location = new System.Drawing.Point(677, 312);
+            this.textBox_Retail_Type7.Name = "textBox_Retail_Type7";
+            this.textBox_Retail_Type7.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type7.TabIndex = 54;
             // 
-            // textBox10
+            // textBox_Retail_PriceAmount2
             // 
-            this.textBox10.Location = new System.Drawing.Point(906, 107);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(173, 22);
-            this.textBox10.TabIndex = 42;
+            this.textBox_Retail_PriceAmount2.Location = new System.Drawing.Point(906, 107);
+            this.textBox_Retail_PriceAmount2.Name = "textBox_Retail_PriceAmount2";
+            this.textBox_Retail_PriceAmount2.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount2.TabIndex = 42;
             // 
-            // textBox48
+            // textBox_Retail_Count7
             // 
-            this.textBox48.Location = new System.Drawing.Point(575, 312);
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(96, 22);
-            this.textBox48.TabIndex = 53;
+            this.textBox_Retail_Count7.Location = new System.Drawing.Point(575, 312);
+            this.textBox_Retail_Count7.Name = "textBox_Retail_Count7";
+            this.textBox_Retail_Count7.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count7.TabIndex = 53;
             // 
-            // textBox26
+            // textBox_Retail_Price5
             // 
-            this.textBox26.Location = new System.Drawing.Point(752, 229);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(132, 22);
-            this.textBox26.TabIndex = 62;
+            this.textBox_Retail_Price5.Location = new System.Drawing.Point(752, 229);
+            this.textBox_Retail_Price5.Name = "textBox_Retail_Price5";
+            this.textBox_Retail_Price5.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price5.TabIndex = 62;
             // 
-            // textBox49
+            // textBox_Retail_item7
             // 
-            this.textBox49.Location = new System.Drawing.Point(226, 312);
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(324, 22);
-            this.textBox49.TabIndex = 52;
+            this.textBox_Retail_item7.Location = new System.Drawing.Point(226, 312);
+            this.textBox_Retail_item7.Name = "textBox_Retail_item7";
+            this.textBox_Retail_item7.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item7.TabIndex = 52;
             // 
-            // textBox11
+            // textBox_Retail_Price2
             // 
-            this.textBox11.Location = new System.Drawing.Point(751, 107);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(132, 22);
-            this.textBox11.TabIndex = 41;
+            this.textBox_Retail_Price2.Location = new System.Drawing.Point(751, 107);
+            this.textBox_Retail_Price2.Name = "textBox_Retail_Price2";
+            this.textBox_Retail_Price2.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price2.TabIndex = 41;
             // 
-            // comboBox10
+            // combo_Retail_Item7
             // 
-            this.comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(15, 312);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(190, 21);
-            this.comboBox10.TabIndex = 51;
+            this.combo_Retail_Item7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item7.FormattingEnabled = true;
+            this.combo_Retail_Item7.Location = new System.Drawing.Point(15, 312);
+            this.combo_Retail_Item7.Name = "combo_Retail_Item7";
+            this.combo_Retail_Item7.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item7.TabIndex = 51;
             // 
-            // textBox27
+            // textBox_Retail_Type5
             // 
-            this.textBox27.Location = new System.Drawing.Point(678, 229);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(49, 22);
-            this.textBox27.TabIndex = 61;
+            this.textBox_Retail_Type5.Location = new System.Drawing.Point(678, 229);
+            this.textBox_Retail_Type5.Name = "textBox_Retail_Type5";
+            this.textBox_Retail_Type5.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type5.TabIndex = 61;
             // 
-            // textBox12
+            // textBox_Retail_Type2
             // 
-            this.textBox12.Location = new System.Drawing.Point(677, 107);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(49, 22);
-            this.textBox12.TabIndex = 40;
+            this.textBox_Retail_Type2.Location = new System.Drawing.Point(677, 107);
+            this.textBox_Retail_Type2.Name = "textBox_Retail_Type2";
+            this.textBox_Retail_Type2.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type2.TabIndex = 40;
             // 
-            // textBox28
+            // textBox_Retail_Count5
             // 
-            this.textBox28.Location = new System.Drawing.Point(576, 229);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(96, 22);
-            this.textBox28.TabIndex = 60;
+            this.textBox_Retail_Count5.Location = new System.Drawing.Point(576, 229);
+            this.textBox_Retail_Count5.Name = "textBox_Retail_Count5";
+            this.textBox_Retail_Count5.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count5.TabIndex = 60;
             // 
-            // textBox13
+            // textBox_Retail_Count2
             // 
-            this.textBox13.Location = new System.Drawing.Point(575, 107);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(96, 22);
-            this.textBox13.TabIndex = 39;
+            this.textBox_Retail_Count2.Location = new System.Drawing.Point(575, 107);
+            this.textBox_Retail_Count2.Name = "textBox_Retail_Count2";
+            this.textBox_Retail_Count2.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count2.TabIndex = 39;
             // 
-            // textBox29
+            // textBox_Retail_item5
             // 
-            this.textBox29.Location = new System.Drawing.Point(227, 229);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(324, 22);
-            this.textBox29.TabIndex = 59;
+            this.textBox_Retail_item5.Location = new System.Drawing.Point(227, 229);
+            this.textBox_Retail_item5.Name = "textBox_Retail_item5";
+            this.textBox_Retail_item5.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item5.TabIndex = 59;
             // 
-            // textBox14
+            // textBox_Retail_item2
             // 
-            this.textBox14.Location = new System.Drawing.Point(226, 107);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(324, 22);
-            this.textBox14.TabIndex = 38;
+            this.textBox_Retail_item2.Location = new System.Drawing.Point(226, 107);
+            this.textBox_Retail_item2.Name = "textBox_Retail_item2";
+            this.textBox_Retail_item2.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item2.TabIndex = 38;
             // 
-            // comboBox6
+            // combo_Retail_Item5
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(15, 230);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(190, 21);
-            this.comboBox6.TabIndex = 58;
+            this.combo_Retail_Item5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item5.FormattingEnabled = true;
+            this.combo_Retail_Item5.Location = new System.Drawing.Point(15, 230);
+            this.combo_Retail_Item5.Name = "combo_Retail_Item5";
+            this.combo_Retail_Item5.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item5.TabIndex = 58;
             // 
-            // comboBox3
+            // combo_Retail_Item2
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(14, 108);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(190, 21);
-            this.comboBox3.TabIndex = 37;
+            this.combo_Retail_Item2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item2.FormattingEnabled = true;
+            this.combo_Retail_Item2.Location = new System.Drawing.Point(14, 108);
+            this.combo_Retail_Item2.Name = "combo_Retail_Item2";
+            this.combo_Retail_Item2.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item2.TabIndex = 37;
             // 
             // label25
             // 
@@ -1382,12 +1383,12 @@
             this.label18.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n" +
     "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n\r\n\r\n";
             // 
-            // textBox30
+            // textBox_Retail_PriceAmount4
             // 
-            this.textBox30.Location = new System.Drawing.Point(906, 190);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(173, 22);
-            this.textBox30.TabIndex = 56;
+            this.textBox_Retail_PriceAmount4.Location = new System.Drawing.Point(906, 190);
+            this.textBox_Retail_PriceAmount4.Name = "textBox_Retail_PriceAmount4";
+            this.textBox_Retail_PriceAmount4.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount4.TabIndex = 56;
             // 
             // label17
             // 
@@ -1400,12 +1401,12 @@
             this.label17.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n" +
     "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n\r\n\r\n";
             // 
-            // textBox31
+            // textBox_Retail_Price4
             // 
-            this.textBox31.Location = new System.Drawing.Point(751, 190);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(132, 22);
-            this.textBox31.TabIndex = 55;
+            this.textBox_Retail_Price4.Location = new System.Drawing.Point(751, 190);
+            this.textBox_Retail_Price4.Name = "textBox_Retail_Price4";
+            this.textBox_Retail_Price4.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price4.TabIndex = 55;
             // 
             // label16
             // 
@@ -1418,12 +1419,12 @@
             this.label16.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n" +
     "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n\r\n\r\n";
             // 
-            // textBox32
+            // textBox_Retail_Type4
             // 
-            this.textBox32.Location = new System.Drawing.Point(677, 190);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(49, 22);
-            this.textBox32.TabIndex = 54;
+            this.textBox_Retail_Type4.Location = new System.Drawing.Point(677, 190);
+            this.textBox_Retail_Type4.Name = "textBox_Retail_Type4";
+            this.textBox_Retail_Type4.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type4.TabIndex = 54;
             // 
             // label36
             // 
@@ -1436,12 +1437,12 @@
             this.label36.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n" +
     "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n\r\n\r\n";
             // 
-            // textBox33
+            // textBox_Retail_Count4
             // 
-            this.textBox33.Location = new System.Drawing.Point(575, 190);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(96, 22);
-            this.textBox33.TabIndex = 53;
+            this.textBox_Retail_Count4.Location = new System.Drawing.Point(575, 190);
+            this.textBox_Retail_Count4.Name = "textBox_Retail_Count4";
+            this.textBox_Retail_Count4.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count4.TabIndex = 53;
             // 
             // label21
             // 
@@ -1455,21 +1456,21 @@
     "--------------------------------------------------------------------------------" +
     "-------------------";
             // 
-            // textBox34
+            // textBox_Retail_item4
             // 
-            this.textBox34.Location = new System.Drawing.Point(226, 190);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(324, 22);
-            this.textBox34.TabIndex = 52;
+            this.textBox_Retail_item4.Location = new System.Drawing.Point(226, 190);
+            this.textBox_Retail_item4.Name = "textBox_Retail_item4";
+            this.textBox_Retail_item4.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item4.TabIndex = 52;
             // 
-            // comboBox7
+            // combo_Retail_Item4
             // 
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(15, 190);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(190, 21);
-            this.comboBox7.TabIndex = 51;
+            this.combo_Retail_Item4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item4.FormattingEnabled = true;
+            this.combo_Retail_Item4.Location = new System.Drawing.Point(15, 190);
+            this.combo_Retail_Item4.Name = "combo_Retail_Item4";
+            this.combo_Retail_Item4.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item4.TabIndex = 51;
             // 
             // label9
             // 
@@ -1494,49 +1495,49 @@
             this.label20.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n" +
     "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n\r\n\r\n";
             // 
-            // textBox9
+            // textBox_Retail_PriceAmount1
             // 
-            this.textBox9.Location = new System.Drawing.Point(905, 68);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(173, 22);
-            this.textBox9.TabIndex = 31;
+            this.textBox_Retail_PriceAmount1.Location = new System.Drawing.Point(905, 68);
+            this.textBox_Retail_PriceAmount1.Name = "textBox_Retail_PriceAmount1";
+            this.textBox_Retail_PriceAmount1.Size = new System.Drawing.Size(173, 22);
+            this.textBox_Retail_PriceAmount1.TabIndex = 31;
             // 
-            // textBox8
+            // textBox_Retail_Price1
             // 
-            this.textBox8.Location = new System.Drawing.Point(750, 68);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(132, 22);
-            this.textBox8.TabIndex = 29;
+            this.textBox_Retail_Price1.Location = new System.Drawing.Point(750, 68);
+            this.textBox_Retail_Price1.Name = "textBox_Retail_Price1";
+            this.textBox_Retail_Price1.Size = new System.Drawing.Size(132, 22);
+            this.textBox_Retail_Price1.TabIndex = 29;
             // 
-            // textBox7
+            // textBox_Retail_Type1
             // 
-            this.textBox7.Location = new System.Drawing.Point(676, 68);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(49, 22);
-            this.textBox7.TabIndex = 27;
+            this.textBox_Retail_Type1.Location = new System.Drawing.Point(676, 68);
+            this.textBox_Retail_Type1.Name = "textBox_Retail_Type1";
+            this.textBox_Retail_Type1.Size = new System.Drawing.Size(49, 22);
+            this.textBox_Retail_Type1.TabIndex = 27;
             // 
-            // textBox6
+            // textBox_Retail_Count1
             // 
-            this.textBox6.Location = new System.Drawing.Point(574, 68);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(96, 22);
-            this.textBox6.TabIndex = 26;
+            this.textBox_Retail_Count1.Location = new System.Drawing.Point(574, 68);
+            this.textBox_Retail_Count1.Name = "textBox_Retail_Count1";
+            this.textBox_Retail_Count1.Size = new System.Drawing.Size(96, 22);
+            this.textBox_Retail_Count1.TabIndex = 26;
             // 
-            // textBox5
+            // textBox_Retail_item1
             // 
-            this.textBox5.Location = new System.Drawing.Point(225, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(324, 22);
-            this.textBox5.TabIndex = 25;
+            this.textBox_Retail_item1.Location = new System.Drawing.Point(225, 68);
+            this.textBox_Retail_item1.Name = "textBox_Retail_item1";
+            this.textBox_Retail_item1.Size = new System.Drawing.Size(324, 22);
+            this.textBox_Retail_item1.TabIndex = 25;
             // 
-            // comboBox2
+            // combo_Retail_Item1
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(14, 68);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(190, 21);
-            this.comboBox2.TabIndex = 23;
+            this.combo_Retail_Item1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.combo_Retail_Item1.FormattingEnabled = true;
+            this.combo_Retail_Item1.Location = new System.Drawing.Point(14, 68);
+            this.combo_Retail_Item1.Name = "combo_Retail_Item1";
+            this.combo_Retail_Item1.Size = new System.Drawing.Size(190, 21);
+            this.combo_Retail_Item1.TabIndex = 23;
             // 
             // label15
             // 
@@ -1580,6 +1581,7 @@
             this.Name = "Retail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Retail ( ขายปลีก )";
+            this.Load += new System.EventHandler(this.Retail_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1594,17 +1596,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox_InvNo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_Name;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox_RetailNo;
+        private System.Windows.Forms.DateTimePicker dateTimePickerRetail;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_CusAddress;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_CusTell;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
@@ -1614,128 +1616,128 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox combo_Retail_Item1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox_Retail_Type1;
+        private System.Windows.Forms.TextBox textBox_Retail_Count1;
+        private System.Windows.Forms.TextBox textBox_Retail_item1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount1;
+        private System.Windows.Forms.TextBox textBox_Retail_Price1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox65;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount15;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox66;
-        private System.Windows.Forms.TextBox textBox50;
-        private System.Windows.Forms.TextBox textBox67;
+        private System.Windows.Forms.TextBox textBox_Retail_Price15;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount12;
+        private System.Windows.Forms.TextBox textBox_Retail_Type15;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox68;
-        private System.Windows.Forms.TextBox textBox51;
-        private System.Windows.Forms.TextBox textBox69;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.ComboBox comboBox14;
-        private System.Windows.Forms.TextBox textBox52;
+        private System.Windows.Forms.TextBox textBox_Retail_Count15;
+        private System.Windows.Forms.TextBox textBox_Retail_Price12;
+        private System.Windows.Forms.TextBox textBox_Retail_item15;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount9;
+        private System.Windows.Forms.ComboBox combo_Retail_Item15;
+        private System.Windows.Forms.TextBox textBox_Retail_Type12;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox70;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.TextBox textBox71;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox72;
-        private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.TextBox textBox73;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox74;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.ComboBox comboBox15;
-        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount14;
+        private System.Windows.Forms.TextBox textBox_Retail_Count12;
+        private System.Windows.Forms.TextBox textBox_Retail_Price14;
+        private System.Windows.Forms.TextBox textBox_Retail_Price9;
+        private System.Windows.Forms.TextBox textBox_Retail_Type14;
+        private System.Windows.Forms.TextBox textBox_Retail_item12;
+        private System.Windows.Forms.TextBox textBox_Retail_Count14;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount6;
+        private System.Windows.Forms.TextBox textBox_Retail_item14;
+        private System.Windows.Forms.ComboBox combo_Retail_Item12;
+        private System.Windows.Forms.ComboBox combo_Retail_Item14;
+        private System.Windows.Forms.TextBox textBox_Retail_Type9;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox75;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox76;
-        private System.Windows.Forms.TextBox textBox55;
-        private System.Windows.Forms.TextBox textBox77;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox78;
-        private System.Windows.Forms.TextBox textBox56;
-        private System.Windows.Forms.TextBox textBox79;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.ComboBox comboBox16;
-        private System.Windows.Forms.TextBox textBox57;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.TextBox textBox58;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox59;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox12;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount13;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount3;
+        private System.Windows.Forms.TextBox textBox_Retail_Price13;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount11;
+        private System.Windows.Forms.TextBox textBox_Retail_Type13;
+        private System.Windows.Forms.TextBox textBox_Retail_Count9;
+        private System.Windows.Forms.TextBox textBox_Retail_Count13;
+        private System.Windows.Forms.TextBox textBox_Retail_Price11;
+        private System.Windows.Forms.TextBox textBox_Retail_item13;
+        private System.Windows.Forms.TextBox textBox_Retail_Price6;
+        private System.Windows.Forms.ComboBox combo_Retail_Item13;
+        private System.Windows.Forms.TextBox textBox_Retail_Type11;
+        private System.Windows.Forms.TextBox textBox_Retail_item9;
+        private System.Windows.Forms.TextBox textBox_Retail_Count11;
+        private System.Windows.Forms.TextBox textBox_Retail_Price3;
+        private System.Windows.Forms.TextBox textBox_Retail_item11;
+        private System.Windows.Forms.ComboBox combo_Retail_Item9;
+        private System.Windows.Forms.ComboBox combo_Retail_Item11;
+        private System.Windows.Forms.TextBox textBox_Retail_Type6;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox60;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox61;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox62;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox63;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox64;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.ComboBox comboBox13;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox43;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount10;
+        private System.Windows.Forms.TextBox textBox_Retail_Type3;
+        private System.Windows.Forms.TextBox textBox_Retail_Price10;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount8;
+        private System.Windows.Forms.TextBox textBox_Retail_Type10;
+        private System.Windows.Forms.TextBox textBox_Retail_Count6;
+        private System.Windows.Forms.TextBox textBox_Retail_Count10;
+        private System.Windows.Forms.TextBox textBox_Retail_Price8;
+        private System.Windows.Forms.TextBox textBox_Retail_item10;
+        private System.Windows.Forms.TextBox textBox_Retail_Count3;
+        private System.Windows.Forms.ComboBox combo_Retail_Item10;
+        private System.Windows.Forms.TextBox textBox_Retail_Type8;
+        private System.Windows.Forms.TextBox textBox_Retail_item6;
+        private System.Windows.Forms.TextBox textBox_Retail_Count8;
+        private System.Windows.Forms.TextBox textBox_Retail_item3;
+        private System.Windows.Forms.TextBox textBox_Retail_item8;
+        private System.Windows.Forms.ComboBox combo_Retail_Item6;
+        private System.Windows.Forms.ComboBox combo_Retail_Item8;
+        private System.Windows.Forms.ComboBox combo_Retail_Item3;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox45;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount7;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox46;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox47;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox48;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox49;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox textBox_Retail_Price7;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount5;
+        private System.Windows.Forms.TextBox textBox_Retail_Type7;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount2;
+        private System.Windows.Forms.TextBox textBox_Retail_Count7;
+        private System.Windows.Forms.TextBox textBox_Retail_Price5;
+        private System.Windows.Forms.TextBox textBox_Retail_item7;
+        private System.Windows.Forms.TextBox textBox_Retail_Price2;
+        private System.Windows.Forms.ComboBox combo_Retail_Item7;
+        private System.Windows.Forms.TextBox textBox_Retail_Type5;
+        private System.Windows.Forms.TextBox textBox_Retail_Type2;
+        private System.Windows.Forms.TextBox textBox_Retail_Count5;
+        private System.Windows.Forms.TextBox textBox_Retail_Count2;
+        private System.Windows.Forms.TextBox textBox_Retail_item5;
+        private System.Windows.Forms.TextBox textBox_Retail_item2;
+        private System.Windows.Forms.ComboBox combo_Retail_Item5;
+        private System.Windows.Forms.ComboBox combo_Retail_Item2;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.TextBox textBox_Retail_PriceAmount4;
+        private System.Windows.Forms.TextBox textBox_Retail_Price4;
+        private System.Windows.Forms.TextBox textBox_Retail_Type4;
+        private System.Windows.Forms.TextBox textBox_Retail_Count4;
+        private System.Windows.Forms.TextBox textBox_Retail_item4;
+        private System.Windows.Forms.ComboBox combo_Retail_Item4;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox textBox83;
+        private System.Windows.Forms.TextBox textBox_Retail_SumCount;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox82;
+        private System.Windows.Forms.TextBox textBox_Retail_SumItem;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBox81;
-        private System.Windows.Forms.TextBox textBox80;
+        private System.Windows.Forms.TextBox textBox_Retail_Amount;
+        private System.Windows.Forms.TextBox textBox_Retail_ThaiPrice;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBox84;
+        private System.Windows.Forms.TextBox textBox_Retail_SumWeight;
     }
 }
