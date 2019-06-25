@@ -23,6 +23,32 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        List<Qury> Inv_Qry = new List<Qury>();
+        public void Set_Inv()
+        {
+            string query = "SELECT  `Inv_No`, `Cus_CD`, `Date`, `User_ID`, `Amt_Price`, `Amt_Goods`, `Amt_Piece`, `Amt_Weight` FROM `invoice_hearder` ";
+            con.Open();
+            command = new MySqlCommand(query, con);
+            mdr = command.ExecuteReader();
+
+            Qury qry = new Qury() ;
+            while (mdr.Read())
+            {
+                qry.Inv_No = mdr.GetString("Inv_No");
+                qry.Cus_Name = mdr.GetString("Cus_CD");
+                qry.Inv_Date = mdr.GetString("Date");
+                qry.User_Name = mdr.GetString("User_ID");
+                qry.Inv_AmtPrice = mdr.GetString("Amt_Price");
+                qry.Inv_SumItem = mdr.GetString("Amt_Goods");
+                qry.Inv_SumCount = mdr.GetString("Amt_Piece");
+                qry.Inv_SumWeight = mdr.GetString("Amt_Weight");
+
+
+            }
+
+
+            }
+
         public void FillCombobox()
         { 
             string query = "SELECT ID,Name,Address  FROM customers";
@@ -1898,7 +1924,17 @@ namespace WindowsFormsApp1
             }
         }
 
-       
+
+
+
+        private void button_Print_Click(object sender, EventArgs e)
+        {
+            string str1 = "str123";
+            string str2 = "str234";
+
+            
+
+        }
     }
 
 }

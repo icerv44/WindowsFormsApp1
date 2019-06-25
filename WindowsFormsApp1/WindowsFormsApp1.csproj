@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Invoice_Program</RootNamespace>
     <AssemblyName>Invoice_Program</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -65,6 +65,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB_InvoiceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_InvoiceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +115,9 @@
     <Compile Include="WholeSale.Designer.cs">
       <DependentUpon>WholeSale.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +137,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Invoice.rdlc" />
     <EmbeddedResource Include="Retail.resx">
       <DependentUpon>Retail.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +148,25 @@
       <DependentUpon>WholeSale.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="DB_InvoiceDataSet.xsc">
+      <DependentUpon>DB_InvoiceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_InvoiceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_InvoiceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_InvoiceDataSet.xss">
+      <DependentUpon>DB_InvoiceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\WindowsFormsApp1.Loadding.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Login.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Main.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Program.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Qury.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Retail.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.StockIn.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.WholeSale.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -167,8 +201,14 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Dapper">
+      <Version>1.60.6</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.Office.Interop.Excel">
       <Version>15.0.4795.1000</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Report.Viewer">
+      <Version>11.0.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +217,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB_Invoice.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

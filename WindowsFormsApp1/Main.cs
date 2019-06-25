@@ -47,8 +47,17 @@ namespace WindowsFormsApp1
 
         private void button_Retail_Click(object sender, EventArgs e)
         {
+            Retail re = new Retail() ;
 
+            re.Show();
         }
+        private void button_WholeSale_Click(object sender, EventArgs e)
+        {
+            WholeSale wh = new WholeSale();
+
+            wh.Show();
+        }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -70,7 +79,7 @@ namespace WindowsFormsApp1
         }
         public void Qury_Select_Goods()
         {
-            string query = "SELECT * FROM `goods` ";
+            string query = "SELECT `ID`, `Code`, `Description`, `Size`, `Weight`, `Cost_price`, `Whole_Price`, `Retail_Price`, `Type_Count`, `Amount` FROM goods ";
 
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
 
@@ -309,5 +318,7 @@ namespace WindowsFormsApp1
         {
             
         }
+
+      
     }
 }

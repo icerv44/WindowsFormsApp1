@@ -22,5 +22,15 @@ namespace Invoice_Program.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\DB_Invoice.mdb")]
+        public string DB_InvoiceConnectionString {
+            get {
+                return ((string)(this["DB_InvoiceConnectionString"]));
+            }
+        }
     }
 }

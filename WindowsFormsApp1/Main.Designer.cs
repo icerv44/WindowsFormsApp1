@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.Panel_Menu = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_StockIn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button_WholeSale = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.button_Retail = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Print = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dgv_Customer = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgv_Warehouse = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.dgv_Warehouse = new System.Windows.Forms.DataGridView();
-            this.dgv_Customer = new System.Windows.Forms.DataGridView();
             this.Panel_Menu.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Customer)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Warehouse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Customer)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Menu
@@ -75,6 +75,14 @@
             this.Panel_Menu.TabIndex = 0;
             this.Panel_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Menu_Paint);
             // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox1.Location = new System.Drawing.Point(43, 401);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 3;
+            // 
             // button_StockIn
             // 
             this.button_StockIn.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -85,6 +93,16 @@
             this.button_StockIn.Text = "Stock In";
             this.button_StockIn.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(43, 357);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button_WholeSale
             // 
             this.button_WholeSale.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -94,6 +112,17 @@
             this.button_WholeSale.TabIndex = 2;
             this.button_WholeSale.Text = "WholeSale";
             this.button_WholeSale.UseVisualStyleBackColor = false;
+            this.button_WholeSale.Click += new System.EventHandler(this.button_WholeSale_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(43, 249);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button_Retail
             // 
@@ -139,7 +168,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.tabControl1.Location = new System.Drawing.Point(224, 10);
+            this.tabControl1.Location = new System.Drawing.Point(223, 10);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1199, 710);
@@ -157,33 +186,16 @@
             this.tabPage1.Text = "Invoice";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // dgv_Customer
             // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox1.Location = new System.Drawing.Point(43, 401);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(43, 357);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(43, 249);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dgv_Customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Customer.Location = new System.Drawing.Point(6, 16);
+            this.dgv_Customer.Name = "dgv_Customer";
+            this.dgv_Customer.Size = new System.Drawing.Size(1179, 649);
+            this.dgv_Customer.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -195,6 +207,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Warehouse";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgv_Warehouse
+            // 
+            this.dgv_Warehouse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Warehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Warehouse.Location = new System.Drawing.Point(4, 26);
+            this.dgv_Warehouse.Name = "dgv_Warehouse";
+            this.dgv_Warehouse.Size = new System.Drawing.Size(1179, 649);
+            this.dgv_Warehouse.TabIndex = 1;
             // 
             // tabPage3
             // 
@@ -209,28 +232,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // dgv_Warehouse
-            // 
-            this.dgv_Warehouse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Warehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Warehouse.Location = new System.Drawing.Point(4, 26);
-            this.dgv_Warehouse.Name = "dgv_Warehouse";
-            this.dgv_Warehouse.Size = new System.Drawing.Size(1179, 649);
-            this.dgv_Warehouse.TabIndex = 1;
-            // 
-            // dgv_Customer
-            // 
-            this.dgv_Customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Customer.Location = new System.Drawing.Point(6, 16);
-            this.dgv_Customer.Name = "dgv_Customer";
-            this.dgv_Customer.Size = new System.Drawing.Size(1179, 649);
-            this.dgv_Customer.TabIndex = 2;
             // 
             // Main
             // 
@@ -248,9 +249,9 @@
             this.Panel_Menu.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Customer)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Warehouse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Customer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
