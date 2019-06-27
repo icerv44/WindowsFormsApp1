@@ -1498,7 +1498,7 @@
             this.combo_Retail_Item5.Name = "combo_Retail_Item5";
             this.combo_Retail_Item5.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item5.TabIndex = 58;
-            this.combo_Retail_Item5.Text = " Select Item";
+            this.combo_Retail_Item5.Text = "Select Item";
             this.combo_Retail_Item5.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item5_SelectedIndexChanged);
             // 
             // combo_Retail_Item2
@@ -1708,7 +1708,7 @@
             this.combo_Retail_Item1.FormattingEnabled = true;
             this.combo_Retail_Item1.Items.AddRange(new object[] {
             "Select Item"});
-            this.combo_Retail_Item1.Location = new System.Drawing.Point(14, 68);
+            this.combo_Retail_Item1.Location = new System.Drawing.Point(15, 68);
             this.combo_Retail_Item1.Name = "combo_Retail_Item1";
             this.combo_Retail_Item1.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item1.TabIndex = 23;

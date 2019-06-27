@@ -10,74 +10,348 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MySql.Data;
 using DataTable = System.Data.DataTable;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
     public partial class Retail : Form
     {
-        MySqlConnection con = new MySqlConnection("server = localhost; database = invoice; username = root; password=; charset=utf8");
+        /*MySqlConnection con = new MySqlConnection("server = localhost; database = invoice; username = root; password=; charset=utf8");
         MySqlCommand command;
-        MySqlDataReader mdr;
+        MySqlDataReader mdr;*/
+
+        List<WindowsFormsApp1.Qury> Inv_QryHead = new List<WindowsFormsApp1.Qury>();
+        List<WindowsFormsApp1.Qury> Inv_QryDetail = new List<WindowsFormsApp1.Qury>();
+        OleDbConnection bookConn;
+        OleDbCommand oleDbCmd;
+        OleDbDataReader mdr;
+        String connParam = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Invoice\DB\DB_Invoice.mdb;Persist Security Info=True;User ID=admin";
 
         public Retail()
         {
             InitializeComponent();
         }
-        List<Qury> Inv_Qry = new List<Qury>();
-        public void Set_Inv()
+
+        public void SelectInvNo()
         {
-            string query = "SELECT  `Inv_No`, `Cus_CD`, `Date`, `User_ID`, `Amt_Price`, `Amt_Goods`, `Amt_Piece`, `Amt_Weight` FROM `invoice_hearder` ";
-            con.Open();
-            command = new MySqlCommand(query, con);
-            mdr = command.ExecuteReader();
+            string query = "SELECT max(ID) FROM Invoice_Header";
 
-            Qury qry = new Qury() ;
-            while (mdr.Read())
-            {
-                qry.Inv_No = mdr.GetString("Inv_No");
-                qry.Cus_Name = mdr.GetString("Cus_CD");
-                qry.Inv_Date = mdr.GetString("Date");
-                qry.User_Name = mdr.GetString("User_ID");
-                qry.Inv_AmtPrice = mdr.GetString("Amt_Price");
-                qry.Inv_SumItem = mdr.GetString("Amt_Goods");
-                qry.Inv_SumCount = mdr.GetString("Amt_Piece");
-                qry.Inv_SumWeight = mdr.GetString("Amt_Weight");
-
-
-            }
-
-
-            }
-
-        public void FillCombobox()
-        { 
-            string query = "SELECT ID,Name,Address  FROM customers";
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
             try
             {
-               
-                con.Open();
-                command = new MySqlCommand(query, con);
-                mdr = command.ExecuteReader();
+                oleDbCmd = new OleDbCommand(query, bookConn);
+
+                mdr = oleDbCmd.ExecuteReader();
 
                 while (mdr.Read())
                 {
-                    comboBox_Name.Items.Add(mdr.GetString("Name"));
+                    textBox_RetailNo.Text = mdr.GetInt32(0).ToString();
+
+                    
                 }
             }
             catch (Exception er)
             {
-                Console.WriteLine("ERROR : " + er);
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
             }
-            finally
+            bookConn.Close();
+
+        }
+
+        public void InsertInvHeader()
+        {
+            Qury qry = new Qury();
+            qry.Cus_Name = comboBox_Name.Text;
+            qry.Cus_Address = textBox_CusAddress.Text;
+            qry.Inv_No = textBox_RetailNo.Text;
+            qry.Inv_ThaiPrice = textBox_Retail_ThaiPrice.Text;
+            qry.Inv_AmtPrice = textBox_Retail_Amount.Text;
+            qry.Inv_SumItem = textBox_Retail_SumItem.Text;
+            qry.Inv_SumCount = textBox_Retail_SumCount.Text;
+            qry.Inv_SumWeight = textBox_Retail_SumWeight.Text;
+            Inv_QryHead.Add(qry);
+        }
+
+        public void InsertInvDetail()
+        {
+            Qury qry = new Qury();
+            qry.Inv_No = textBox_RetailNo.Text;
+            if (combo_Retail_Item1.Text != "Select Item" || combo_Retail_Item1.Text != "")
             {
-                con.Close();
-                con.Dispose();
+                qry.Goods_Code = combo_Retail_Item1.Text;
+                qry.Goods_Des = textBox_Retail_item1.Text;
+                qry.Goods_SumCount = textBox_Retail_Count1.Text;
+                qry.Goods_Type = textBox_Retail_Type1.Text;
+                qry.Goods_Price = textBox_Retail_Price1.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount1.Text;
+                Inv_QryDetail.Add(qry);
             }
+            if (combo_Retail_Item2.Text != "Select Item" || combo_Retail_Item2.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item2.Text;
+                qry.Goods_Des = textBox_Retail_item2.Text;
+                qry.Goods_SumCount = textBox_Retail_Count2.Text;
+                qry.Goods_Type = textBox_Retail_Type2.Text;
+                qry.Goods_Price = textBox_Retail_Price2.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount2.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item3.Text != "Select Item" || combo_Retail_Item3.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item3.Text;
+                qry.Goods_Des = textBox_Retail_item3.Text;
+                qry.Goods_SumCount = textBox_Retail_Count3.Text;
+                qry.Goods_Type = textBox_Retail_Type3.Text;
+                qry.Goods_Price = textBox_Retail_Price3.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount3.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item4.Text != "Select Item" || combo_Retail_Item4.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item4.Text;
+                qry.Goods_Des = textBox_Retail_item4.Text;
+                qry.Goods_SumCount = textBox_Retail_Count4.Text;
+                qry.Goods_Type = textBox_Retail_Type4.Text;
+                qry.Goods_Price = textBox_Retail_Price4.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount4.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item5.Text != "Select Item" || combo_Retail_Item5.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item5.Text;
+                qry.Goods_Des = textBox_Retail_item5.Text;
+                qry.Goods_SumCount = textBox_Retail_Count5.Text;
+                qry.Goods_Type = textBox_Retail_Type5.Text;
+                qry.Goods_Price = textBox_Retail_Price5.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount5.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item6.Text != "Select Item" || combo_Retail_Item6.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item6.Text;
+                qry.Goods_Des = textBox_Retail_item6.Text;
+                qry.Goods_SumCount = textBox_Retail_Count6.Text;
+                qry.Goods_Type = textBox_Retail_Type6.Text;
+                qry.Goods_Price = textBox_Retail_Price6.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount6.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item7.Text != "Select Item" || combo_Retail_Item7.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item7.Text;
+                qry.Goods_Des = textBox_Retail_item7.Text;
+                qry.Goods_SumCount = textBox_Retail_Count7.Text;
+                qry.Goods_Type = textBox_Retail_Type7.Text;
+                qry.Goods_Price = textBox_Retail_Price7.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount7.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item8.Text != "Select Item" || combo_Retail_Item8.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item8.Text;
+                qry.Goods_Des = textBox_Retail_item8.Text;
+                qry.Goods_SumCount = textBox_Retail_Count8.Text;
+                qry.Goods_Type = textBox_Retail_Type8.Text;
+                qry.Goods_Price = textBox_Retail_Price8.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount8.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item9.Text != "Select Item" || combo_Retail_Item9.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item9.Text;
+                qry.Goods_Des = textBox_Retail_item9.Text;
+                qry.Goods_SumCount = textBox_Retail_Count9.Text;
+                qry.Goods_Type = textBox_Retail_Type9.Text;
+                qry.Goods_Price = textBox_Retail_Price9.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount9.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item10.Text != "Select Item" || combo_Retail_Item10.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item10.Text;
+                qry.Goods_Des = textBox_Retail_item10.Text;
+                qry.Goods_SumCount = textBox_Retail_Count10.Text;
+                qry.Goods_Type = textBox_Retail_Type10.Text;
+                qry.Goods_Price = textBox_Retail_Price10.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount10.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item11.Text != "Select Item" || combo_Retail_Item11.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item11.Text;
+                qry.Goods_Des = textBox_Retail_item11.Text;
+                qry.Goods_SumCount = textBox_Retail_Count11.Text;
+                qry.Goods_Type = textBox_Retail_Type11.Text;
+                qry.Goods_Price = textBox_Retail_Price11.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount11.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item12.Text != "Select Item" || combo_Retail_Item12.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item12.Text;
+                qry.Goods_Des = textBox_Retail_item12.Text;
+                qry.Goods_SumCount = textBox_Retail_Count12.Text;
+                qry.Goods_Type = textBox_Retail_Type12.Text;
+                qry.Goods_Price = textBox_Retail_Price12.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount12.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item13.Text != "Select Item" || combo_Retail_Item13.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item13.Text;
+                qry.Goods_Des = textBox_Retail_item13.Text;
+                qry.Goods_SumCount = textBox_Retail_Count13.Text;
+                qry.Goods_Type = textBox_Retail_Type13.Text;
+                qry.Goods_Price = textBox_Retail_Price13.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount13.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item14.Text != "Select Item" || combo_Retail_Item14.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item14.Text;
+                qry.Goods_Des = textBox_Retail_item14.Text;
+                qry.Goods_SumCount = textBox_Retail_Count14.Text;
+                qry.Goods_Type = textBox_Retail_Type14.Text;
+                qry.Goods_Price = textBox_Retail_Price14.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount14.Text;
+                Inv_QryDetail.Add(qry);
+            }
+            if (combo_Retail_Item15.Text != "Select Item" || combo_Retail_Item15.Text != "")
+            {
+                qry.Goods_Code = combo_Retail_Item15.Text;
+                qry.Goods_Des = textBox_Retail_item15.Text;
+                qry.Goods_SumCount = textBox_Retail_Count15.Text;
+                qry.Goods_Type = textBox_Retail_Type15.Text;
+                qry.Goods_Price = textBox_Retail_Price15.Text;
+                qry.Goods_SumPrice = textBox_Retail_PriceAmount15.Text;
+                Inv_QryDetail.Add(qry);
+            }
+
+
+            Console.WriteLine("");
+
+        }
+
+
+
+
+       // List<Qury> Inv_Qry = new List<Qury>();
+       /*public void Set_InvHead()
+       {
+           string query = "SELECT  `Inv_No`, `Cus_CD`, `Date`, `User_ID`, `Amt_Price`, `Amt_Goods`, `Amt_Piece`, `Amt_Weight` FROM `invoice_hearder` ";
+           con.Open();
+           command = new MySqlCommand(query, con);
+           mdr = command.ExecuteReader();
+
+           Qury qry = new Qury() ;
+           while (mdr.Read())
+           {
+               qry.Inv_No = mdr.GetString("Inv_No");
+               qry.Cus_Name = mdr.GetString("Cus_CD");
+               qry.Inv_Date = mdr.GetString("Date");
+               qry.User_Name = mdr.GetString("User_ID");
+               qry.Inv_AmtPrice = mdr.GetString("Amt_Price");
+               qry.Inv_SumItem = mdr.GetString("Amt_Goods");
+               qry.Inv_SumCount = mdr.GetString("Amt_Piece");
+               qry.Inv_SumWeight = mdr.GetString("Amt_Weight");
+
+
+           }
+
+
+           }*/
+
+        public void FillCombobox()
+        { 
+            string query = "SELECT Cus_Name FROM customer";
+
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
+            try
+            {
+                oleDbCmd = new OleDbCommand(query, bookConn);
+
+                mdr = oleDbCmd.ExecuteReader();
+
+                while (mdr.Read())
+                {
+                    comboBox_Name.Items.Add(mdr.GetString(0));
+                }
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
+            /*
+                        try
+                        {
+
+                            con.Open();
+                            command = new MySqlCommand(query, con);
+                            mdr = command.ExecuteReader();
+
+                            while (mdr.Read())
+                            {
+                                comboBox_Name.Items.Add(mdr.GetString("Name"));
+                            }
+                        }
+                        catch (Exception er)
+                        {
+                            Console.WriteLine("ERROR : " + er);
+                        }
+                        finally
+                        {
+                            con.Close();
+                            con.Dispose();
+                        }*/
         }
         public void FillComboboxItem()
         {
-            string query = "SELECT `ID`, `Code`, `Description`, `Size`, `Weight`, `Cost_price`, `Whole_Price`, `Retail_Price`, `Type_Count`, `Amount`, `Update_Date` " +
-                           "FROM `goods`";
+            string query = "SELECT `Goods_CD` FROM `goods`";
+
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
+            try
+            {
+                oleDbCmd = new OleDbCommand(query, bookConn);
+
+                mdr = oleDbCmd.ExecuteReader();
+
+                while (mdr.Read())
+                {
+                    combo_Retail_Item1.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item2.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item3.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item4.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item5.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item6.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item7.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item8.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item9.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item10.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item11.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item12.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item13.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item14.Items.Add(mdr.GetString(0));
+                    combo_Retail_Item15.Items.Add(mdr.GetString(0));
+                }
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
+
+            /*
             try
             {
 
@@ -112,20 +386,38 @@ namespace WindowsFormsApp1
             {
                 con.Close();
                 con.Dispose();
-            }
+            }*/
         }
 
         public void Qury_Select_Customer()
         {
-            string query = "SELECT Name  FROM customers";
+            string query = "SELECT Cus_Name  FROM customer";
 
-            MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
+            try
+            {
+                OleDbDataAdapter dAdapter = new OleDbDataAdapter(query, connParam);
+                DataTable dt = new DataTable();
 
-            DataTable dt = new DataTable();
+                dAdapter.Fill(dt);
+                comboBox_Name.Items.Add("");
+            }
+            catch (Exception er)
+            {
 
-            data.Fill(dt);
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
 
-            comboBox_Name.Items.Add("");
+            /* MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+
+             DataTable dt = new DataTable();
+
+             data.Fill(dt);
+
+             comboBox_Name.Items.Add("");*/
 
         }
         private void Retail_Load(object sender, EventArgs e)
@@ -133,6 +425,8 @@ namespace WindowsFormsApp1
 
             FillCombobox();
             FillComboboxItem();
+            SelectInvNo();
+           
             //MessageBox.Show(ThaiBaht("153,456,200"));
         }
 
@@ -172,13 +466,41 @@ namespace WindowsFormsApp1
         }
         public void Qury_Address_Customer(string name )
         {
-            con.Open();
-            string query = "SELECT address  FROM customers where Name ='"+ name+"'";
+           
+            string query = "SELECT Cus_Address  FROM customer where Cus_Name ='" + name+"'";
+
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
+            try
+            {
+                oleDbCmd = new OleDbCommand(query, bookConn);
+
+                mdr = oleDbCmd.ExecuteReader();
+             
+                if (mdr.Read())
+                {
+                    textBox_CusAddress.Text = mdr.GetString(0);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Do not for this id ");
+                }
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
+
             /*
+              con.Open();
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             data.Fill(dt);
-            textBox_CusAddress.Text = data.ToString();*/
+            textBox_CusAddress.Text = data.ToString();
             command = new MySqlCommand(query, con);
             mdr = command.ExecuteReader();
 
@@ -191,7 +513,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Do not for this id ");
             }
-
+            */
         }
 
         private void comboBox_Name_SelectedIndexChanged(object sender, EventArgs e)
@@ -266,39 +588,97 @@ namespace WindowsFormsApp1
         }
         public string Select_Des_Item(string Des)
         {
-            con.Open();
-            string query = "SELECT  `Description` FROM `goods` WHERE Code = '" + Des + "'";
+           
+            string query = "SELECT  `Goods_Description` FROM `goods` WHERE Goods_CD = '" + Des + "'";
             string str = "";
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
             try
             {
-                command = new MySqlCommand(query, con);
-                mdr = command.ExecuteReader();
+                oleDbCmd = new OleDbCommand(query, bookConn);
+
+                mdr = oleDbCmd.ExecuteReader();
+
                 while (mdr.Read())
                 {
-                    //comboBox_Name.Items.Add(mdr.GetString("Name"));
-                    str = mdr.GetString("Description");
+                    str = mdr.GetString(0);
+
                 }
             }
             catch (Exception er)
             {
-                Console.WriteLine("ERROR : " + er);
-                
-                con.Close();
-                con.Dispose();
-            }
 
-            con.Close();
-            con.Dispose();
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+                bookConn.Dispose();
+            }
+            bookConn.Close();
+            bookConn.Dispose();
             return (str);
+            /* try
+             {
+                 command = new MySqlCommand(query, con);
+                 mdr = command.ExecuteReader();
+                 while (mdr.Read())
+                 {
+                     //comboBox_Name.Items.Add(mdr.GetString("Name"));
+                     str = mdr.GetString("Description");
+                 }
+             }
+             catch (Exception er)
+             {
+                 Console.WriteLine("ERROR : " + er);
+
+                 con.Close();
+                 con.Dispose();
+             }
+
+             con.Close();
+             con.Dispose();
+             return (str);*/
 
         }
         public string Select_Price_Item(string Code)
         {
-            con.Open();
-            string query = "SELECT  `Retail_Price` FROM `goods` WHERE Code = '" + Code + "'";
+            
+            string query = "SELECT  Goods_Retail FROM `goods` WHERE Goods_CD = '" + Code + "'";
             string str = "";
+
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
             try
             {
+                oleDbCmd = new OleDbCommand(query, bookConn);
+
+                mdr = oleDbCmd.ExecuteReader();
+
+                while (mdr.Read())
+                {
+                    //str = mdr.GetString(0);
+                    // str = mdr.GetString(0) == "" ? "0" : mdr.GetString(0);
+                    str = mdr.GetInt32(0).ToString();
+                }
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+                bookConn.Dispose();
+            }
+            bookConn.Close();
+            bookConn.Dispose();
+            int integer = 0;
+            integer = Int32.Parse(str);
+
+            return integer.ToString("N2");
+
+
+
+
+            /*try
+            {
+                con.Open();
                 command = new MySqlCommand(query, con);
                 mdr = command.ExecuteReader();
                 while (mdr.Read())
@@ -319,15 +699,42 @@ namespace WindowsFormsApp1
             int integer = 0;
             integer = Int32.Parse(str);
 
-            return integer.ToString("N2");
+            return integer.ToString("N2");*/
         }
         public string Select_Size_Item(string Code)
         {
-            con.Open();
-            string query = "SELECT  `Size` FROM `goods` WHERE Code = '" + Code + "'";
+           
+            string query = "SELECT  `Goods_Size` FROM `goods` WHERE Goods_CD = '" + Code + "'";
             string str = "";
+
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
             try
             {
+                oleDbCmd = new OleDbCommand(query, bookConn);
+
+                mdr = oleDbCmd.ExecuteReader();
+
+                while (mdr.Read())
+                {
+                    //str = mdr.GetString(0);
+                    str = mdr.GetString(0) == "" ? "" : mdr.GetString(0);
+                }
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+                bookConn.Dispose();
+            }
+            bookConn.Close();
+            bookConn.Dispose();
+            return str;
+
+            /*try
+            {
+                con.Open();
                 command = new MySqlCommand(query, con);
                 mdr = command.ExecuteReader();
                 while (mdr.Read())
@@ -345,16 +752,43 @@ namespace WindowsFormsApp1
             }
             con.Close();
             con.Dispose();
-            return str;
+            return str;*/
         }
 
         public string Select_Type_Item(string Code)
         {
-            con.Open();
-            string query = "SELECT  `Type_Count` FROM `goods` WHERE Code = '" + Code + "'";
+           
+            string query = "SELECT  `Goods_Type` FROM `goods` WHERE Goods_CD = '" + Code + "'";
             string str = "";
+
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
             try
             {
+                oleDbCmd = new OleDbCommand(query, bookConn);
+
+                mdr = oleDbCmd.ExecuteReader();
+
+                while (mdr.Read())
+                {
+                    //str = mdr.GetString(0);
+                    str = mdr.GetString(0) == "" ? "" : mdr.GetString(0);
+                }
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+                bookConn.Dispose();
+            }
+            bookConn.Close();
+            bookConn.Dispose();
+            return str;
+
+            /*try
+            {
+                con.Open();
                 command = new MySqlCommand(query, con);
                 mdr = command.ExecuteReader();
                 while (mdr.Read())
@@ -372,36 +806,68 @@ namespace WindowsFormsApp1
             }
             con.Close();
             con.Dispose();
-            return str;
+            return str;*/
         }
         public string Select_Cost_Price(string Code)
         {
-            con.Open();
-            string query = "SELECT  `Cost_price` FROM `goods` WHERE Code = '" + Code + "'";
+           
+            string query = "SELECT  `Goods_Cost` FROM `goods` WHERE Goods_CD = '" + Code + "'";
             string str = "";
+
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
             try
             {
-                command = new MySqlCommand(query, con);
-                mdr = command.ExecuteReader();
+                oleDbCmd = new OleDbCommand(query, bookConn);
+
+                mdr = oleDbCmd.ExecuteReader();
+
                 while (mdr.Read())
                 {
-                    // comboBox_Name.Items.Add(mdr.GetString("Name"));
-                    str = mdr.GetString("Cost_price") == "" ? "0" : mdr.GetString("Cost_price");
+                    //str = mdr.GetString(0);
+                    //str = mdr.GetString(0) == "" ? "0" : mdr.GetString(0);
+                    str = mdr.GetInt32(0).ToString();
                 }
             }
             catch (Exception er)
             {
-                Console.WriteLine("ERROR : " + er);
 
-                con.Close();
-                con.Dispose();
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+                bookConn.Dispose();
             }
-            con.Close();
-            con.Dispose();
+            bookConn.Close();
+            bookConn.Dispose();
             int integer = 0;
-            integer =  str == "" ? 0 : Int32.Parse(str);
+            integer = str == "" ? 0 : Int32.Parse(str);
 
             return integer.ToString("N2");
+
+
+            /* try
+             {
+                 con.Open();
+                 command = new MySqlCommand(query, con);
+                 mdr = command.ExecuteReader();
+                 while (mdr.Read())
+                 {
+                     // comboBox_Name.Items.Add(mdr.GetString("Name"));
+                     str = mdr.GetString("Cost_price") == "" ? "0" : mdr.GetString("Cost_price");
+                 }
+             }
+             catch (Exception er)
+             {
+                 Console.WriteLine("ERROR : " + er);
+
+                 con.Close();
+                 con.Dispose();
+             }
+             con.Close();
+             con.Dispose();
+             int integer = 0;
+             integer =  str == "" ? 0 : Int32.Parse(str);
+
+             return integer.ToString("N2");*/
         }
 
 
@@ -411,49 +877,107 @@ namespace WindowsFormsApp1
 
             if (Item != "Select Item")
             {
-                con.Open();
-                string query = "SELECT Weight FROM `goods` WHERE Code = '" + Item + "'";
+                string query = "SELECT Goods_Weight FROM `goods` WHERE Goods_CD = '" + Item + "'";
                 string str = "";
+                bookConn = new OleDbConnection(connParam);
+                bookConn.Open();
                 try
                 {
-                    command = new MySqlCommand(query, con);
-                    mdr = command.ExecuteReader();
+                    oleDbCmd = new OleDbCommand(query, bookConn);
+
+                    mdr = oleDbCmd.ExecuteReader();
+
                     while (mdr.Read())
                     {
-                        // comboBox_Name.Items.Add(mdr.GetString("Name"));
-                        str = mdr.GetString("Weight") == "" ? "0" : mdr.GetString("Weight");
+                        //str = mdr.GetString(0);
+                        //str = mdr.GetString(0) == "" ? "0" : mdr.GetString(0);
+                        str = mdr.GetInt32(0).ToString();
                     }
                 }
                 catch (Exception er)
                 {
-                    Console.WriteLine("ERROR : " + er);
 
-                    con.Close();
-                    con.Dispose();
+                    MessageBox.Show("ERROR : " + er);
+                    bookConn.Close();
+                    bookConn.Dispose();
                 }
-                con.Close();
-                con.Dispose();
-               
+                bookConn.Close();
+                bookConn.Dispose();
                 weight = str == "" ? 0 : Int32.Parse(str);
 
-                
+                /* con.Open();
+                 string query = "SELECT Weight FROM `goods` WHERE Code = '" + Item + "'";
+                 string str = "";
+                 try
+                 {
+                     command = new MySqlCommand(query, con);
+                     mdr = command.ExecuteReader();
+                     while (mdr.Read())
+                     {
+                         // comboBox_Name.Items.Add(mdr.GetString("Name"));
+                         str = mdr.GetString("Weight") == "" ? "0" : mdr.GetString("Weight");
+                     }
+                 }
+                 catch (Exception er)
+                 {
+                     Console.WriteLine("ERROR : " + er);
+
+                     con.Close();
+                     con.Dispose();
+                 }
+                 con.Close();
+                 con.Dispose();
+
+                 weight = str == "" ? 0 : Int32.Parse(str);*/
+
+
             }
 
             return weight;
 
            
         }
-
+        
 
         public void SumWeight()
         {
-            int Item1;
+            int Item1, Item2, Item3, Item4, Item5, Item6, Item7, Item8, Item9, Item10, Item11, Item12, Item13, Item14, Item15;
             int Sum;
-            int Count1;
+            int Count1, Count2, Count3, Count4, Count5, Count6, Count7, Count8, Count9, Count10, Count11, Count12, Count13, Count14, Count15;
             Item1 = Select_Weight(combo_Retail_Item1.Text);
             Count1 = textBox_Retail_Count1.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count1.Text.ToString());
+            Item2 = Select_Weight(combo_Retail_Item2.Text);
+            Count2 = textBox_Retail_Count2.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count2.Text.ToString());
+            Item3 = Select_Weight(combo_Retail_Item3.Text);
+            Count3 = textBox_Retail_Count3.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count3.Text.ToString());
+            Item4 = Select_Weight(combo_Retail_Item4.Text);
+            Count4 = textBox_Retail_Count4.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count4.Text.ToString());
+            Item5 = Select_Weight(combo_Retail_Item5.Text);
+            Count5 = textBox_Retail_Count5.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count5.Text.ToString());
+            Item6 = Select_Weight(combo_Retail_Item6.Text);
+            Count6 = textBox_Retail_Count6.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count6.Text.ToString());
+            Item7 = Select_Weight(combo_Retail_Item7.Text);
+            Count7 = textBox_Retail_Count7.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count7.Text.ToString());
+            Item8 = Select_Weight(combo_Retail_Item8.Text);
+            Count8 = textBox_Retail_Count8.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count8.Text.ToString());
+            Item9 = Select_Weight(combo_Retail_Item9.Text);
+            Count9 = textBox_Retail_Count9.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count9.Text.ToString());
+            Item10 = Select_Weight(combo_Retail_Item10.Text);
+            Count10 = textBox_Retail_Count10.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count10.Text.ToString());
+            Item11 = Select_Weight(combo_Retail_Item11.Text);
+            Count11 = textBox_Retail_Count11.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count11.Text.ToString());
+            Item12 = Select_Weight(combo_Retail_Item12.Text);
+            Count12 = textBox_Retail_Count12.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count12.Text.ToString());
+            Item13 = Select_Weight(combo_Retail_Item13.Text);
+            Count13 = textBox_Retail_Count13.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count13.Text.ToString());
+            Item14 = Select_Weight(combo_Retail_Item14.Text);
+            Count14 = textBox_Retail_Count14.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count14.Text.ToString());
+            Item15 = Select_Weight(combo_Retail_Item15.Text);
+            Count15 = textBox_Retail_Count15.Text.ToString() == "" ? 0 : Int32.Parse(textBox_Retail_Count15.Text.ToString());
 
-            Sum = (Item1 * Count1);
+            Sum = (Item1 * Count1) + (Item2 * Count2) + (Item3 * Count3) + (Item4 * Count4) + (Item5 * Count5) 
+                + (Item6 * Count6) + (Item7 * Count7) + (Item8 * Count8) + (Item9 * Count9) + (Item10 * Count10)
+                + (Item11 * Count11) + (Item12 * Count12) + (Item13 * Count13) + (Item14 * Count14) + (Item15 * Count15);
 
             textBox_Retail_SumWeight.Text = Sum.ToString();
 
@@ -502,46 +1026,60 @@ namespace WindowsFormsApp1
             if (combo_Retail_Item1.Text != "Select Item")
             {
                 i = i + 1;
-            }  if (combo_Retail_Item2.Text != "Select Item")
+            }
+            if (combo_Retail_Item2.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item3.Text != "Select Item")
+            }
+            if (combo_Retail_Item3.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item4.Text != "Select Item")
+            }
+            if (combo_Retail_Item4.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item5.Text != "Select Item")
+            }
+            if (combo_Retail_Item5.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item6.Text != "Select Item")
+            }
+            if (combo_Retail_Item6.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item7.Text != "Select Item")
+            }
+            if (combo_Retail_Item7.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item8.Text != "Select Item")
+            }
+            if (combo_Retail_Item8.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item9.Text != "Select Item")
+            }
+            if (combo_Retail_Item9.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item10.Text != "Select Item")
+            }
+            if (combo_Retail_Item10.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item11.Text != "Select Item")
+            }
+            if (combo_Retail_Item11.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item12.Text != "Select Item")
+            }
+            if (combo_Retail_Item12.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item13.Text != "Select Item")
+            }
+            if (combo_Retail_Item13.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item14.Text != "Select Item")
+            }
+            if (combo_Retail_Item14.Text != "Select Item")
             {
                 i = i + 1;
-            } if (combo_Retail_Item15.Text != "Select Item")
+            }
+            if (combo_Retail_Item15.Text != "Select Item")
             {
                 i = i + 1;
             }
@@ -582,7 +1120,8 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Error : "+er);
             }
         }
-      
+        
+       
 
         public void SumCount()
         {
@@ -700,6 +1239,7 @@ namespace WindowsFormsApp1
         }
         private void textBox_Retail_Count2_TextChanged(object sender, EventArgs e)
         {
+
             try
             {
                 string textPrice = "";
@@ -1477,7 +2017,7 @@ namespace WindowsFormsApp1
         {
             try
             {
-                Object selectedItem = combo_Retail_Item1.SelectedItem;
+                Object selectedItem = combo_Retail_Item2.SelectedItem;
                 string textCount = "";
                 double douCount, amount, Price;
                 double costPrice;
@@ -1929,10 +2469,8 @@ namespace WindowsFormsApp1
 
         private void button_Print_Click(object sender, EventArgs e)
         {
-            string str1 = "str123";
-            string str2 = "str234";
-
-            
+            InsertInvHeader();
+            InsertInvDetail();
 
         }
     }

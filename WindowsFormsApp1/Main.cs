@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 using Microsoft.Office;
 //using Excel = Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -20,15 +22,18 @@ namespace WindowsFormsApp1
     {
 
         List<WindowsFormsApp1.Qury> lt_Exc = new List<WindowsFormsApp1.Qury>() ;
-
-
+        OleDbConnection bookConn;
+        OleDbCommand oleDbCmd;
+        OleDbDataReader mdr;
+        String connParam = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Invoice\DB\DB_Invoice.mdb;Persist Security Info=True;User ID=admin";
 
         public Main()
         {
             InitializeComponent();
         }
 
-        MySqlConnection con = new MySqlConnection("server = localhost; database = invoice; username = root; password=; charset=utf8");
+        // MySqlConnection con = new MySqlConnection("server = localhost; database = invoice; username = root; password=; charset=utf8");
+       
         private void Form1_Load(object sender, EventArgs e)
         {
             Qury_Select_Goods();
@@ -67,27 +72,61 @@ namespace WindowsFormsApp1
 
         public void Qury_Select_Customer()
         {
-            string query = "SELECT * FROM customers";
+            string query = "SELECT * FROM customer";
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
+            try
+            {
+                OleDbDataAdapter dAdapter = new OleDbDataAdapter(query, connParam);
+                DataTable dt = new DataTable();
 
+                dAdapter.Fill(dt);
+                dgv_Customer.DataSource = dt;
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
+
+            /*
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-
             DataTable dt = new DataTable();
-
             data.Fill(dt);
+            dgv_Customer.DataSource = dt;*/
 
-            dgv_Customer.DataSource = dt;
+
         }
         public void Qury_Select_Goods()
         {
-            string query = "SELECT `ID`, `Code`, `Description`, `Size`, `Weight`, `Cost_price`, `Whole_Price`, `Retail_Price`, `Type_Count`, `Amount` FROM goods ";
+            string query = "SELECT  `Goods_CD`, `Goods_Description`, `Goods_Size`, `Goods_Weight`, `Goods_Cost`, `Goods_Whole`, `Goods_Retail`, `Goods_Type` FROM goods ";
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
+            try
+            {
+                OleDbDataAdapter dAdapter = new OleDbDataAdapter(query, connParam);
+                DataTable dt = new DataTable();
 
+                dAdapter.Fill(dt);
+                dgv_Warehouse.DataSource = dt;
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
+
+
+            /*
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-
             DataTable dt = new DataTable();
-
             data.Fill(dt);
+            dgv_Warehouse.DataSource = dt;*/
 
-            dgv_Warehouse.DataSource = dt;
         }
         public void Qury_Insert_Customer(string Cus_Name, string Cus_CD, string Address,  string Zip, string Tell, string Note, string Update_Date)
         {
@@ -96,34 +135,75 @@ namespace WindowsFormsApp1
 
             text1 = textBox1.Text;
 
-            string query = "INSERT INTO `Customers`( `Cus_CD`, `Name`, `Address`, `zip`, `Tell`, `Note`, `Updated`) " +
-                                  "VALUES ('"+ Cus_CD + "','"+ Cus_Name + "','"+ Address + "','"+ Zip + "','"+ Tell + "','"+ Note + "','"+ Update_Date + "')";
+            string query = "INSERT INTO `Customer`( `Cus_CD`, `Cus_Name`, `Cus_Address`, `Cus_Note`) " +
+                                  "VALUES ('"+ Cus_CD + "','"+ Cus_Name + "','"+ Address + "','"+  Note  + "')";
 
+            bookConn = new OleDbConnection(connParam);
+            oleDbCmd = new OleDbCommand(query, bookConn);
+            bookConn.Open();
+            try
+            {
+
+
+                //oleDbCmd.Parameters.AddWithValue("@Year", Year.ToString());
+                //oleDbCmd.Parameters.AddWithValue("@Inv_No", InvNo);
+                oleDbCmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
+
+            /*
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-
             DataTable dt = new DataTable();
-
-            data.Fill(dt);
+            data.Fill(dt);*/
 
             //Qury_Select_Customer();
         }
 
        public void Qury_Insert_Goods(string Goods_Code, string Goods_Des, string Size, int Weight, int Cost_price, 
-                                     int Whole_Price, int Retail_Price, string Type_Count, int Amount, string Update_Date)
+                                     int Whole_Price, int Retail_Price, string Type_Count)
         {
             string text1 = "";
 
             text1 = textBox1.Text;
 
-            string query = "INSERT INTO `goods`( `Code`, `Description`, `Size`, `Weight`, `Cost_price`, `Whole_Price`, `Retail_Price`, `Type_Count`, `Amount`, `Update_Date`) " +
+            string query = "INSERT INTO `goods`( `Goods_CD`, `Goods_Description`, `Goods_Size`, `Goods_Weight`, `Goods_Cost`, `Goods_Whole`, `Goods_Retail`, `Goods_Type`) " +
                                                 "VALUES ('"+ Goods_Code +"','"+ Goods_Des + "','"+ Size + "',"+ Weight + ","+ Cost_price +","+ Whole_Price +","+ Retail_Price + 
-                                                ",'"+ Type_Count + "',"+ Amount +",'"+ Update_Date + "')";
+                                                ",'"+ Type_Count + "')";
 
+            bookConn = new OleDbConnection(connParam);
+            oleDbCmd = new OleDbCommand(query, bookConn);
+            bookConn.Open();
+            try
+            {
+
+
+                //oleDbCmd.Parameters.AddWithValue("@Year", Year.ToString());
+                //oleDbCmd.Parameters.AddWithValue("@Inv_No", InvNo);
+                oleDbCmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
+
+
+
+
+            /*
             MySqlDataAdapter data = new MySqlDataAdapter(query, con);
-
             DataTable dt = new DataTable();
-
-            data.Fill(dt);
+            data.Fill(dt);*/
 
             //Qury_Select_Customer();
         }
@@ -187,7 +267,7 @@ namespace WindowsFormsApp1
 
                     Console.WriteLine(Goods_Code + " | " + Goods_Des + " | " + Size + " | " + Weight + " | " + Cost_price + " | " + Whole_Price + " | " + Retail_Price + " | " + Type_Count + " | " + Amount+"|"+ Update_Date);
 
-                    Qury_Insert_Goods(Goods_Code, Goods_Des, Size, Weight, Cost_price, Whole_Price, Retail_Price, Type_Count, Amount, Update_Date);
+                    Qury_Insert_Goods(Goods_Code, Goods_Des, Size, Weight, Cost_price, Whole_Price, Retail_Price, Type_Count);
                     Qury_Select_Goods();
                 }
 
@@ -308,7 +388,7 @@ namespace WindowsFormsApp1
         void button1_Click(object sender, EventArgs e)
         {
 
-            // GetExcel_Goods();
+            GetExcel_Goods();
             GetExcel_Customer();
 
 
