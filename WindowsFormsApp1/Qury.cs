@@ -15,12 +15,7 @@ namespace WindowsFormsApp1
         public string Cus_Address { get; set; }
         public string Inv_Date { get; set; }
         public string User_Name { get; set; }
-        public string Goods_Code { get; set; }
-        public string Goods_Des { get; set; }
-        public string Goods_SumCount { get; set;}
-        public string Goods_Price { get; set; }
-        public string Goods_Type { get; set; }
-        public string Goods_SumPrice { get; set; }
+        
         public string Inv_ThaiPrice { get; set; }
         public string Inv_AmtPrice { get; set; }
         public string Inv_SumItem { get; set; }

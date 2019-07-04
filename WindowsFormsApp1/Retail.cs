@@ -12,6 +12,7 @@ using MySql.Data;
 using DataTable = System.Data.DataTable;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using Microsoft.Reporting.WinForms;
 
 namespace WindowsFormsApp1
 {
@@ -21,8 +22,8 @@ namespace WindowsFormsApp1
         MySqlCommand command;
         MySqlDataReader mdr;*/
 
-        List<WindowsFormsApp1.Qury> Inv_QryHead = new List<WindowsFormsApp1.Qury>();
-        List<WindowsFormsApp1.Qury> Inv_QryDetail = new List<WindowsFormsApp1.Qury>();
+        List<Qury> Inv_QryHead = new List<Qury>();
+        List<Qury> Inv_QryDetail = new List<Qury>();
         OleDbConnection bookConn;
         OleDbCommand oleDbCmd;
         OleDbDataReader mdr;
@@ -64,6 +65,8 @@ namespace WindowsFormsApp1
 
         public void InsertInvHeader()
         {
+
+
             Qury qry = new Qury();
             qry.Cus_Name = comboBox_Name.Text;
             qry.Cus_Address = textBox_CusAddress.Text;
@@ -73,12 +76,16 @@ namespace WindowsFormsApp1
             qry.Inv_SumItem = textBox_Retail_SumItem.Text;
             qry.Inv_SumCount = textBox_Retail_SumCount.Text;
             qry.Inv_SumWeight = textBox_Retail_SumWeight.Text;
+            qry.Inv_Date = dateTimePickerRetail.Text;
             Inv_QryHead.Add(qry);
+
+
         }
 
         public void InsertInvDetail()
         {
-            Qury qry = new Qury();
+            QuryDetail qry = new QuryDetail();
+
             qry.Inv_No = textBox_RetailNo.Text;
             if (combo_Retail_Item1.Text != "Select Item" || combo_Retail_Item1.Text != "")
             {
@@ -233,6 +240,53 @@ namespace WindowsFormsApp1
 
 
             Console.WriteLine("");
+
+        }
+
+        public void InsertINV()
+        {
+            try
+            {
+                foreach (var InvHead in Inv_QryHead)
+                {
+                    Console.WriteLine("Inv No :" + InvHead.Inv_No);
+                    Console.WriteLine("Cus Name :" + InvHead.Cus_Name);
+                    Console.WriteLine("Cus address :" + InvHead.Cus_Address);
+                    Console.WriteLine("Date :" + InvHead.Inv_Date);
+                    Console.WriteLine("User :" + InvHead.User_Name);
+                    Console.WriteLine("Thai Price :" + InvHead.Inv_ThaiPrice);
+                    Console.WriteLine("Total Price :" + InvHead.Inv_AmtPrice);
+                    Console.WriteLine("Sum Item :" + InvHead.Inv_SumItem);
+                    Console.WriteLine("Sum Count :" + InvHead.Inv_SumCount);
+                    Console.WriteLine("Sum Weight :" + InvHead.Inv_SumWeight);
+                    
+                }
+            }
+            catch(Exception ex)
+            {
+
+
+            }
+        }
+
+        public void InsertINVDetail()
+        {
+            try
+            {
+                foreach (var InvDetail in Inv_QryDetail)
+                {
+                    Console.WriteLine("ItemCD  : " + InvDetail.Goods_Code + " DesCrip : " + InvDetail.Goods_Des + " Count : " + InvDetail.Goods_SumCount +
+                                      " Type : " + InvDetail.Goods_Type + " Price : " + InvDetail.Goods_Price + " SumPrice : " + InvDetail.Goods_SumPrice);
+                    
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+
 
         }
 
@@ -420,13 +474,23 @@ namespace WindowsFormsApp1
              comboBox_Name.Items.Add("");*/
 
         }
+
+        public string Qry_Date()
+        {
+            string date = "";
+           // dateTimePickerRetail.CustomFormat = "dd/MM/yyyy";
+           // dateTimePickerRetail.Format = DateTimePickerFormat.Custom;
+             date = dateTimePickerRetail.Text;
+
+            return date;
+        }
         private void Retail_Load(object sender, EventArgs e)
         {
-
+            
             FillCombobox();
             FillComboboxItem();
             SelectInvNo();
-           
+            //Console.WriteLine(Qry_Date());
             //MessageBox.Show(ThaiBaht("153,456,200"));
         }
 
@@ -668,8 +732,10 @@ namespace WindowsFormsApp1
             }
             bookConn.Close();
             bookConn.Dispose();
+
             int integer = 0;
-            integer = Int32.Parse(str);
+
+            integer = Int32.Parse(str); //.ToString() == "" ? 0 : Int32.Parse(str);
 
             return integer.ToString("N2");
 
@@ -1023,63 +1089,63 @@ namespace WindowsFormsApp1
         public void SumItem()
         {
             int i = 0;
-            if (combo_Retail_Item1.Text != "Select Item")
+            if (combo_Retail_Item1.Text != "Select Item" && combo_Retail_Item1.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item2.Text != "Select Item")
+            if (combo_Retail_Item2.Text != "Select Item" && combo_Retail_Item2.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item3.Text != "Select Item")
+            if (combo_Retail_Item3.Text != "Select Item" && combo_Retail_Item3.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item4.Text != "Select Item")
+            if (combo_Retail_Item4.Text != "Select Item" && combo_Retail_Item4.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item5.Text != "Select Item")
+            if (combo_Retail_Item5.Text != "Select Item" && combo_Retail_Item5.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item6.Text != "Select Item")
+            if (combo_Retail_Item6.Text != "Select Item" && combo_Retail_Item6.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item7.Text != "Select Item")
+            if (combo_Retail_Item7.Text != "Select Item" && combo_Retail_Item7.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item8.Text != "Select Item")
+            if (combo_Retail_Item8.Text != "Select Item" && combo_Retail_Item8.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item9.Text != "Select Item")
+            if (combo_Retail_Item9.Text != "Select Item" && combo_Retail_Item9.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item10.Text != "Select Item")
+            if (combo_Retail_Item10.Text != "Select Item" && combo_Retail_Item10.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item11.Text != "Select Item")
+            if (combo_Retail_Item11.Text != "Select Item" && combo_Retail_Item11.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item12.Text != "Select Item")
+            if (combo_Retail_Item12.Text != "Select Item" && combo_Retail_Item12.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item13.Text != "Select Item")
+            if (combo_Retail_Item13.Text != "Select Item" && combo_Retail_Item13.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item14.Text != "Select Item")
+            if (combo_Retail_Item14.Text != "Select Item" && combo_Retail_Item14.Text != "")
             {
                 i = i + 1;
             }
-            if (combo_Retail_Item15.Text != "Select Item")
+            if (combo_Retail_Item15.Text != "Select Item" && combo_Retail_Item15.Text != "")
             {
                 i = i + 1;
             }
@@ -1099,9 +1165,16 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price1.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type1.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item2.Enabled = true;
+                    textBox_Retail_item2.Enabled = true;
+                    textBox_Retail_Count2.Enabled = true;
+                    textBox_Retail_Type2.Enabled = true;
+                    textBox_Retail_Price2.Enabled = true;
+                    textBox_Retail_PriceAmount2.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
+
                 }
                 else
                 {
@@ -1112,6 +1185,12 @@ namespace WindowsFormsApp1
                     AmountChanged();
                     SumItem();
                     SumWeight();
+                    combo_Retail_Item2.Enabled = false;
+                    textBox_Retail_item2.Enabled = false;
+                    textBox_Retail_Count2.Enabled = false;
+                    textBox_Retail_Type2.Enabled = false;
+                    textBox_Retail_Price2.Enabled = false;
+                    textBox_Retail_PriceAmount2.Enabled = false;
                 }
                
             }
@@ -1214,6 +1293,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price2.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type2.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item3.Enabled = true;
+                    textBox_Retail_item3.Enabled = true;
+                    textBox_Retail_Count3.Enabled = true;
+                    textBox_Retail_Type3.Enabled = true;
+                    textBox_Retail_Price3.Enabled = true;
+                    textBox_Retail_PriceAmount3.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1224,6 +1309,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price2.Text = "";
                     textBox_Retail_Type2.Text = "";
                     textBox_Retail_PriceAmount2.Text = "";
+                    combo_Retail_Item3.Enabled = false;
+                    textBox_Retail_item3.Enabled = false ;
+                    textBox_Retail_Count3.Enabled = false ;
+                    textBox_Retail_Type3.Enabled = false ;
+                    textBox_Retail_Price3.Enabled = false ;
+                    textBox_Retail_PriceAmount3.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1273,6 +1364,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price3.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type3.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item4.Enabled = true;
+                    textBox_Retail_item4.Enabled = true;
+                    textBox_Retail_Count4.Enabled = true;
+                    textBox_Retail_Type4.Enabled = true;
+                    textBox_Retail_Price4.Enabled = true;
+                    textBox_Retail_PriceAmount4.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1283,6 +1380,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price3.Text = "";
                     textBox_Retail_Type3.Text = "";
                     textBox_Retail_PriceAmount3.Text = "";
+                    combo_Retail_Item4.Enabled = false ;
+                    textBox_Retail_item4.Enabled = false ;
+                    textBox_Retail_Count4.Enabled = false ;
+                    textBox_Retail_Type4.Enabled =  false ;
+                    textBox_Retail_Price4.Enabled = false ;
+                    textBox_Retail_PriceAmount4.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1331,6 +1434,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price4.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type4.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item5.Enabled = true;
+                    textBox_Retail_item5.Enabled = true;
+                    textBox_Retail_Count5.Enabled = true;
+                    textBox_Retail_Type5.Enabled = true;
+                    textBox_Retail_Price5.Enabled = true;
+                    textBox_Retail_PriceAmount5.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1341,6 +1450,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price4.Text = "";
                     textBox_Retail_Type4.Text = "";
                     textBox_Retail_PriceAmount4.Text = "";
+                    combo_Retail_Item5.Enabled = false ;
+                    textBox_Retail_item5.Enabled = false ;
+                    textBox_Retail_Count5.Enabled = false ;
+                    textBox_Retail_Type5.Enabled = false ;
+                    textBox_Retail_Price5.Enabled = false ;
+                    textBox_Retail_PriceAmount5.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1389,6 +1504,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price5.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type5.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item6.Enabled = true;
+                    textBox_Retail_item6.Enabled = true;
+                    textBox_Retail_Count6.Enabled = true;
+                    textBox_Retail_Type6.Enabled = true;
+                    textBox_Retail_Price6.Enabled = true;
+                    textBox_Retail_PriceAmount6.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1399,6 +1520,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price5.Text = "";
                     textBox_Retail_Type5.Text = "";
                     textBox_Retail_PriceAmount5.Text = "";
+                    combo_Retail_Item6.Enabled = false ;
+                    textBox_Retail_item6.Enabled = false ;
+                    textBox_Retail_Count6.Enabled = false ;
+                    textBox_Retail_Type6.Enabled = false ;
+                    textBox_Retail_Price6.Enabled = false ;
+                    textBox_Retail_PriceAmount6.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1447,6 +1574,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price6.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type6.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item7.Enabled = true;
+                    textBox_Retail_item7.Enabled = true;
+                    textBox_Retail_Count7.Enabled = true;
+                    textBox_Retail_Type7.Enabled = true;
+                    textBox_Retail_Price7.Enabled = true;
+                    textBox_Retail_PriceAmount7.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1457,6 +1590,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price6.Text = "";
                     textBox_Retail_Type6.Text = "";
                     textBox_Retail_PriceAmount6.Text = "";
+                    combo_Retail_Item7.Enabled = false ;
+                    textBox_Retail_item7.Enabled = false ;
+                    textBox_Retail_Count7.Enabled = false ;
+                    textBox_Retail_Type7.Enabled = false ;
+                    textBox_Retail_Price7.Enabled = false ;
+                    textBox_Retail_PriceAmount7.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1506,6 +1645,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price7.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type7.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item8.Enabled = true;
+                    textBox_Retail_item8.Enabled = true;
+                    textBox_Retail_Count8.Enabled = true;
+                    textBox_Retail_Type8.Enabled = true;
+                    textBox_Retail_Price8.Enabled = true;
+                    textBox_Retail_PriceAmount8.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1516,6 +1661,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price7.Text = "";
                     textBox_Retail_Type7.Text = "";
                     textBox_Retail_PriceAmount7.Text = "";
+                    combo_Retail_Item8.Enabled = false ;
+                    textBox_Retail_item8.Enabled = false ;
+                    textBox_Retail_Count8.Enabled = false ;
+                    textBox_Retail_Type8.Enabled = false ;
+                    textBox_Retail_Price8.Enabled = false ;
+                    textBox_Retail_PriceAmount8.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1564,6 +1715,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price8.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type8.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item9.Enabled = true;
+                    textBox_Retail_item9.Enabled = true;
+                    textBox_Retail_Count9.Enabled = true;
+                    textBox_Retail_Type9.Enabled = true;
+                    textBox_Retail_Price9.Enabled = true;
+                    textBox_Retail_PriceAmount9.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1574,6 +1731,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price8.Text = "";
                     textBox_Retail_Type8.Text = "";
                     textBox_Retail_PriceAmount8.Text = "";
+                    combo_Retail_Item9.Enabled = false ;
+                    textBox_Retail_item9.Enabled = false ;
+                    textBox_Retail_Count9.Enabled = false ;
+                    textBox_Retail_Type9.Enabled = false ;
+                    textBox_Retail_Price9.Enabled = false ;
+                    textBox_Retail_PriceAmount9.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1621,6 +1784,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price9.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type9.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item10.Enabled = true;
+                    textBox_Retail_item10.Enabled = true;
+                    textBox_Retail_Count10.Enabled = true;
+                    textBox_Retail_Type10.Enabled = true;
+                    textBox_Retail_Price10.Enabled = true;
+                    textBox_Retail_PriceAmount10.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1631,6 +1800,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price9.Text = "";
                     textBox_Retail_Type9.Text = "";
                     textBox_Retail_PriceAmount9.Text = "";
+                    combo_Retail_Item10.Enabled = false ;
+                    textBox_Retail_item10.Enabled = false ;
+                    textBox_Retail_Count10.Enabled = false ;
+                    textBox_Retail_Type10.Enabled = false ;
+                    textBox_Retail_Price10.Enabled = false ;
+                    textBox_Retail_PriceAmount10.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1678,6 +1853,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price10.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type10.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item11.Enabled = true;
+                    textBox_Retail_item11.Enabled = true;
+                    textBox_Retail_Count11.Enabled = true;
+                    textBox_Retail_Type11.Enabled = true;
+                    textBox_Retail_Price11.Enabled = true;
+                    textBox_Retail_PriceAmount11.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1688,6 +1869,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price10.Text = "";
                     textBox_Retail_Type10.Text = "";
                     textBox_Retail_PriceAmount10.Text = "";
+                    combo_Retail_Item11.Enabled = false ;
+                    textBox_Retail_item11.Enabled = false ;
+                    textBox_Retail_Count11.Enabled = false ;
+                    textBox_Retail_Type11.Enabled = false ;
+                    textBox_Retail_Price11.Enabled = false ;
+                    textBox_Retail_PriceAmount11.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1735,6 +1922,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price11.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type11.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item12.Enabled = true;
+                    textBox_Retail_item12.Enabled = true;
+                    textBox_Retail_Count12.Enabled = true;
+                    textBox_Retail_Type12.Enabled = true;
+                    textBox_Retail_Price12.Enabled = true;
+                    textBox_Retail_PriceAmount12.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1745,6 +1938,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price11.Text = "";
                     textBox_Retail_Type11.Text = "";
                     textBox_Retail_PriceAmount11.Text = "";
+                    combo_Retail_Item12.Enabled = false ;
+                    textBox_Retail_item12.Enabled = false ;
+                    textBox_Retail_Count12.Enabled = false ;
+                    textBox_Retail_Type12.Enabled = false ;
+                    textBox_Retail_Price12.Enabled = false ;
+                    textBox_Retail_PriceAmount12.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1793,6 +1992,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price12.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type12.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item13.Enabled = true;
+                    textBox_Retail_item13.Enabled = true;
+                    textBox_Retail_Count13.Enabled = true;
+                    textBox_Retail_Type13.Enabled = true;
+                    textBox_Retail_Price13.Enabled = true;
+                    textBox_Retail_PriceAmount13.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1803,6 +2008,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price12.Text = "";
                     textBox_Retail_Type12.Text = "";
                     textBox_Retail_PriceAmount12.Text = "";
+                    combo_Retail_Item13.Enabled = false ;
+                    textBox_Retail_item13.Enabled = false ;
+                    textBox_Retail_Count13.Enabled = false ;
+                    textBox_Retail_Type13.Enabled = false ;
+                    textBox_Retail_Price13.Enabled = false ;
+                    textBox_Retail_PriceAmount13.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1851,6 +2062,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price13.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type13.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item14.Enabled = true;
+                    textBox_Retail_item14.Enabled = true;
+                    textBox_Retail_Count14.Enabled = true;
+                    textBox_Retail_Type14.Enabled = true;
+                    textBox_Retail_Price14.Enabled = true;
+                    textBox_Retail_PriceAmount14.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1861,6 +2078,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price13.Text = "";
                     textBox_Retail_Type13.Text = "";
                     textBox_Retail_PriceAmount13.Text = "";
+                    combo_Retail_Item14.Enabled = false ;
+                    textBox_Retail_item14.Enabled = false ;
+                    textBox_Retail_Count14.Enabled = false ;
+                    textBox_Retail_Type14.Enabled = false ;
+                    textBox_Retail_Price14.Enabled = false ;
+                    textBox_Retail_PriceAmount14.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1909,6 +2132,12 @@ namespace WindowsFormsApp1
 
                     textBox_Retail_Price14.Text = Select_Price_Item(selectedItem.ToString());
                     textBox_Retail_Type14.Text = Select_Type_Item(selectedItem.ToString());
+                    combo_Retail_Item15.Enabled = true;
+                    textBox_Retail_item15.Enabled = true;
+                    textBox_Retail_Count15.Enabled = true;
+                    textBox_Retail_Type15.Enabled = true;
+                    textBox_Retail_Price15.Enabled = true;
+                    textBox_Retail_PriceAmount15.Enabled = true;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -1919,6 +2148,12 @@ namespace WindowsFormsApp1
                     textBox_Retail_Price14.Text = "";
                     textBox_Retail_Type14.Text = "";
                     textBox_Retail_PriceAmount14.Text = "";
+                    combo_Retail_Item15.Enabled = false ;
+                    textBox_Retail_item15.Enabled = false ;
+                    textBox_Retail_Count15.Enabled = false ;
+                    textBox_Retail_Type15.Enabled = false ;
+                    textBox_Retail_Price15.Enabled = false ;
+                    textBox_Retail_PriceAmount15.Enabled = false ;
                     AmountChanged();
                     SumItem();
                     SumWeight();
@@ -2471,7 +2706,19 @@ namespace WindowsFormsApp1
         {
             InsertInvHeader();
             InsertInvDetail();
+            InsertINV();
+            InsertINVDetail();
 
+        }
+
+        private void textBox_Retail_PriceAmount5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerRetail_ValueChanged(object sender, EventArgs e)
+        {
+           Console.WriteLine(Qry_Date());
         }
     }
 

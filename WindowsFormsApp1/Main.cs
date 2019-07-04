@@ -399,6 +399,9 @@ namespace WindowsFormsApp1
             
         }
 
-      
+        private void dgv_Warehouse_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

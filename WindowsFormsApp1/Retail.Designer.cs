@@ -260,10 +260,14 @@
             // 
             // dateTimePickerRetail
             // 
+            this.dateTimePickerRetail.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerRetail.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerRetail.Location = new System.Drawing.Point(99, 29);
             this.dateTimePickerRetail.Name = "dateTimePickerRetail";
             this.dateTimePickerRetail.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerRetail.TabIndex = 7;
+            this.dateTimePickerRetail.Value = new System.DateTime(2019, 6, 29, 13, 2, 4, 0);
+            this.dateTimePickerRetail.ValueChanged += new System.EventHandler(this.dateTimePickerRetail_ValueChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -349,6 +353,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(99, 91);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 19;
             // 
@@ -555,6 +560,7 @@
             this.textBox_Retail_SumWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_SumWeight.Location = new System.Drawing.Point(480, 722);
             this.textBox_Retail_SumWeight.Name = "textBox_Retail_SumWeight";
+            this.textBox_Retail_SumWeight.ReadOnly = true;
             this.textBox_Retail_SumWeight.Size = new System.Drawing.Size(159, 22);
             this.textBox_Retail_SumWeight.TabIndex = 81;
             // 
@@ -573,6 +579,7 @@
             this.textBox_Retail_SumCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_SumCount.Location = new System.Drawing.Point(227, 722);
             this.textBox_Retail_SumCount.Name = "textBox_Retail_SumCount";
+            this.textBox_Retail_SumCount.ReadOnly = true;
             this.textBox_Retail_SumCount.Size = new System.Drawing.Size(114, 22);
             this.textBox_Retail_SumCount.TabIndex = 79;
             // 
@@ -591,6 +598,7 @@
             this.textBox_Retail_SumItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_SumItem.Location = new System.Drawing.Point(62, 720);
             this.textBox_Retail_SumItem.Name = "textBox_Retail_SumItem";
+            this.textBox_Retail_SumItem.ReadOnly = true;
             this.textBox_Retail_SumItem.Size = new System.Drawing.Size(33, 22);
             this.textBox_Retail_SumItem.TabIndex = 77;
             // 
@@ -619,6 +627,7 @@
             this.textBox_Retail_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Amount.Location = new System.Drawing.Point(907, 676);
             this.textBox_Retail_Amount.Name = "textBox_Retail_Amount";
+            this.textBox_Retail_Amount.ReadOnly = true;
             this.textBox_Retail_Amount.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_Amount.TabIndex = 74;
             // 
@@ -627,6 +636,7 @@
             this.textBox_Retail_ThaiPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_ThaiPrice.Location = new System.Drawing.Point(149, 676);
             this.textBox_Retail_ThaiPrice.Name = "textBox_Retail_ThaiPrice";
+            this.textBox_Retail_ThaiPrice.ReadOnly = true;
             this.textBox_Retail_ThaiPrice.Size = new System.Drawing.Size(419, 22);
             this.textBox_Retail_ThaiPrice.TabIndex = 73;
             // 
@@ -668,9 +678,11 @@
             // 
             // textBox_Retail_PriceAmount15
             // 
+            this.textBox_Retail_PriceAmount15.Enabled = false;
             this.textBox_Retail_PriceAmount15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount15.Location = new System.Drawing.Point(906, 636);
             this.textBox_Retail_PriceAmount15.Name = "textBox_Retail_PriceAmount15";
+            this.textBox_Retail_PriceAmount15.ReadOnly = true;
             this.textBox_Retail_PriceAmount15.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount15.TabIndex = 70;
             // 
@@ -688,6 +700,7 @@
             // 
             // textBox_Retail_Price15
             // 
+            this.textBox_Retail_Price15.Enabled = false;
             this.textBox_Retail_Price15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price15.Location = new System.Drawing.Point(751, 636);
             this.textBox_Retail_Price15.Name = "textBox_Retail_Price15";
@@ -697,14 +710,17 @@
             // 
             // textBox_Retail_PriceAmount12
             // 
+            this.textBox_Retail_PriceAmount12.Enabled = false;
             this.textBox_Retail_PriceAmount12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount12.Location = new System.Drawing.Point(906, 514);
             this.textBox_Retail_PriceAmount12.Name = "textBox_Retail_PriceAmount12";
+            this.textBox_Retail_PriceAmount12.ReadOnly = true;
             this.textBox_Retail_PriceAmount12.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount12.TabIndex = 70;
             // 
             // textBox_Retail_Type15
             // 
+            this.textBox_Retail_Type15.Enabled = false;
             this.textBox_Retail_Type15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type15.Location = new System.Drawing.Point(677, 636);
             this.textBox_Retail_Type15.Name = "textBox_Retail_Type15";
@@ -725,6 +741,7 @@
             // 
             // textBox_Retail_Count15
             // 
+            this.textBox_Retail_Count15.Enabled = false;
             this.textBox_Retail_Count15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count15.Location = new System.Drawing.Point(575, 636);
             this.textBox_Retail_Count15.Name = "textBox_Retail_Count15";
@@ -734,6 +751,7 @@
             // 
             // textBox_Retail_Price12
             // 
+            this.textBox_Retail_Price12.Enabled = false;
             this.textBox_Retail_Price12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price12.Location = new System.Drawing.Point(751, 514);
             this.textBox_Retail_Price12.Name = "textBox_Retail_Price12";
@@ -743,6 +761,7 @@
             // 
             // textBox_Retail_item15
             // 
+            this.textBox_Retail_item15.Enabled = false;
             this.textBox_Retail_item15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item15.Location = new System.Drawing.Point(226, 636);
             this.textBox_Retail_item15.Name = "textBox_Retail_item15";
@@ -751,14 +770,18 @@
             // 
             // textBox_Retail_PriceAmount9
             // 
+            this.textBox_Retail_PriceAmount9.Enabled = false;
             this.textBox_Retail_PriceAmount9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount9.Location = new System.Drawing.Point(906, 392);
             this.textBox_Retail_PriceAmount9.Name = "textBox_Retail_PriceAmount9";
+            this.textBox_Retail_PriceAmount9.ReadOnly = true;
             this.textBox_Retail_PriceAmount9.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount9.TabIndex = 70;
             // 
             // combo_Retail_Item15
             // 
+            this.combo_Retail_Item15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item15.Enabled = false;
             this.combo_Retail_Item15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item15.FormattingEnabled = true;
             this.combo_Retail_Item15.Items.AddRange(new object[] {
@@ -767,11 +790,11 @@
             this.combo_Retail_Item15.Name = "combo_Retail_Item15";
             this.combo_Retail_Item15.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item15.TabIndex = 65;
-            this.combo_Retail_Item15.Text = "Select Item";
             this.combo_Retail_Item15.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item15_SelectedIndexChanged);
             // 
             // textBox_Retail_Type12
             // 
+            this.textBox_Retail_Type12.Enabled = false;
             this.textBox_Retail_Type12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type12.Location = new System.Drawing.Point(677, 514);
             this.textBox_Retail_Type12.Name = "textBox_Retail_Type12";
@@ -804,14 +827,17 @@
             // 
             // textBox_Retail_PriceAmount14
             // 
+            this.textBox_Retail_PriceAmount14.Enabled = false;
             this.textBox_Retail_PriceAmount14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount14.Location = new System.Drawing.Point(907, 595);
             this.textBox_Retail_PriceAmount14.Name = "textBox_Retail_PriceAmount14";
+            this.textBox_Retail_PriceAmount14.ReadOnly = true;
             this.textBox_Retail_PriceAmount14.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount14.TabIndex = 63;
             // 
             // textBox_Retail_Count12
             // 
+            this.textBox_Retail_Count12.Enabled = false;
             this.textBox_Retail_Count12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count12.Location = new System.Drawing.Point(575, 514);
             this.textBox_Retail_Count12.Name = "textBox_Retail_Count12";
@@ -821,6 +847,7 @@
             // 
             // textBox_Retail_Price14
             // 
+            this.textBox_Retail_Price14.Enabled = false;
             this.textBox_Retail_Price14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price14.Location = new System.Drawing.Point(752, 595);
             this.textBox_Retail_Price14.Name = "textBox_Retail_Price14";
@@ -830,6 +857,7 @@
             // 
             // textBox_Retail_Price9
             // 
+            this.textBox_Retail_Price9.Enabled = false;
             this.textBox_Retail_Price9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price9.Location = new System.Drawing.Point(751, 392);
             this.textBox_Retail_Price9.Name = "textBox_Retail_Price9";
@@ -839,6 +867,7 @@
             // 
             // textBox_Retail_Type14
             // 
+            this.textBox_Retail_Type14.Enabled = false;
             this.textBox_Retail_Type14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type14.Location = new System.Drawing.Point(678, 595);
             this.textBox_Retail_Type14.Name = "textBox_Retail_Type14";
@@ -847,6 +876,7 @@
             // 
             // textBox_Retail_item12
             // 
+            this.textBox_Retail_item12.Enabled = false;
             this.textBox_Retail_item12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item12.Location = new System.Drawing.Point(226, 514);
             this.textBox_Retail_item12.Name = "textBox_Retail_item12";
@@ -855,6 +885,7 @@
             // 
             // textBox_Retail_Count14
             // 
+            this.textBox_Retail_Count14.Enabled = false;
             this.textBox_Retail_Count14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count14.Location = new System.Drawing.Point(576, 595);
             this.textBox_Retail_Count14.Name = "textBox_Retail_Count14";
@@ -864,14 +895,17 @@
             // 
             // textBox_Retail_PriceAmount6
             // 
+            this.textBox_Retail_PriceAmount6.Enabled = false;
             this.textBox_Retail_PriceAmount6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount6.Location = new System.Drawing.Point(906, 270);
             this.textBox_Retail_PriceAmount6.Name = "textBox_Retail_PriceAmount6";
+            this.textBox_Retail_PriceAmount6.ReadOnly = true;
             this.textBox_Retail_PriceAmount6.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount6.TabIndex = 70;
             // 
             // textBox_Retail_item14
             // 
+            this.textBox_Retail_item14.Enabled = false;
             this.textBox_Retail_item14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item14.Location = new System.Drawing.Point(227, 595);
             this.textBox_Retail_item14.Name = "textBox_Retail_item14";
@@ -880,6 +914,8 @@
             // 
             // combo_Retail_Item12
             // 
+            this.combo_Retail_Item12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item12.Enabled = false;
             this.combo_Retail_Item12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item12.FormattingEnabled = true;
             this.combo_Retail_Item12.Items.AddRange(new object[] {
@@ -888,11 +924,12 @@
             this.combo_Retail_Item12.Name = "combo_Retail_Item12";
             this.combo_Retail_Item12.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item12.TabIndex = 65;
-            this.combo_Retail_Item12.Text = "Select Item";
             this.combo_Retail_Item12.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item12_SelectedIndexChanged);
             // 
             // combo_Retail_Item14
             // 
+            this.combo_Retail_Item14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item14.Enabled = false;
             this.combo_Retail_Item14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item14.FormattingEnabled = true;
             this.combo_Retail_Item14.Items.AddRange(new object[] {
@@ -901,11 +938,11 @@
             this.combo_Retail_Item14.Name = "combo_Retail_Item14";
             this.combo_Retail_Item14.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item14.TabIndex = 58;
-            this.combo_Retail_Item14.Text = "Select Item";
             this.combo_Retail_Item14.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item14_SelectedIndexChanged);
             // 
             // textBox_Retail_Type9
             // 
+            this.textBox_Retail_Type9.Enabled = false;
             this.textBox_Retail_Type9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type9.Location = new System.Drawing.Point(677, 392);
             this.textBox_Retail_Type9.Name = "textBox_Retail_Type9";
@@ -938,22 +975,27 @@
             // 
             // textBox_Retail_PriceAmount13
             // 
+            this.textBox_Retail_PriceAmount13.Enabled = false;
             this.textBox_Retail_PriceAmount13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount13.Location = new System.Drawing.Point(906, 556);
             this.textBox_Retail_PriceAmount13.Name = "textBox_Retail_PriceAmount13";
+            this.textBox_Retail_PriceAmount13.ReadOnly = true;
             this.textBox_Retail_PriceAmount13.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount13.TabIndex = 56;
             // 
             // textBox_Retail_PriceAmount3
             // 
+            this.textBox_Retail_PriceAmount3.Enabled = false;
             this.textBox_Retail_PriceAmount3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount3.Location = new System.Drawing.Point(905, 148);
             this.textBox_Retail_PriceAmount3.Name = "textBox_Retail_PriceAmount3";
+            this.textBox_Retail_PriceAmount3.ReadOnly = true;
             this.textBox_Retail_PriceAmount3.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount3.TabIndex = 49;
             // 
             // textBox_Retail_Price13
             // 
+            this.textBox_Retail_Price13.Enabled = false;
             this.textBox_Retail_Price13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price13.Location = new System.Drawing.Point(751, 556);
             this.textBox_Retail_Price13.Name = "textBox_Retail_Price13";
@@ -963,14 +1005,17 @@
             // 
             // textBox_Retail_PriceAmount11
             // 
+            this.textBox_Retail_PriceAmount11.Enabled = false;
             this.textBox_Retail_PriceAmount11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount11.Location = new System.Drawing.Point(907, 473);
             this.textBox_Retail_PriceAmount11.Name = "textBox_Retail_PriceAmount11";
+            this.textBox_Retail_PriceAmount11.ReadOnly = true;
             this.textBox_Retail_PriceAmount11.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount11.TabIndex = 63;
             // 
             // textBox_Retail_Type13
             // 
+            this.textBox_Retail_Type13.Enabled = false;
             this.textBox_Retail_Type13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type13.Location = new System.Drawing.Point(677, 556);
             this.textBox_Retail_Type13.Name = "textBox_Retail_Type13";
@@ -979,6 +1024,7 @@
             // 
             // textBox_Retail_Count9
             // 
+            this.textBox_Retail_Count9.Enabled = false;
             this.textBox_Retail_Count9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count9.Location = new System.Drawing.Point(575, 392);
             this.textBox_Retail_Count9.Name = "textBox_Retail_Count9";
@@ -988,6 +1034,7 @@
             // 
             // textBox_Retail_Count13
             // 
+            this.textBox_Retail_Count13.Enabled = false;
             this.textBox_Retail_Count13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count13.Location = new System.Drawing.Point(575, 556);
             this.textBox_Retail_Count13.Name = "textBox_Retail_Count13";
@@ -997,6 +1044,7 @@
             // 
             // textBox_Retail_Price11
             // 
+            this.textBox_Retail_Price11.Enabled = false;
             this.textBox_Retail_Price11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price11.Location = new System.Drawing.Point(752, 473);
             this.textBox_Retail_Price11.Name = "textBox_Retail_Price11";
@@ -1006,6 +1054,7 @@
             // 
             // textBox_Retail_item13
             // 
+            this.textBox_Retail_item13.Enabled = false;
             this.textBox_Retail_item13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item13.Location = new System.Drawing.Point(226, 556);
             this.textBox_Retail_item13.Name = "textBox_Retail_item13";
@@ -1014,6 +1063,7 @@
             // 
             // textBox_Retail_Price6
             // 
+            this.textBox_Retail_Price6.Enabled = false;
             this.textBox_Retail_Price6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price6.Location = new System.Drawing.Point(751, 270);
             this.textBox_Retail_Price6.Name = "textBox_Retail_Price6";
@@ -1023,6 +1073,8 @@
             // 
             // combo_Retail_Item13
             // 
+            this.combo_Retail_Item13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item13.Enabled = false;
             this.combo_Retail_Item13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item13.FormattingEnabled = true;
             this.combo_Retail_Item13.Items.AddRange(new object[] {
@@ -1031,11 +1083,11 @@
             this.combo_Retail_Item13.Name = "combo_Retail_Item13";
             this.combo_Retail_Item13.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item13.TabIndex = 51;
-            this.combo_Retail_Item13.Text = "Select Item";
             this.combo_Retail_Item13.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item13_SelectedIndexChanged);
             // 
             // textBox_Retail_Type11
             // 
+            this.textBox_Retail_Type11.Enabled = false;
             this.textBox_Retail_Type11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type11.Location = new System.Drawing.Point(678, 473);
             this.textBox_Retail_Type11.Name = "textBox_Retail_Type11";
@@ -1044,6 +1096,7 @@
             // 
             // textBox_Retail_item9
             // 
+            this.textBox_Retail_item9.Enabled = false;
             this.textBox_Retail_item9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item9.Location = new System.Drawing.Point(226, 392);
             this.textBox_Retail_item9.Name = "textBox_Retail_item9";
@@ -1052,6 +1105,7 @@
             // 
             // textBox_Retail_Count11
             // 
+            this.textBox_Retail_Count11.Enabled = false;
             this.textBox_Retail_Count11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count11.Location = new System.Drawing.Point(576, 473);
             this.textBox_Retail_Count11.Name = "textBox_Retail_Count11";
@@ -1061,6 +1115,7 @@
             // 
             // textBox_Retail_Price3
             // 
+            this.textBox_Retail_Price3.Enabled = false;
             this.textBox_Retail_Price3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price3.Location = new System.Drawing.Point(750, 148);
             this.textBox_Retail_Price3.Name = "textBox_Retail_Price3";
@@ -1070,6 +1125,7 @@
             // 
             // textBox_Retail_item11
             // 
+            this.textBox_Retail_item11.Enabled = false;
             this.textBox_Retail_item11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item11.Location = new System.Drawing.Point(227, 473);
             this.textBox_Retail_item11.Name = "textBox_Retail_item11";
@@ -1078,6 +1134,8 @@
             // 
             // combo_Retail_Item9
             // 
+            this.combo_Retail_Item9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item9.Enabled = false;
             this.combo_Retail_Item9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item9.FormattingEnabled = true;
             this.combo_Retail_Item9.Items.AddRange(new object[] {
@@ -1086,11 +1144,12 @@
             this.combo_Retail_Item9.Name = "combo_Retail_Item9";
             this.combo_Retail_Item9.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item9.TabIndex = 65;
-            this.combo_Retail_Item9.Text = "Select Item";
             this.combo_Retail_Item9.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item9_SelectedIndexChanged);
             // 
             // combo_Retail_Item11
             // 
+            this.combo_Retail_Item11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item11.Enabled = false;
             this.combo_Retail_Item11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item11.FormattingEnabled = true;
             this.combo_Retail_Item11.Items.AddRange(new object[] {
@@ -1099,11 +1158,11 @@
             this.combo_Retail_Item11.Name = "combo_Retail_Item11";
             this.combo_Retail_Item11.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item11.TabIndex = 58;
-            this.combo_Retail_Item11.Text = "Select Item";
             this.combo_Retail_Item11.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item11_SelectedIndexChanged);
             // 
             // textBox_Retail_Type6
             // 
+            this.textBox_Retail_Type6.Enabled = false;
             this.textBox_Retail_Type6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type6.Location = new System.Drawing.Point(677, 270);
             this.textBox_Retail_Type6.Name = "textBox_Retail_Type6";
@@ -1137,14 +1196,17 @@
             // 
             // textBox_Retail_PriceAmount10
             // 
+            this.textBox_Retail_PriceAmount10.Enabled = false;
             this.textBox_Retail_PriceAmount10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount10.Location = new System.Drawing.Point(906, 434);
             this.textBox_Retail_PriceAmount10.Name = "textBox_Retail_PriceAmount10";
+            this.textBox_Retail_PriceAmount10.ReadOnly = true;
             this.textBox_Retail_PriceAmount10.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount10.TabIndex = 56;
             // 
             // textBox_Retail_Type3
             // 
+            this.textBox_Retail_Type3.Enabled = false;
             this.textBox_Retail_Type3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type3.Location = new System.Drawing.Point(676, 148);
             this.textBox_Retail_Type3.Name = "textBox_Retail_Type3";
@@ -1153,6 +1215,7 @@
             // 
             // textBox_Retail_Price10
             // 
+            this.textBox_Retail_Price10.Enabled = false;
             this.textBox_Retail_Price10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price10.Location = new System.Drawing.Point(751, 434);
             this.textBox_Retail_Price10.Name = "textBox_Retail_Price10";
@@ -1162,14 +1225,17 @@
             // 
             // textBox_Retail_PriceAmount8
             // 
+            this.textBox_Retail_PriceAmount8.Enabled = false;
             this.textBox_Retail_PriceAmount8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount8.Location = new System.Drawing.Point(907, 351);
             this.textBox_Retail_PriceAmount8.Name = "textBox_Retail_PriceAmount8";
+            this.textBox_Retail_PriceAmount8.ReadOnly = true;
             this.textBox_Retail_PriceAmount8.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount8.TabIndex = 63;
             // 
             // textBox_Retail_Type10
             // 
+            this.textBox_Retail_Type10.Enabled = false;
             this.textBox_Retail_Type10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type10.Location = new System.Drawing.Point(677, 434);
             this.textBox_Retail_Type10.Name = "textBox_Retail_Type10";
@@ -1178,6 +1244,7 @@
             // 
             // textBox_Retail_Count6
             // 
+            this.textBox_Retail_Count6.Enabled = false;
             this.textBox_Retail_Count6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count6.Location = new System.Drawing.Point(575, 270);
             this.textBox_Retail_Count6.Name = "textBox_Retail_Count6";
@@ -1187,6 +1254,7 @@
             // 
             // textBox_Retail_Count10
             // 
+            this.textBox_Retail_Count10.Enabled = false;
             this.textBox_Retail_Count10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count10.Location = new System.Drawing.Point(575, 434);
             this.textBox_Retail_Count10.Name = "textBox_Retail_Count10";
@@ -1196,6 +1264,7 @@
             // 
             // textBox_Retail_Price8
             // 
+            this.textBox_Retail_Price8.Enabled = false;
             this.textBox_Retail_Price8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price8.Location = new System.Drawing.Point(752, 351);
             this.textBox_Retail_Price8.Name = "textBox_Retail_Price8";
@@ -1205,6 +1274,7 @@
             // 
             // textBox_Retail_item10
             // 
+            this.textBox_Retail_item10.Enabled = false;
             this.textBox_Retail_item10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item10.Location = new System.Drawing.Point(226, 434);
             this.textBox_Retail_item10.Name = "textBox_Retail_item10";
@@ -1213,6 +1283,7 @@
             // 
             // textBox_Retail_Count3
             // 
+            this.textBox_Retail_Count3.Enabled = false;
             this.textBox_Retail_Count3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count3.Location = new System.Drawing.Point(574, 148);
             this.textBox_Retail_Count3.Name = "textBox_Retail_Count3";
@@ -1222,6 +1293,8 @@
             // 
             // combo_Retail_Item10
             // 
+            this.combo_Retail_Item10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item10.Enabled = false;
             this.combo_Retail_Item10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item10.FormattingEnabled = true;
             this.combo_Retail_Item10.Items.AddRange(new object[] {
@@ -1230,11 +1303,11 @@
             this.combo_Retail_Item10.Name = "combo_Retail_Item10";
             this.combo_Retail_Item10.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item10.TabIndex = 51;
-            this.combo_Retail_Item10.Text = "Select Item";
             this.combo_Retail_Item10.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item10_SelectedIndexChanged);
             // 
             // textBox_Retail_Type8
             // 
+            this.textBox_Retail_Type8.Enabled = false;
             this.textBox_Retail_Type8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type8.Location = new System.Drawing.Point(678, 351);
             this.textBox_Retail_Type8.Name = "textBox_Retail_Type8";
@@ -1243,6 +1316,7 @@
             // 
             // textBox_Retail_item6
             // 
+            this.textBox_Retail_item6.Enabled = false;
             this.textBox_Retail_item6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item6.Location = new System.Drawing.Point(226, 270);
             this.textBox_Retail_item6.Name = "textBox_Retail_item6";
@@ -1251,6 +1325,7 @@
             // 
             // textBox_Retail_Count8
             // 
+            this.textBox_Retail_Count8.Enabled = false;
             this.textBox_Retail_Count8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count8.Location = new System.Drawing.Point(576, 351);
             this.textBox_Retail_Count8.Name = "textBox_Retail_Count8";
@@ -1260,6 +1335,7 @@
             // 
             // textBox_Retail_item3
             // 
+            this.textBox_Retail_item3.Enabled = false;
             this.textBox_Retail_item3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item3.Location = new System.Drawing.Point(225, 148);
             this.textBox_Retail_item3.Name = "textBox_Retail_item3";
@@ -1268,6 +1344,7 @@
             // 
             // textBox_Retail_item8
             // 
+            this.textBox_Retail_item8.Enabled = false;
             this.textBox_Retail_item8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item8.Location = new System.Drawing.Point(227, 351);
             this.textBox_Retail_item8.Name = "textBox_Retail_item8";
@@ -1276,6 +1353,8 @@
             // 
             // combo_Retail_Item6
             // 
+            this.combo_Retail_Item6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item6.Enabled = false;
             this.combo_Retail_Item6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item6.FormattingEnabled = true;
             this.combo_Retail_Item6.Items.AddRange(new object[] {
@@ -1284,11 +1363,12 @@
             this.combo_Retail_Item6.Name = "combo_Retail_Item6";
             this.combo_Retail_Item6.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item6.TabIndex = 65;
-            this.combo_Retail_Item6.Text = "Select Item";
             this.combo_Retail_Item6.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item6_SelectedIndexChanged);
             // 
             // combo_Retail_Item8
             // 
+            this.combo_Retail_Item8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item8.Enabled = false;
             this.combo_Retail_Item8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item8.FormattingEnabled = true;
             this.combo_Retail_Item8.Items.AddRange(new object[] {
@@ -1297,11 +1377,12 @@
             this.combo_Retail_Item8.Name = "combo_Retail_Item8";
             this.combo_Retail_Item8.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item8.TabIndex = 58;
-            this.combo_Retail_Item8.Text = "Select Item";
             this.combo_Retail_Item8.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item8_SelectedIndexChanged);
             // 
             // combo_Retail_Item3
             // 
+            this.combo_Retail_Item3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item3.Enabled = false;
             this.combo_Retail_Item3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item3.FormattingEnabled = true;
             this.combo_Retail_Item3.Items.AddRange(new object[] {
@@ -1310,7 +1391,6 @@
             this.combo_Retail_Item3.Name = "combo_Retail_Item3";
             this.combo_Retail_Item3.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item3.TabIndex = 44;
-            this.combo_Retail_Item3.Text = "Select Item";
             this.combo_Retail_Item3.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item3_SelectedIndexChanged);
             // 
             // label28
@@ -1339,9 +1419,11 @@
             // 
             // textBox_Retail_PriceAmount7
             // 
+            this.textBox_Retail_PriceAmount7.Enabled = false;
             this.textBox_Retail_PriceAmount7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount7.Location = new System.Drawing.Point(906, 312);
             this.textBox_Retail_PriceAmount7.Name = "textBox_Retail_PriceAmount7";
+            this.textBox_Retail_PriceAmount7.ReadOnly = true;
             this.textBox_Retail_PriceAmount7.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount7.TabIndex = 56;
             // 
@@ -1359,6 +1441,7 @@
             // 
             // textBox_Retail_Price7
             // 
+            this.textBox_Retail_Price7.Enabled = false;
             this.textBox_Retail_Price7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price7.Location = new System.Drawing.Point(751, 312);
             this.textBox_Retail_Price7.Name = "textBox_Retail_Price7";
@@ -1368,14 +1451,19 @@
             // 
             // textBox_Retail_PriceAmount5
             // 
+            this.textBox_Retail_PriceAmount5.Enabled = false;
             this.textBox_Retail_PriceAmount5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.textBox_Retail_PriceAmount5.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBox_Retail_PriceAmount5.Location = new System.Drawing.Point(907, 229);
             this.textBox_Retail_PriceAmount5.Name = "textBox_Retail_PriceAmount5";
+            this.textBox_Retail_PriceAmount5.ReadOnly = true;
             this.textBox_Retail_PriceAmount5.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount5.TabIndex = 63;
+            this.textBox_Retail_PriceAmount5.TextChanged += new System.EventHandler(this.textBox_Retail_PriceAmount5_TextChanged);
             // 
             // textBox_Retail_Type7
             // 
+            this.textBox_Retail_Type7.Enabled = false;
             this.textBox_Retail_Type7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type7.Location = new System.Drawing.Point(677, 312);
             this.textBox_Retail_Type7.Name = "textBox_Retail_Type7";
@@ -1387,11 +1475,13 @@
             this.textBox_Retail_PriceAmount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount2.Location = new System.Drawing.Point(906, 107);
             this.textBox_Retail_PriceAmount2.Name = "textBox_Retail_PriceAmount2";
+            this.textBox_Retail_PriceAmount2.ReadOnly = true;
             this.textBox_Retail_PriceAmount2.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount2.TabIndex = 42;
             // 
             // textBox_Retail_Count7
             // 
+            this.textBox_Retail_Count7.Enabled = false;
             this.textBox_Retail_Count7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count7.Location = new System.Drawing.Point(575, 312);
             this.textBox_Retail_Count7.Name = "textBox_Retail_Count7";
@@ -1401,6 +1491,7 @@
             // 
             // textBox_Retail_Price5
             // 
+            this.textBox_Retail_Price5.Enabled = false;
             this.textBox_Retail_Price5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price5.Location = new System.Drawing.Point(752, 229);
             this.textBox_Retail_Price5.Name = "textBox_Retail_Price5";
@@ -1418,6 +1509,7 @@
             // 
             // textBox_Retail_Price2
             // 
+            this.textBox_Retail_Price2.Enabled = false;
             this.textBox_Retail_Price2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price2.Location = new System.Drawing.Point(751, 107);
             this.textBox_Retail_Price2.Name = "textBox_Retail_Price2";
@@ -1427,6 +1519,8 @@
             // 
             // combo_Retail_Item7
             // 
+            this.combo_Retail_Item7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item7.Enabled = false;
             this.combo_Retail_Item7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item7.FormattingEnabled = true;
             this.combo_Retail_Item7.Items.AddRange(new object[] {
@@ -1435,11 +1529,11 @@
             this.combo_Retail_Item7.Name = "combo_Retail_Item7";
             this.combo_Retail_Item7.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item7.TabIndex = 51;
-            this.combo_Retail_Item7.Text = "Select Item";
             this.combo_Retail_Item7.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item7_SelectedIndexChanged);
             // 
             // textBox_Retail_Type5
             // 
+            this.textBox_Retail_Type5.Enabled = false;
             this.textBox_Retail_Type5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type5.Location = new System.Drawing.Point(678, 229);
             this.textBox_Retail_Type5.Name = "textBox_Retail_Type5";
@@ -1448,6 +1542,7 @@
             // 
             // textBox_Retail_Type2
             // 
+            this.textBox_Retail_Type2.Enabled = false;
             this.textBox_Retail_Type2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type2.Location = new System.Drawing.Point(677, 107);
             this.textBox_Retail_Type2.Name = "textBox_Retail_Type2";
@@ -1456,6 +1551,7 @@
             // 
             // textBox_Retail_Count5
             // 
+            this.textBox_Retail_Count5.Enabled = false;
             this.textBox_Retail_Count5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count5.Location = new System.Drawing.Point(576, 229);
             this.textBox_Retail_Count5.Name = "textBox_Retail_Count5";
@@ -1465,6 +1561,7 @@
             // 
             // textBox_Retail_Count2
             // 
+            this.textBox_Retail_Count2.Enabled = false;
             this.textBox_Retail_Count2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count2.Location = new System.Drawing.Point(575, 107);
             this.textBox_Retail_Count2.Name = "textBox_Retail_Count2";
@@ -1474,6 +1571,7 @@
             // 
             // textBox_Retail_item5
             // 
+            this.textBox_Retail_item5.Enabled = false;
             this.textBox_Retail_item5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item5.Location = new System.Drawing.Point(227, 229);
             this.textBox_Retail_item5.Name = "textBox_Retail_item5";
@@ -1482,6 +1580,7 @@
             // 
             // textBox_Retail_item2
             // 
+            this.textBox_Retail_item2.Enabled = false;
             this.textBox_Retail_item2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item2.Location = new System.Drawing.Point(226, 107);
             this.textBox_Retail_item2.Name = "textBox_Retail_item2";
@@ -1490,6 +1589,8 @@
             // 
             // combo_Retail_Item5
             // 
+            this.combo_Retail_Item5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item5.Enabled = false;
             this.combo_Retail_Item5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item5.FormattingEnabled = true;
             this.combo_Retail_Item5.Items.AddRange(new object[] {
@@ -1498,11 +1599,12 @@
             this.combo_Retail_Item5.Name = "combo_Retail_Item5";
             this.combo_Retail_Item5.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item5.TabIndex = 58;
-            this.combo_Retail_Item5.Text = "Select Item";
             this.combo_Retail_Item5.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item5_SelectedIndexChanged);
             // 
             // combo_Retail_Item2
             // 
+            this.combo_Retail_Item2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item2.Enabled = false;
             this.combo_Retail_Item2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.combo_Retail_Item2.FormattingEnabled = true;
             this.combo_Retail_Item2.Items.AddRange(new object[] {
@@ -1511,7 +1613,6 @@
             this.combo_Retail_Item2.Name = "combo_Retail_Item2";
             this.combo_Retail_Item2.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item2.TabIndex = 37;
-            this.combo_Retail_Item2.Text = "Select Item";
             this.combo_Retail_Item2.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item2_SelectedIndexChanged);
             // 
             // label25
@@ -1539,9 +1640,11 @@
             // 
             // textBox_Retail_PriceAmount4
             // 
+            this.textBox_Retail_PriceAmount4.Enabled = false;
             this.textBox_Retail_PriceAmount4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount4.Location = new System.Drawing.Point(906, 190);
             this.textBox_Retail_PriceAmount4.Name = "textBox_Retail_PriceAmount4";
+            this.textBox_Retail_PriceAmount4.ReadOnly = true;
             this.textBox_Retail_PriceAmount4.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount4.TabIndex = 56;
             // 
@@ -1558,6 +1661,7 @@
             // 
             // textBox_Retail_Price4
             // 
+            this.textBox_Retail_Price4.Enabled = false;
             this.textBox_Retail_Price4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Price4.Location = new System.Drawing.Point(751, 190);
             this.textBox_Retail_Price4.Name = "textBox_Retail_Price4";
@@ -1578,6 +1682,7 @@
             // 
             // textBox_Retail_Type4
             // 
+            this.textBox_Retail_Type4.Enabled = false;
             this.textBox_Retail_Type4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Type4.Location = new System.Drawing.Point(677, 190);
             this.textBox_Retail_Type4.Name = "textBox_Retail_Type4";
@@ -1597,6 +1702,7 @@
             // 
             // textBox_Retail_Count4
             // 
+            this.textBox_Retail_Count4.Enabled = false;
             this.textBox_Retail_Count4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_Count4.Location = new System.Drawing.Point(575, 190);
             this.textBox_Retail_Count4.Name = "textBox_Retail_Count4";
@@ -1618,6 +1724,7 @@
             // 
             // textBox_Retail_item4
             // 
+            this.textBox_Retail_item4.Enabled = false;
             this.textBox_Retail_item4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_item4.Location = new System.Drawing.Point(226, 190);
             this.textBox_Retail_item4.Name = "textBox_Retail_item4";
@@ -1626,6 +1733,8 @@
             // 
             // combo_Retail_Item4
             // 
+            this.combo_Retail_Item4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_Retail_Item4.Enabled = false;
             this.combo_Retail_Item4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.combo_Retail_Item4.FormattingEnabled = true;
             this.combo_Retail_Item4.Items.AddRange(new object[] {
@@ -1634,7 +1743,6 @@
             this.combo_Retail_Item4.Name = "combo_Retail_Item4";
             this.combo_Retail_Item4.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item4.TabIndex = 51;
-            this.combo_Retail_Item4.Text = "Select Item";
             this.combo_Retail_Item4.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item4_SelectedIndexChanged);
             // 
             // label9
@@ -1665,6 +1773,7 @@
             this.textBox_Retail_PriceAmount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_Retail_PriceAmount1.Location = new System.Drawing.Point(905, 68);
             this.textBox_Retail_PriceAmount1.Name = "textBox_Retail_PriceAmount1";
+            this.textBox_Retail_PriceAmount1.ReadOnly = true;
             this.textBox_Retail_PriceAmount1.Size = new System.Drawing.Size(173, 22);
             this.textBox_Retail_PriceAmount1.TabIndex = 31;
             // 
@@ -1704,6 +1813,7 @@
             // 
             // combo_Retail_Item1
             // 
+            this.combo_Retail_Item1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_Retail_Item1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.combo_Retail_Item1.FormattingEnabled = true;
             this.combo_Retail_Item1.Items.AddRange(new object[] {
@@ -1712,7 +1822,6 @@
             this.combo_Retail_Item1.Name = "combo_Retail_Item1";
             this.combo_Retail_Item1.Size = new System.Drawing.Size(190, 21);
             this.combo_Retail_Item1.TabIndex = 23;
-            this.combo_Retail_Item1.Text = "Select Item";
             this.combo_Retail_Item1.SelectedIndexChanged += new System.EventHandler(this.combo_Retail_Item1_SelectedIndexChanged);
             // 
             // label15

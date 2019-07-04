@@ -210,14 +210,12 @@
             // 
             // dgv_Warehouse
             // 
-            this.dgv_Warehouse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Warehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Warehouse.Location = new System.Drawing.Point(4, 26);
+            this.dgv_Warehouse.Location = new System.Drawing.Point(4, 6);
             this.dgv_Warehouse.Name = "dgv_Warehouse";
-            this.dgv_Warehouse.Size = new System.Drawing.Size(1179, 649);
+            this.dgv_Warehouse.Size = new System.Drawing.Size(1179, 669);
             this.dgv_Warehouse.TabIndex = 1;
+            this.dgv_Warehouse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Warehouse_CellContentClick);
             // 
             // tabPage3
             // 
