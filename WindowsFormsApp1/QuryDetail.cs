@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
-namespace Invoice_Program
+namespace WindowsFormsApp1
 {
-    public class QuryDetail
+   public class QuryDetail
     {
 
         public string Goods_Code { get; set; }
@@ -16,6 +17,7 @@ namespace Invoice_Program
         public string Goods_Type { get; set; }
         public string Goods_SumPrice { get; set; }
 
+        public string Inv_No { get; set; }
 
     }
 }

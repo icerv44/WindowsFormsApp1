@@ -23,7 +23,8 @@ namespace WindowsFormsApp1
         MySqlDataReader mdr;*/
 
         List<Qury> Inv_QryHead = new List<Qury>();
-        List<Qury> Inv_QryDetail = new List<Qury>();
+        List<QuryDetail> Inv_QryDetail = new List<QuryDetail>();
+        
         OleDbConnection bookConn;
         OleDbCommand oleDbCmd;
         OleDbDataReader mdr;
@@ -36,7 +37,7 @@ namespace WindowsFormsApp1
 
         public void SelectInvNo()
         {
-            string query = "SELECT max(ID) FROM Invoice_Header";
+            string query = "SELECT max(Inv_No) FROM Invoice_Header";
 
             bookConn = new OleDbConnection(connParam);
             bookConn.Open();
@@ -48,7 +49,8 @@ namespace WindowsFormsApp1
 
                 while (mdr.Read())
                 {
-                    textBox_RetailNo.Text = mdr.GetInt32(0).ToString();
+                    int InvNO = mdr.GetInt32(0)+1;
+                    textBox_RetailNo.Text = InvNO.ToString();
 
                     
                 }
@@ -63,7 +65,7 @@ namespace WindowsFormsApp1
 
         }
 
-        public void InsertInvHeader()
+        public void InsertQryInvHeader()
         {
 
 
@@ -82,13 +84,15 @@ namespace WindowsFormsApp1
 
         }
 
-        public void InsertInvDetail()
+        public void InsertQryInvDetail()
         {
-            QuryDetail qry = new QuryDetail();
+            
 
-            qry.Inv_No = textBox_RetailNo.Text;
-            if (combo_Retail_Item1.Text != "Select Item" || combo_Retail_Item1.Text != "")
+           // qry.Inv_No = textBox_RetailNo.Text;
+            if (combo_Retail_Item1.Text != "Select Item" && combo_Retail_Item1.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item1.Text;
                 qry.Goods_Des = textBox_Retail_item1.Text;
                 qry.Goods_SumCount = textBox_Retail_Count1.Text;
@@ -97,8 +101,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount1.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item2.Text != "Select Item" || combo_Retail_Item2.Text != "")
+            if (combo_Retail_Item2.Text != "Select Item" && combo_Retail_Item2.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item2.Text;
                 qry.Goods_Des = textBox_Retail_item2.Text;
                 qry.Goods_SumCount = textBox_Retail_Count2.Text;
@@ -107,8 +113,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount2.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item3.Text != "Select Item" || combo_Retail_Item3.Text != "")
+            if (combo_Retail_Item3.Text != "Select Item" && combo_Retail_Item3.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item3.Text;
                 qry.Goods_Des = textBox_Retail_item3.Text;
                 qry.Goods_SumCount = textBox_Retail_Count3.Text;
@@ -117,8 +125,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount3.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item4.Text != "Select Item" || combo_Retail_Item4.Text != "")
+            if (combo_Retail_Item4.Text != "Select Item" && combo_Retail_Item4.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item4.Text;
                 qry.Goods_Des = textBox_Retail_item4.Text;
                 qry.Goods_SumCount = textBox_Retail_Count4.Text;
@@ -127,8 +137,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount4.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item5.Text != "Select Item" || combo_Retail_Item5.Text != "")
+            if (combo_Retail_Item5.Text != "Select Item" && combo_Retail_Item5.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item5.Text;
                 qry.Goods_Des = textBox_Retail_item5.Text;
                 qry.Goods_SumCount = textBox_Retail_Count5.Text;
@@ -137,8 +149,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount5.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item6.Text != "Select Item" || combo_Retail_Item6.Text != "")
+            if (combo_Retail_Item6.Text != "Select Item" && combo_Retail_Item6.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item6.Text;
                 qry.Goods_Des = textBox_Retail_item6.Text;
                 qry.Goods_SumCount = textBox_Retail_Count6.Text;
@@ -147,8 +161,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount6.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item7.Text != "Select Item" || combo_Retail_Item7.Text != "")
+            if (combo_Retail_Item7.Text != "Select Item" && combo_Retail_Item7.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item7.Text;
                 qry.Goods_Des = textBox_Retail_item7.Text;
                 qry.Goods_SumCount = textBox_Retail_Count7.Text;
@@ -157,8 +173,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount7.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item8.Text != "Select Item" || combo_Retail_Item8.Text != "")
+            if (combo_Retail_Item8.Text != "Select Item" && combo_Retail_Item8.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item8.Text;
                 qry.Goods_Des = textBox_Retail_item8.Text;
                 qry.Goods_SumCount = textBox_Retail_Count8.Text;
@@ -167,8 +185,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount8.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item9.Text != "Select Item" || combo_Retail_Item9.Text != "")
+            if (combo_Retail_Item9.Text != "Select Item" && combo_Retail_Item9.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item9.Text;
                 qry.Goods_Des = textBox_Retail_item9.Text;
                 qry.Goods_SumCount = textBox_Retail_Count9.Text;
@@ -177,8 +197,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount9.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item10.Text != "Select Item" || combo_Retail_Item10.Text != "")
+            if (combo_Retail_Item10.Text != "Select Item" && combo_Retail_Item10.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item10.Text;
                 qry.Goods_Des = textBox_Retail_item10.Text;
                 qry.Goods_SumCount = textBox_Retail_Count10.Text;
@@ -187,8 +209,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount10.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item11.Text != "Select Item" || combo_Retail_Item11.Text != "")
+            if (combo_Retail_Item11.Text != "Select Item" && combo_Retail_Item11.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item11.Text;
                 qry.Goods_Des = textBox_Retail_item11.Text;
                 qry.Goods_SumCount = textBox_Retail_Count11.Text;
@@ -197,8 +221,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount11.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item12.Text != "Select Item" || combo_Retail_Item12.Text != "")
+            if (combo_Retail_Item12.Text != "Select Item" && combo_Retail_Item12.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item12.Text;
                 qry.Goods_Des = textBox_Retail_item12.Text;
                 qry.Goods_SumCount = textBox_Retail_Count12.Text;
@@ -207,8 +233,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount12.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item13.Text != "Select Item" || combo_Retail_Item13.Text != "")
+            if (combo_Retail_Item13.Text != "Select Item" && combo_Retail_Item13.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item13.Text;
                 qry.Goods_Des = textBox_Retail_item13.Text;
                 qry.Goods_SumCount = textBox_Retail_Count13.Text;
@@ -217,8 +245,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount13.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item14.Text != "Select Item" || combo_Retail_Item14.Text != "")
+            if (combo_Retail_Item14.Text != "Select Item" && combo_Retail_Item14.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item14.Text;
                 qry.Goods_Des = textBox_Retail_item14.Text;
                 qry.Goods_SumCount = textBox_Retail_Count14.Text;
@@ -227,8 +257,10 @@ namespace WindowsFormsApp1
                 qry.Goods_SumPrice = textBox_Retail_PriceAmount14.Text;
                 Inv_QryDetail.Add(qry);
             }
-            if (combo_Retail_Item15.Text != "Select Item" || combo_Retail_Item15.Text != "")
+            if (combo_Retail_Item15.Text != "Select Item" && combo_Retail_Item15.Text != "")
             {
+                QuryDetail qry = new QuryDetail();
+                qry.Inv_No = textBox_RetailNo.Text;
                 qry.Goods_Code = combo_Retail_Item15.Text;
                 qry.Goods_Des = textBox_Retail_item15.Text;
                 qry.Goods_SumCount = textBox_Retail_Count15.Text;
@@ -245,8 +277,15 @@ namespace WindowsFormsApp1
 
         public void InsertINV()
         {
+
+
+            string query = "";
+
+
             try
             {
+
+            
                 foreach (var InvHead in Inv_QryHead)
                 {
                     Console.WriteLine("Inv No :" + InvHead.Inv_No);
@@ -259,14 +298,25 @@ namespace WindowsFormsApp1
                     Console.WriteLine("Sum Item :" + InvHead.Inv_SumItem);
                     Console.WriteLine("Sum Count :" + InvHead.Inv_SumCount);
                     Console.WriteLine("Sum Weight :" + InvHead.Inv_SumWeight);
-                    
+
+                    query = "INSERT INTO `Invoice_Header`( `Inv_No`, `Cus_Name`, `Cus_Address`, `Inv_Date`, `User_Name`, `Thai_Price`, `Amt_Price`, `Amt_Items`, `Amt_Count`, `Amt_Weight`) " +
+                                  "VALUES ('" + InvHead.Inv_No + "','" + InvHead.Cus_Name + "','" + InvHead.Cus_Address + "','" + InvHead.Inv_Date + "','" + InvHead.User_Name + "','" 
+                                  + InvHead.Inv_ThaiPrice + "','" + InvHead.Inv_AmtPrice + "','" + InvHead.Inv_SumItem + "','" + InvHead.Inv_SumCount + "','" + InvHead.Inv_SumWeight + "')";
+
+                         
+                        
                 }
+                bookConn = new OleDbConnection(connParam);
+                oleDbCmd = new OleDbCommand(query, bookConn);
+                bookConn.Open();
+                oleDbCmd.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch(Exception er)
             {
-
-
+                MessageBox.Show("Error : " + er);
+                bookConn.Close();
             }
+            bookConn.Close();
         }
 
         public void InsertINVDetail()
@@ -277,16 +327,24 @@ namespace WindowsFormsApp1
                 {
                     Console.WriteLine("ItemCD  : " + InvDetail.Goods_Code + " DesCrip : " + InvDetail.Goods_Des + " Count : " + InvDetail.Goods_SumCount +
                                       " Type : " + InvDetail.Goods_Type + " Price : " + InvDetail.Goods_Price + " SumPrice : " + InvDetail.Goods_SumPrice);
-                    
 
+                  string query = "INSERT INTO `Invoice_Detail`( `Inv_No`, `Goods_Code`, `Goods_Description`, `Amt_Piece`, `Goods_Type`, `Goods_Price`, `Amt_Price`) " +
+                                 "VALUES ('" + InvDetail.Inv_No + "','" + InvDetail.Goods_Code + "','" + InvDetail.Goods_Des + "','" + InvDetail.Goods_SumCount + "','" + InvDetail.Goods_Type 
+                                 + "','"+ InvDetail.Goods_Price + "','" + InvDetail.Goods_SumPrice + "')";
+
+
+                    bookConn = new OleDbConnection(connParam);
+                    oleDbCmd = new OleDbCommand(query, bookConn);
+                    bookConn.Open();
+                    oleDbCmd.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch (Exception er)
             {
-
-
+                MessageBox.Show("Error : " + er);
+                bookConn.Close();
             }
-
+            bookConn.Close();
 
         }
 
@@ -2704,11 +2762,11 @@ namespace WindowsFormsApp1
 
         private void button_Print_Click(object sender, EventArgs e)
         {
-            InsertInvHeader();
-            InsertInvDetail();
+            InsertQryInvHeader();
+            InsertQryInvDetail();
             InsertINV();
             InsertINVDetail();
-
+            
         }
 
         private void textBox_Retail_PriceAmount5_TextChanged(object sender, EventArgs e)
@@ -2720,6 +2778,8 @@ namespace WindowsFormsApp1
         {
            Console.WriteLine(Qry_Date());
         }
+
+      
     }
 
 }

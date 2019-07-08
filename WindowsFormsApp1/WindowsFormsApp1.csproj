@@ -146,6 +146,8 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\Invoice_Program.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Invoice_Program.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.Loadding.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.Login.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.Main.datasource" />

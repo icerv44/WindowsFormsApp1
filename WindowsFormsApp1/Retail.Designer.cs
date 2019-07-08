@@ -255,6 +255,7 @@
             // 
             this.textBox_RetailNo.Location = new System.Drawing.Point(99, 3);
             this.textBox_RetailNo.Name = "textBox_RetailNo";
+            this.textBox_RetailNo.ReadOnly = true;
             this.textBox_RetailNo.Size = new System.Drawing.Size(105, 20);
             this.textBox_RetailNo.TabIndex = 4;
             // 

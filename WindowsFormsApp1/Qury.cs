@@ -21,5 +21,8 @@ namespace WindowsFormsApp1
         public string Inv_SumItem { get; set; }
         public string Inv_SumCount { get; set; }
         public string Inv_SumWeight { get; set; }
+
+
+       
     }
 }
