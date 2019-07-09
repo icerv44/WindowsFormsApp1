@@ -91,8 +91,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Qury.cs" />
-    <Compile Include="QuryDetail.cs" />
+    <Compile Include="QuryDB\Qury.cs" />
+    <Compile Include="QuryDB\QuryDetail.cs" />
     <Compile Include="Retail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,7 +133,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Invoice.rdlc" />
     <EmbeddedResource Include="Retail.resx">
       <DependentUpon>Retail.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,16 +145,6 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\DataSources\Invoice_Program.Properties.Resources.datasource" />
-    <None Include="Properties\DataSources\Invoice_Program.Properties.Settings.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.Loadding.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.Login.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.Main.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.Program.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.Qury.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.Retail.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.StockIn.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.WholeSale.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -236,6 +225,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

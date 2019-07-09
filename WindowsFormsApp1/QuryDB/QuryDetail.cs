@@ -16,7 +16,6 @@ namespace WindowsFormsApp1
         public string Goods_Price { get; set; }
         public string Goods_Type { get; set; }
         public string Goods_SumPrice { get; set; }
-
         public string Inv_No { get; set; }
 
     }
