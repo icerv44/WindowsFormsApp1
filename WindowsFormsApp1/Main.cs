@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
     public partial class Main : Form
     {
 
-        List<WindowsFormsApp1.Qury> lt_Exc = new List<WindowsFormsApp1.Qury>() ;
+        List<QuryDB.Qury> lt_Exc = new List<QuryDB.Qury>() ;
         OleDbConnection bookConn;
         OleDbCommand oleDbCmd;
         OleDbDataReader mdr;

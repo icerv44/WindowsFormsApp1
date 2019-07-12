@@ -285,31 +285,35 @@ namespace WindowsFormsApp1
             try
             {
 
-            
-                foreach (var InvHead in Inv_QryHead)
-                {
-                    Console.WriteLine("Inv No :" + InvHead.Inv_No);
-                    Console.WriteLine("Cus Name :" + InvHead.Cus_Name);
-                    Console.WriteLine("Cus address :" + InvHead.Cus_Address);
-                    Console.WriteLine("Date :" + InvHead.Inv_Date);
-                    Console.WriteLine("User :" + InvHead.User_Name);
-                    Console.WriteLine("Thai Price :" + InvHead.Inv_ThaiPrice);
-                    Console.WriteLine("Total Price :" + InvHead.Inv_AmtPrice);
-                    Console.WriteLine("Sum Item :" + InvHead.Inv_SumItem);
-                    Console.WriteLine("Sum Count :" + InvHead.Inv_SumCount);
-                    Console.WriteLine("Sum Weight :" + InvHead.Inv_SumWeight);
 
-                    query = "INSERT INTO `Invoice_Header`( `Inv_No`, `Cus_Name`, `Cus_Address`, `Inv_Date`, `User_Name`, `Thai_Price`, `Amt_Price`, `Amt_Items`, `Amt_Count`, `Amt_Weight`) " +
-                                  "VALUES ('" + InvHead.Inv_No + "','" + InvHead.Cus_Name + "','" + InvHead.Cus_Address + "','" + InvHead.Inv_Date + "','" + InvHead.User_Name + "','" 
-                                  + InvHead.Inv_ThaiPrice + "','" + InvHead.Inv_AmtPrice + "','" + InvHead.Inv_SumItem + "','" + InvHead.Inv_SumCount + "','" + InvHead.Inv_SumWeight + "')";
+                 foreach (var InvHead in Inv_QryHead)
+                 {
+                     Console.WriteLine("Inv No :" + InvHead.Inv_No);
+                     Console.WriteLine("Cus Name :" + InvHead.Cus_Name);
+                     Console.WriteLine("Cus address :" + InvHead.Cus_Address);
+                     Console.WriteLine("Date :" + InvHead.Inv_Date);
+                     Console.WriteLine("User :" + InvHead.User_Name);
+                     Console.WriteLine("Thai Price :" + InvHead.Inv_ThaiPrice);
+                     Console.WriteLine("Total Price :" + InvHead.Inv_AmtPrice);
+                     Console.WriteLine("Sum Item :" + InvHead.Inv_SumItem);
+                     Console.WriteLine("Sum Count :" + InvHead.Inv_SumCount);
+                     Console.WriteLine("Sum Weight :" + InvHead.Inv_SumWeight);
 
-                         
-                        
+                     query = "INSERT INTO `Invoice_Header`( `Inv_No`, `Cus_Name`, `Cus_Address`, `Inv_Date`, `User_Name`, `Thai_Price`, `Amt_Price`, `Amt_Items`, `Amt_Count`, `Amt_Weight`) " +
+                                   "VALUES ('" + InvHead.Inv_No + "','" + InvHead.Cus_Name + "','" + InvHead.Cus_Address + "','" + InvHead.Inv_Date + "','" + InvHead.User_Name + "','" 
+                                   + InvHead.Inv_ThaiPrice + "','" + InvHead.Inv_AmtPrice + "','" + InvHead.Inv_SumItem + "','" + InvHead.Inv_SumCount + "','" + InvHead.Inv_SumWeight + "')";
+
+                    bookConn = new OleDbConnection(connParam);
+                    oleDbCmd = new OleDbCommand(query, bookConn);
+                    bookConn.Open();
+                    oleDbCmd.ExecuteNonQuery();
                 }
-                bookConn = new OleDbConnection(connParam);
-                oleDbCmd = new OleDbCommand(query, bookConn);
-                bookConn.Open();
-                oleDbCmd.ExecuteNonQuery();
+
+               /* query = "INSERT INTO `Invoice_Header`( `Inv_No`, `Cus_Name`, `Cus_Address`, `Inv_Date`, `User_Name`, `Thai_Price`, `Amt_Price`, `Amt_Items`, `Amt_Count`, `Amt_Weight`) " +
+                                 "VALUES ('" + Inv_QryHead.Inv_No + "','" + Inv_QryHead.Cus_Name + "','" + Inv_QryHead.Cus_Address + "','" + Inv_QryHead.Inv_Date + "','" + Inv_QryHead.User_Name + "','"
+                                 + Inv_QryHead.Inv_ThaiPrice + "','" + Inv_QryHead.Inv_AmtPrice + "','" + Inv_QryHead.Inv_SumItem + "','" + Inv_QryHead.Inv_SumCount + "','" + Inv_QryHead.Inv_SumWeight + "')";
+*/
+               
             }
             catch(Exception er)
             {
@@ -2767,6 +2771,10 @@ namespace WindowsFormsApp1
             InsertINV();
             InsertINVDetail();
             
+            using(Print prt = new Print(Inv_QryHead,Inv_QryDetail))
+            {
+                prt.ShowDialog();
+            }
         }
 
         private void textBox_Retail_PriceAmount5_TextChanged(object sender, EventArgs e)
