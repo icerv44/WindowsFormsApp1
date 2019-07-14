@@ -24,15 +24,16 @@ namespace WindowsFormsApp1
 
         List<Qury> Inv_QryHead = new List<Qury>();
         List<QuryDetail> Inv_QryDetail = new List<QuryDetail>();
-        
+        string userName = "";
         OleDbConnection bookConn;
         OleDbCommand oleDbCmd;
         OleDbDataReader mdr;
         String connParam = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Invoice\DB\DB_Invoice.mdb;Persist Security Info=True;User ID=admin";
 
-        public Retail()
+        public Retail(string user)
         {
             InitializeComponent();
+            userName = user;
         }
 
         public void SelectInvNo()
@@ -79,6 +80,7 @@ namespace WindowsFormsApp1
             qry.Inv_SumCount = textBox_Retail_SumCount.Text;
             qry.Inv_SumWeight = textBox_Retail_SumWeight.Text;
             qry.Inv_Date = dateTimePickerRetail.Text;
+            qry.User_Name = textBox_UserName.Text;
             Inv_QryHead.Add(qry);
 
 
@@ -277,11 +279,7 @@ namespace WindowsFormsApp1
 
         public void InsertINV()
         {
-
-
             string query = "";
-
-
             try
             {
 
@@ -548,7 +546,7 @@ namespace WindowsFormsApp1
         }
         private void Retail_Load(object sender, EventArgs e)
         {
-            
+            textBox_UserName.Text = userName;
             FillCombobox();
             FillComboboxItem();
             SelectInvNo();
@@ -2787,7 +2785,18 @@ namespace WindowsFormsApp1
            Console.WriteLine(Qry_Date());
         }
 
-      
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            InsertQryInvHeader();
+            InsertQryInvDetail();
+            InsertINV();
+            InsertINVDetail();
+
+            using (Print prt = new Print(Inv_QryHead, Inv_QryDetail))
+            {
+                prt.ShowDialog();
+            }
+        }
     }
 
 }

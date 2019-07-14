@@ -44,7 +44,7 @@
             this.textBox_CusTell = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_UserName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -179,9 +179,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -267,7 +269,7 @@
             this.dateTimePickerRetail.Name = "dateTimePickerRetail";
             this.dateTimePickerRetail.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerRetail.TabIndex = 7;
-            this.dateTimePickerRetail.Value = new System.DateTime(2019, 6, 29, 13, 2, 4, 0);
+            this.dateTimePickerRetail.Value = new System.DateTime(2019, 7, 12, 0, 0, 0, 0);
             this.dateTimePickerRetail.ValueChanged += new System.EventHandler(this.dateTimePickerRetail_ValueChanged);
             // 
             // tableLayoutPanel1
@@ -328,7 +330,7 @@
             this.tableLayoutPanel2.Controls.Add(this.dateTimePickerRetail, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label14, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.textBox4, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.textBox_UserName, 1, 4);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(452, 12);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
@@ -350,13 +352,13 @@
             this.label14.TabIndex = 18;
             this.label14.Text = "พนักงานขาย  :";
             // 
-            // textBox4
+            // textBox_UserName
             // 
-            this.textBox4.Location = new System.Drawing.Point(99, 91);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 19;
+            this.textBox_UserName.Location = new System.Drawing.Point(99, 91);
+            this.textBox_UserName.Name = "textBox_UserName";
+            this.textBox_UserName.ReadOnly = true;
+            this.textBox_UserName.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UserName.TabIndex = 19;
             // 
             // label7
             // 
@@ -540,7 +542,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.groupBox1.Location = new System.Drawing.Point(12, 137);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1188, 830);
+            this.groupBox1.Size = new System.Drawing.Size(1117, 830);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Retail";
@@ -1858,7 +1860,7 @@
             // 
             // button_Print
             // 
-            this.button_Print.Location = new System.Drawing.Point(828, 14);
+            this.button_Print.Location = new System.Drawing.Point(919, 70);
             this.button_Print.Name = "button_Print";
             this.button_Print.Size = new System.Drawing.Size(135, 42);
             this.button_Print.TabIndex = 18;
@@ -1868,7 +1870,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(969, 13);
+            this.button2.Location = new System.Drawing.Point(957, 17);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 42);
             this.button2.TabIndex = 19;
@@ -1889,16 +1891,32 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Print_Button_printer_512;
+            this.pictureBox1.Location = new System.Drawing.Point(840, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Retail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 979);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(1141, 979);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button_Print);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Retail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Retail ( ขายปลีก )";
@@ -1909,6 +1927,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1936,7 +1955,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_UserName;
         private System.Windows.Forms.ComboBox combo_Retail_Item1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox_Retail_Type1;
@@ -2064,5 +2083,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

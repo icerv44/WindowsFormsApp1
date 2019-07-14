@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="QryDetail">
+    <DataSet Name="QryDetail_DataSet">
       <Query>
         <DataSourceName>WindowsFormsApp1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -49,7 +49,7 @@
       <rd:DataSetInfo>
         <rd:DataSetName>WindowsFormsApp1</rd:DataSetName>
         <rd:TableName>QuryDetail</rd:TableName>
-        <rd:ObjectDataSourceType>WindowsFormsApp1.QuryDetail, Invoice_Program, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>WindowsFormsApp1.QuryDetail, WindowsFormsApp1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -841,7 +841,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>QryDetail</DataSetName>
+            <DataSetName>QryDetail_DataSet</DataSetName>
             <Top>7.90787cm</Top>
             <Left>0.43104cm</Left>
             <Height>1.2cm</Height>

@@ -9,12 +9,13 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
+using System.Configuration;
 using Microsoft.Office;
 //using Excel = Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 using System.Runtime.InteropServices;
-
+using Dapper;
 
 namespace WindowsFormsApp1
 {
@@ -26,10 +27,13 @@ namespace WindowsFormsApp1
         OleDbCommand oleDbCmd;
         OleDbDataReader mdr;
         String connParam = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Invoice\DB\DB_Invoice.mdb;Persist Security Info=True;User ID=admin";
-
-        public Main()
+        //String connParam2 = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Invoice\DB\DB_Invoice.mdb;Persist Security Info=True;User ID=admin";
+        List<User> _User;
+        public Main(List<User> User)
         {
             InitializeComponent();
+
+            _User = User;
         }
 
         // MySqlConnection con = new MySqlConnection("server = localhost; database = invoice; username = root; password=; charset=utf8");
@@ -38,6 +42,18 @@ namespace WindowsFormsApp1
         {
             Qury_Select_Goods();
             Qury_Select_Customer();
+            int level = 0;
+            foreach(var user in _User)
+            {
+                level = user.User_Level;
+            }
+
+            if(level == 1)
+            {
+                button_UpdateCustomer.Visible = false;
+                button_UpdateGoods.Visible = false;
+            }
+            //Qury_Select_InvHead();
         }
 
         private void Panel_Menu_Paint(object sender, PaintEventArgs e)
@@ -52,14 +68,24 @@ namespace WindowsFormsApp1
 
         private void button_Retail_Click(object sender, EventArgs e)
         {
-            Retail re = new Retail() ;
+            string userName = "";
+            foreach (var user in _User)
+            {
+                userName = user.User_Name;
+            }
 
+            Retail re = new Retail(userName) ;
             re.Show();
         }
         private void button_WholeSale_Click(object sender, EventArgs e)
         {
-            WholeSale wh = new WholeSale();
+            string userName = "";
+            foreach (var user in _User)
+            {
+                userName = user.User_Name;
+            }
 
+            WholeSale wh = new WholeSale(userName);
             wh.Show();
         }
 
@@ -68,11 +94,9 @@ namespace WindowsFormsApp1
         {
 
         }
-
-
-        public void Qury_Select_Customer()
+        public void Qury_Select_InvHead()
         {
-            string query = "SELECT * FROM customer";
+            string query = "SELECT  `Inv_No`, `Cus_Name`, `Cus_Address`, `Inv_Date`, `User_Name`, `Thai_Price`, `Amt_Price`, `Amt_Items`, `Amt_Count`, `Amt_Weight` FROM Invoice_Header ";
             bookConn = new OleDbConnection(connParam);
             bookConn.Open();
             try
@@ -81,7 +105,62 @@ namespace WindowsFormsApp1
                 DataTable dt = new DataTable();
 
                 dAdapter.Fill(dt);
-                dgv_Customer.DataSource = dt;
+                // dgv_Warehouse.DataSource = dt;
+                
+
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
+
+
+            /*
+            MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            data.Fill(dt);
+            dgv_Warehouse.DataSource = dt;*/
+
+        }
+
+        public void Qury_Select_InvHead2()
+        {
+           
+            try
+            {
+             //   using (IDbConnection db = new SqlConnection(Configuration))
+
+
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
+
+
+          
+            
+
+        }
+
+        public void Qury_Select_Customer()
+        {
+            string query = "SELECT * FROM Invoice_Header";
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
+            try
+            {
+                OleDbDataAdapter dAdapter = new OleDbDataAdapter(query, connParam);
+                DataTable dt = new DataTable();
+
+                dAdapter.Fill(dt);
+                dgv_Invoice.DataSource = dt;
             }
             catch (Exception er)
             {
@@ -101,7 +180,7 @@ namespace WindowsFormsApp1
         }
         public void Qury_Select_Goods()
         {
-            string query = "SELECT  `Goods_CD`, `Goods_Description`, `Goods_Size`, `Goods_Weight`, `Goods_Cost`, `Goods_Whole`, `Goods_Retail`, `Goods_Type` FROM goods ";
+            string query = "SELECT  `Goods_CD`, `Goods_Description`, `Goods_Size`, `Goods_Weight`, `Goods_Whole`, `Goods_Retail`, `Goods_Type` FROM goods ";
             bookConn = new OleDbConnection(connParam);
             bookConn.Open();
             try
@@ -399,9 +478,27 @@ namespace WindowsFormsApp1
             
         }
 
-        private void dgv_Warehouse_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+      
 
+        private void button_StockIn_Click(object sender, EventArgs e)
+        {
+            StockIn Si = new StockIn();
+
+            Si.Show();
+        }
+
+        private void button_UpdateCustomer_Click(object sender, EventArgs e)
+        {
+            UpdataCustomer Cus = new UpdataCustomer();
+
+            Cus.Show();
+        }
+
+        private void button_UpdateGoods_Click(object sender, EventArgs e)
+        {
+            UpdateGoods Goods = new UpdateGoods();
+
+            Goods.Show();
         }
     }
 }

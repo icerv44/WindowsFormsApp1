@@ -7,17 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using MySql.Data;
+using DataTable = System.Data.DataTable;
+using System.Data.OleDb;
+using System.Data.SqlClient;
+using Microsoft.Reporting.WinForms;
+
+
 namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
+        OleDbConnection bookConn;
+        OleDbCommand oleDbCmd;
+        OleDbDataReader mdr;
+        //String connParam = @"Data Source=C:\Invoice\DB\DB_Invoice.mdb;Persist Security Info=True;User ID=admin";
+        String connParam = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Invoice\DB\DB_Invoice.mdb;Persist Security Info=True;User ID=admin";
+
+        List<User> User1 = new List<User>();
 
         public Login()
         {
             InitializeComponent();
         }
 
-        MySqlConnection con = new MySqlConnection("server = localhost; database = invoice; username = root; password=; ");
+        
 
 
 
@@ -35,9 +49,9 @@ namespace WindowsFormsApp1
         {
             String user = "", pass ="" ;
 
-            Main MN = new Main();
+          //  Main MN = new Main();
                 
-                user = textBox_User.Text;
+            user = textBox_User.Text;
             pass = textBox_Pass.Text;
 
             //Console.WriteLine(user);
@@ -54,31 +68,65 @@ namespace WindowsFormsApp1
             //    label_LoginFail.Text = "Incorrect User Name or Password";
             //    MessageBox.Show("Incorrect User Name or Password","Login Fail",MessageBoxButtons.OK,MessageBoxIcon.Error);
             //}
-
-            string query = "select * from user where username = '" + user + "' && password = '" + pass + "' ";
-
-            MySqlDataAdapter data = new MySqlDataAdapter(query,con);
-
-            DataTable dt = new DataTable();
-
-            data.Fill(dt);
-
-            if (dt.Rows.Count == 1)
+            int tmp = 0;
+            string userName = "";
+            string query = "SELECT User_Level,User_Name FROM [User] WHERE User_Name = '" + user + "' AND User_Pass = '" + pass + "' ;";
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
+            User u = new User();
+            try
             {
-                this.Hide();
-                MN.Show();
+                oleDbCmd = new OleDbCommand(query, bookConn);
+
+                mdr = oleDbCmd.ExecuteReader();
+
+                while (mdr.Read())
+                {
+                    tmp = mdr.GetInt32(0);
+                    userName = mdr.GetString(1);
+                    u.User_Level = tmp ;
+                    u.User_Name = userName;
+                    User1.Add(u);
+
+                }
+
+                // MySqlDataAdapter data = new MySqlDataAdapter(query, connParam);
+                /*OleDbDataAdapter dAdapter = new OleDbDataAdapter(query, connParam);
+
+                DataTable dt = new DataTable();+
+
+                dAdapter.Fill(dt);*/
+
+                if (tmp != 0)
+                {
+                    this.Hide();
+                    Main MN = new Main(User1);
+                    MN.Show();
+                    /*using (Main prt = new Main(User1))
+                    {
+                        //prt.ShowDialog();
+                        prt.Show();
+                    }*/
+                }
+                else
+                {
+                    label_Fail.Visible = true;
+                    label_Fail.Text = "Incorrect User Name or Password";
+
+                    MessageBox.Show("Incorrect User Name or Password", "Login Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    textBox_User.Clear();
+                    textBox_Pass.Clear();
+
+                }
+
             }
-            else
+            catch (Exception er)
             {
-                label_LoginFail.Visible = true;
-                label_LoginFail.Text = "Incorrect User Name or Password";
-
-                MessageBox.Show("Incorrect User Name or Password", "Login Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                textBox_User.Clear();
-                textBox_Pass.Clear();
-                
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
             }
+            bookConn.Close();
 
 
         }

@@ -107,6 +107,19 @@
     <Compile Include="StockIn.Designer.cs">
       <DependentUpon>StockIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdataCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdataCustomer.Designer.cs">
+      <DependentUpon>UpdataCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateGoods.Designer.cs">
+      <DependentUpon>UpdateGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="WholeSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,12 +155,23 @@
     <EmbeddedResource Include="StockIn.resx">
       <DependentUpon>StockIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tmp.rdlc" />
+    <EmbeddedResource Include="UpdataCustomer.resx">
+      <DependentUpon>UpdataCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateGoods.resx">
+      <DependentUpon>UpdateGoods.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WholeSale.resx">
       <DependentUpon>WholeSale.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\QuryDB.Qury.datasource" />
+    <None Include="Properties\DataSources\QuryDB.QuryDetail.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.Qury.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.QuryDetail.datasource" />
     <None Include="Properties\Settings.settings">
@@ -231,6 +255,11 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\65302992_312666559619611_8799582889294430208_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_Button_printer-512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

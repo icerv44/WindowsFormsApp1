@@ -34,13 +34,13 @@
             this.textBox_User = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label_LoginFail = new System.Windows.Forms.Label();
+            this.label_Fail = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label_LoginFail);
+            this.groupBox1.Controls.Add(this.label_Fail);
             this.groupBox1.Controls.Add(this.button_Login);
             this.groupBox1.Controls.Add(this.textBox_Pass);
             this.groupBox1.Controls.Add(this.textBox_User);
@@ -103,16 +103,17 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "User Name :";
             // 
-            // label_LoginFail
+            // label_Fail
             // 
-            this.label_LoginFail.AutoSize = true;
-            this.label_LoginFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label_LoginFail.Location = new System.Drawing.Point(53, 161);
-            this.label_LoginFail.Name = "label_LoginFail";
-            this.label_LoginFail.Size = new System.Drawing.Size(46, 18);
-            this.label_LoginFail.TabIndex = 6;
-            this.label_LoginFail.Text = "TEST";
-            this.label_LoginFail.Visible = false;
+            this.label_Fail.AutoSize = true;
+            this.label_Fail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label_Fail.ForeColor = System.Drawing.Color.Red;
+            this.label_Fail.Location = new System.Drawing.Point(28, 160);
+            this.label_Fail.Name = "label_Fail";
+            this.label_Fail.Size = new System.Drawing.Size(45, 16);
+            this.label_Fail.TabIndex = 10;
+            this.label_Fail.Text = "label3";
+            this.label_Fail.Visible = false;
             // 
             // Login
             // 
@@ -139,6 +140,6 @@
         private System.Windows.Forms.TextBox textBox_User;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label_LoginFail;
+        private System.Windows.Forms.Label label_Fail;
     }
 }

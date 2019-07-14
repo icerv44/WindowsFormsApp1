@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Panel_Menu = new System.Windows.Forms.Panel();
+            this.button_UpdateGoods = new System.Windows.Forms.Button();
+            this.button_UpdateCustomer = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_StockIn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,17 +43,24 @@
             this.Print = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgv_Customer = new System.Windows.Forms.DataGridView();
+            this.dgv_Invoice = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgv_Warehouse = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgv_StockIn = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.quryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Panel_Menu.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Customer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Invoice)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Warehouse)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_StockIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Menu
@@ -57,9 +68,11 @@
             this.Panel_Menu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Panel_Menu.AutoSize = true;
-            this.Panel_Menu.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Panel_Menu.BackColor = System.Drawing.Color.LightGray;
             this.Panel_Menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Panel_Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel_Menu.Controls.Add(this.button_UpdateGoods);
+            this.Panel_Menu.Controls.Add(this.button_UpdateCustomer);
             this.Panel_Menu.Controls.Add(this.textBox1);
             this.Panel_Menu.Controls.Add(this.button_StockIn);
             this.Panel_Menu.Controls.Add(this.button2);
@@ -68,44 +81,71 @@
             this.Panel_Menu.Controls.Add(this.button_Retail);
             this.Panel_Menu.Controls.Add(this.label1);
             this.Panel_Menu.Controls.Add(this.Print);
-            this.Panel_Menu.Location = new System.Drawing.Point(11, 10);
+            this.Panel_Menu.Location = new System.Drawing.Point(11, 164);
             this.Panel_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.Panel_Menu.Name = "Panel_Menu";
-            this.Panel_Menu.Size = new System.Drawing.Size(178, 710);
+            this.Panel_Menu.Size = new System.Drawing.Size(178, 556);
             this.Panel_Menu.TabIndex = 0;
             this.Panel_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Menu_Paint);
+            // 
+            // button_UpdateGoods
+            // 
+            this.button_UpdateGoods.BackColor = System.Drawing.Color.PowderBlue;
+            this.button_UpdateGoods.Location = new System.Drawing.Point(16, 270);
+            this.button_UpdateGoods.Margin = new System.Windows.Forms.Padding(2);
+            this.button_UpdateGoods.Name = "button_UpdateGoods";
+            this.button_UpdateGoods.Size = new System.Drawing.Size(147, 39);
+            this.button_UpdateGoods.TabIndex = 5;
+            this.button_UpdateGoods.Text = "Update Goods";
+            this.button_UpdateGoods.UseVisualStyleBackColor = false;
+            this.button_UpdateGoods.Click += new System.EventHandler(this.button_UpdateGoods_Click);
+            // 
+            // button_UpdateCustomer
+            // 
+            this.button_UpdateCustomer.BackColor = System.Drawing.Color.PowderBlue;
+            this.button_UpdateCustomer.Location = new System.Drawing.Point(16, 227);
+            this.button_UpdateCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.button_UpdateCustomer.Name = "button_UpdateCustomer";
+            this.button_UpdateCustomer.Size = new System.Drawing.Size(147, 39);
+            this.button_UpdateCustomer.TabIndex = 4;
+            this.button_UpdateCustomer.Text = "Update Customer";
+            this.button_UpdateCustomer.UseVisualStyleBackColor = false;
+            this.button_UpdateCustomer.Click += new System.EventHandler(this.button_UpdateCustomer_Click);
             // 
             // textBox1
             // 
             this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox1.Location = new System.Drawing.Point(43, 401);
+            this.textBox1.Location = new System.Drawing.Point(39, 466);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Visible = false;
             // 
             // button_StockIn
             // 
-            this.button_StockIn.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button_StockIn.BackColor = System.Drawing.Color.PowderBlue;
             this.button_StockIn.Location = new System.Drawing.Point(16, 140);
             this.button_StockIn.Name = "button_StockIn";
             this.button_StockIn.Size = new System.Drawing.Size(147, 39);
             this.button_StockIn.TabIndex = 3;
             this.button_StockIn.Text = "Stock In";
             this.button_StockIn.UseVisualStyleBackColor = false;
+            this.button_StockIn.Click += new System.EventHandler(this.button_StockIn_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(43, 357);
+            this.button2.Location = new System.Drawing.Point(39, 422);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button_WholeSale
             // 
-            this.button_WholeSale.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button_WholeSale.BackColor = System.Drawing.Color.PowderBlue;
             this.button_WholeSale.Location = new System.Drawing.Point(16, 95);
             this.button_WholeSale.Name = "button_WholeSale";
             this.button_WholeSale.Size = new System.Drawing.Size(147, 39);
@@ -116,17 +156,18 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(43, 249);
+            this.button1.Location = new System.Drawing.Point(39, 393);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button_Retail
             // 
-            this.button_Retail.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button_Retail.BackColor = System.Drawing.Color.PowderBlue;
             this.button_Retail.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
             this.button_Retail.FlatAppearance.BorderSize = 3;
             this.button_Retail.Location = new System.Drawing.Point(16, 50);
@@ -150,7 +191,7 @@
             // 
             // Print
             // 
-            this.Print.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Print.BackColor = System.Drawing.Color.PowderBlue;
             this.Print.Location = new System.Drawing.Point(16, 184);
             this.Print.Margin = new System.Windows.Forms.Padding(2);
             this.Print.Name = "Print";
@@ -171,31 +212,29 @@
             this.tabControl1.Location = new System.Drawing.Point(223, 10);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1199, 710);
+            this.tabControl1.Size = new System.Drawing.Size(887, 710);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dgv_Customer);
+            this.tabPage1.Controls.Add(this.dgv_Invoice);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1191, 681);
+            this.tabPage1.Size = new System.Drawing.Size(879, 681);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Invoice";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dgv_Customer
+            // dgv_Invoice
             // 
-            this.dgv_Customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Customer.Location = new System.Drawing.Point(6, 16);
-            this.dgv_Customer.Name = "dgv_Customer";
-            this.dgv_Customer.Size = new System.Drawing.Size(1179, 649);
-            this.dgv_Customer.TabIndex = 2;
+            this.dgv_Invoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Invoice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Invoice.Location = new System.Drawing.Point(3, 3);
+            this.dgv_Invoice.Name = "dgv_Invoice";
+            this.dgv_Invoice.Size = new System.Drawing.Size(873, 675);
+            this.dgv_Invoice.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -203,7 +242,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1191, 681);
+            this.tabPage2.Size = new System.Drawing.Size(879, 681);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Warehouse";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -211,33 +250,60 @@
             // dgv_Warehouse
             // 
             this.dgv_Warehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Warehouse.Location = new System.Drawing.Point(4, 6);
+            this.dgv_Warehouse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Warehouse.Location = new System.Drawing.Point(3, 3);
             this.dgv_Warehouse.Name = "dgv_Warehouse";
-            this.dgv_Warehouse.Size = new System.Drawing.Size(1179, 669);
+            this.dgv_Warehouse.Size = new System.Drawing.Size(873, 675);
             this.dgv_Warehouse.TabIndex = 1;
-            this.dgv_Warehouse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Warehouse_CellContentClick);
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dgv_StockIn);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1191, 681);
+            this.tabPage3.Size = new System.Drawing.Size(879, 681);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "StockIn";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgv_StockIn
+            // 
+            this.dgv_StockIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_StockIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_StockIn.Location = new System.Drawing.Point(3, 3);
+            this.dgv_StockIn.Name = "dgv_StockIn";
+            this.dgv_StockIn.Size = new System.Drawing.Size(873, 675);
+            this.dgv_StockIn.TabIndex = 3;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._65302992_312666559619611_8799582889294430208_n;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(176, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // quryBindingSource
+            // 
+            this.quryBindingSource.DataSource = typeof(WindowsFormsApp1.Qury);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1434, 731);
+            this.ClientSize = new System.Drawing.Size(1122, 731);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.Panel_Menu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -247,9 +313,13 @@
             this.Panel_Menu.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Customer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Invoice)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Warehouse)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_StockIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,7 +341,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridView dgv_Warehouse;
-        private System.Windows.Forms.DataGridView dgv_Customer;
+        private System.Windows.Forms.DataGridView dgv_Invoice;
+        private System.Windows.Forms.BindingSource quryBindingSource;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button_UpdateCustomer;
+        private System.Windows.Forms.Button button_UpdateGoods;
+        private System.Windows.Forms.DataGridView dgv_StockIn;
     }
 }
 
