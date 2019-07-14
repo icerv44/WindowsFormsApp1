@@ -91,7 +91,7 @@
             // button_UpdateGoods
             // 
             this.button_UpdateGoods.BackColor = System.Drawing.Color.PowderBlue;
-            this.button_UpdateGoods.Location = new System.Drawing.Point(16, 270);
+            this.button_UpdateGoods.Location = new System.Drawing.Point(17, 270);
             this.button_UpdateGoods.Margin = new System.Windows.Forms.Padding(2);
             this.button_UpdateGoods.Name = "button_UpdateGoods";
             this.button_UpdateGoods.Size = new System.Drawing.Size(147, 39);

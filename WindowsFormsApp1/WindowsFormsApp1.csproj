@@ -65,6 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB_InvoiceDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_InvoiceDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +173,17 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="DB_InvoiceDataSet1.xsc">
+      <DependentUpon>DB_InvoiceDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_InvoiceDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_InvoiceDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_InvoiceDataSet1.xss">
+      <DependentUpon>DB_InvoiceDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\QuryDB.Qury.datasource" />
     <None Include="Properties\DataSources\QuryDB.QuryDetail.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Resources.datasource" />
@@ -260,6 +276,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Print_Button_printer-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB_Invoice.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
