@@ -48,6 +48,24 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -65,11 +83,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB_InvoiceDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB_InvoiceDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +106,12 @@
     </Compile>
     <Compile Include="Print.Designer.cs">
       <DependentUpon>Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print2.Designer.cs">
+      <DependentUpon>Print2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,6 +163,9 @@
     <EmbeddedResource Include="Print.resx">
       <DependentUpon>Print.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Print2.resx">
+      <DependentUpon>Print2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -173,23 +195,8 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="DB_InvoiceDataSet1.xsc">
-      <DependentUpon>DB_InvoiceDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DB_InvoiceDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DB_InvoiceDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DB_InvoiceDataSet1.xss">
-      <DependentUpon>DB_InvoiceDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Properties\DataSources\QuryDB.Qury.datasource" />
-    <None Include="Properties\DataSources\QuryDB.QuryDetail.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Resources.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Settings.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.Qury.datasource" />
-    <None Include="Properties\DataSources\WindowsFormsApp1.QuryDetail.datasource" />
+    <None Include="Properties\DataSources\Qury.datasource" />
+    <None Include="Properties\DataSources\QuryDetail.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -278,9 +285,7 @@
     <None Include="Resources\Print_Button_printer-512.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB_Invoice.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="Resources\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Panel_Menu = new System.Windows.Forms.Panel();
             this.button_UpdateGoods = new System.Windows.Forms.Button();
@@ -50,7 +49,6 @@
             this.dgv_StockIn = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.quryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Panel_Menu.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -60,7 +58,6 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_StockIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Menu
@@ -282,18 +279,14 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._65302992_312666559619611_8799582889294430208_n;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = global::WindowsFormsApp1.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(13, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(176, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // quryBindingSource
-            // 
-            this.quryBindingSource.DataSource = typeof(WindowsFormsApp1.Qury);
             // 
             // Main
             // 
@@ -319,7 +312,6 @@
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_StockIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,7 +334,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridView dgv_Warehouse;
         private System.Windows.Forms.DataGridView dgv_Invoice;
-        private System.Windows.Forms.BindingSource quryBindingSource;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button_UpdateCustomer;
         private System.Windows.Forms.Button button_UpdateGoods;

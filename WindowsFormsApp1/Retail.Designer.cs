@@ -195,6 +195,7 @@
             this.label4.Size = new System.Drawing.Size(48, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "เลขที่  :";
+            this.label4.Visible = false;
             // 
             // textBox_InvNo
             // 
@@ -202,6 +203,7 @@
             this.textBox_InvNo.Name = "textBox_InvNo";
             this.textBox_InvNo.Size = new System.Drawing.Size(144, 20);
             this.textBox_InvNo.TabIndex = 2;
+            this.textBox_InvNo.Visible = false;
             // 
             // label1
             // 

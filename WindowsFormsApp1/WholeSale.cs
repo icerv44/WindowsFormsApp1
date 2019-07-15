@@ -732,7 +732,7 @@ namespace WindowsFormsApp1
         public string Select_Price_Item(string Code)
         {
 
-            string query = "SELECT  Goods_Retail FROM `goods` WHERE Goods_CD = '" + Code + "'";
+            string query = "SELECT  Goods_Whole FROM `goods` WHERE Goods_CD = '" + Code + "'";
             string str = "";
 
             bookConn = new OleDbConnection(connParam);

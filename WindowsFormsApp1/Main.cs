@@ -42,6 +42,7 @@ namespace WindowsFormsApp1
         {
             Qury_Select_Goods();
             Qury_Select_Customer();
+            Qury_Select_StockIn();
             int level = 0;
             foreach(var user in _User)
             {
@@ -125,6 +126,37 @@ namespace WindowsFormsApp1
             dgv_Warehouse.DataSource = dt;*/
 
         }
+        public void Qury_Select_StockIn()
+        {
+            string query = "SELECT  `StockInv_No`, `Cus_Name`, `Cus_Address`, `Inv_Date`, `User_Name`, `Thai_Price`, `Amt_Price`, `Amt_Items`, `Amt_Count`, `Amt_Weight` FROM StockIn_Header ";
+            bookConn = new OleDbConnection(connParam);
+            bookConn.Open();
+            try
+            {
+                OleDbDataAdapter dAdapter = new OleDbDataAdapter(query, connParam);
+                DataTable dt = new DataTable();
+
+                dAdapter.Fill(dt);
+                dgv_StockIn.DataSource = dt;
+
+
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show("ERROR : " + er);
+                bookConn.Close();
+            }
+            bookConn.Close();
+
+
+            /*
+            MySqlDataAdapter data = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            data.Fill(dt);
+            dgv_Warehouse.DataSource = dt;*/
+
+        }
 
         public void Qury_Select_InvHead2()
         {
@@ -180,7 +212,7 @@ namespace WindowsFormsApp1
         }
         public void Qury_Select_Goods()
         {
-            string query = "SELECT  `Goods_CD`, `Goods_Description`, `Goods_Size`, `Goods_Weight`, `Goods_Whole`, `Goods_Retail`, `Goods_Type` FROM goods ";
+            string query = "SELECT  `Goods_CD`, `Goods_Description`, `Goods_Size`, `Goods_Weight`, `Goods_Whole`, `Goods_Retail`, `Goods_Type`, `Goods_Total` FROM [Goods]; ";
             bookConn = new OleDbConnection(connParam);
             bookConn.Open();
             try

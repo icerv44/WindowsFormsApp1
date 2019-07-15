@@ -102,11 +102,11 @@ namespace WindowsFormsApp1
                     this.Hide();
                     Main MN = new Main(User1);
                     MN.Show();
-                    /*using (Main prt = new Main(User1))
+                    using (Main prt = new Main(User1))
                     {
                         //prt.ShowDialog();
                         prt.Show();
-                    }*/
+                    }
                 }
                 else
                 {
