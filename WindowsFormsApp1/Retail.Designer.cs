@@ -1862,12 +1862,13 @@
             // 
             // button_Print
             // 
-            this.button_Print.Location = new System.Drawing.Point(919, 70);
+            this.button_Print.Location = new System.Drawing.Point(957, 70);
             this.button_Print.Name = "button_Print";
             this.button_Print.Size = new System.Drawing.Size(135, 42);
             this.button_Print.TabIndex = 18;
             this.button_Print.Text = "Print";
             this.button_Print.UseVisualStyleBackColor = true;
+            this.button_Print.Visible = false;
             this.button_Print.Click += new System.EventHandler(this.button_Print_Click);
             // 
             // button2
@@ -1878,6 +1879,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // printDialog1
             // 
