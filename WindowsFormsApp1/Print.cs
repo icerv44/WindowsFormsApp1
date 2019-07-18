@@ -36,27 +36,30 @@ namespace WindowsFormsApp1
             
             foreach (var InvHead in _Qury)
             {
-                /* Microsoft.Reporting.WinForms.ReportParameter[] p = new Microsoft.Reporting.WinForms.ReportParameter[]
-              {
-                new Microsoft.Reporting.WinForms.ReportParameter("Cus_Name", InvHead.Cus_Name.ToString()),
-                new Microsoft.Reporting.WinForms.ReportParameter("Cus_Address", InvHead.Cus_Address.ToString()),
-                new Microsoft.Reporting.WinForms.ReportParameter("Inv_No", InvHead.Inv_No.ToString()),
-                new Microsoft.Reporting.WinForms.ReportParameter("Inv_Date", InvHead.Inv_Date.ToString()),
-                new Microsoft.Reporting.WinForms.ReportParameter("User_Name", InvHead.User_Name.ToString()),
-               // new Microsoft.Reporting.WinForms.ReportParameter("Cus_Name", _Qury.Cus_Name.ToString()),
-              };
-                 this.reportViewer1.LocalReport.SetParameters(p);*/
-               
+                          
                 invNo = InvHead.Inv_No.ToString();
                 this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Name", InvHead.Cus_Name.ToString()));
                 this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Address", InvHead.Cus_Address.ToString()));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_ThaiPrice", InvHead.Inv_ThaiPrice.ToString()));
                 this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_No", InvHead.Inv_No.ToString()));
                 this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_Date", InvHead.Inv_Date.ToString()));
                 this.reportViewer1.LocalReport.SetParameters(new ReportParameter("User_Name", "User1"));
+
+                this.reportViewer1.RefreshReport();
+
             }
 
 
-
+            /* Microsoft.Reporting.WinForms.ReportParameter[] p = new Microsoft.Reporting.WinForms.ReportParameter[]
+          {
+            new Microsoft.Reporting.WinForms.ReportParameter("Cus_Name", InvHead.Cus_Name.ToString()),
+            new Microsoft.Reporting.WinForms.ReportParameter("Cus_Address", InvHead.Cus_Address.ToString()),
+            new Microsoft.Reporting.WinForms.ReportParameter("Inv_No", InvHead.Inv_No.ToString()),
+            new Microsoft.Reporting.WinForms.ReportParameter("Inv_Date", InvHead.Inv_Date.ToString()),
+            new Microsoft.Reporting.WinForms.ReportParameter("User_Name", InvHead.User_Name.ToString()),
+           // new Microsoft.Reporting.WinForms.ReportParameter("Cus_Name", _Qury.Cus_Name.ToString()),
+          };
+             this.reportViewer1.LocalReport.SetParameters(p);*/
             // string query = "SELECT  `Inv_No`, `Goods_Code`, `Goods_Description`, `Amt_Piece`, `Goods_Type`, `Goods_Price`, `Amt_Price` FROM Invoice_Detail WHERE Inv_No = " + Int32.Parse(invNo);
             //nwindConn.Open();
             //  bookConn = new OleDbConnection(connParam);
@@ -88,26 +91,26 @@ namespace WindowsFormsApp1
 
 
               }*/
-           /* try
-            {
+            /* try
+             {
 
-                using (DB_InvoiceDataSet db = new DB_InvoiceDataSet())
-                {
+                 using (DB_InvoiceDataSet db = new DB_InvoiceDataSet())
+                 {
 
 
-                }
-            }
-            catch (Exception er)
-            {
+                 }
+             }
+             catch (Exception er)
+             {
 
-                MessageBox.Show("ERROR : " + er);
-                bookConn.Close();
-            }
-            bookConn.Close();*/
-          
+                 MessageBox.Show("ERROR : " + er);
+                 bookConn.Close();
+             }
+             bookConn.Close();*/
+
             //this.reportViewer1.LocalReport.DataSources[0].Value = GetDetail();
-            
-            this.reportViewer1.RefreshReport();
+
+           
 
            
         }

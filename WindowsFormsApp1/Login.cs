@@ -111,9 +111,9 @@ namespace WindowsFormsApp1
                 else
                 {
                     label_Fail.Visible = true;
-                    label_Fail.Text = "Incorrect User Name or Password";
+                    label_Fail.Text = "ใส่ User Name หริอ Password ผิด";
 
-                    MessageBox.Show("Incorrect User Name or Password", "Login Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ใส่ User Name หริอ Password ผิด", "Login Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     textBox_User.Clear();
                     textBox_Pass.Clear();

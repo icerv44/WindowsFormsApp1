@@ -88,24 +88,26 @@
             // button_UpdateGoods
             // 
             this.button_UpdateGoods.BackColor = System.Drawing.Color.PowderBlue;
+            this.button_UpdateGoods.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button_UpdateGoods.Location = new System.Drawing.Point(17, 270);
             this.button_UpdateGoods.Margin = new System.Windows.Forms.Padding(2);
             this.button_UpdateGoods.Name = "button_UpdateGoods";
             this.button_UpdateGoods.Size = new System.Drawing.Size(147, 39);
             this.button_UpdateGoods.TabIndex = 5;
-            this.button_UpdateGoods.Text = "Update Goods";
+            this.button_UpdateGoods.Text = "แก้ไขข้อมูลสินค้า";
             this.button_UpdateGoods.UseVisualStyleBackColor = false;
             this.button_UpdateGoods.Click += new System.EventHandler(this.button_UpdateGoods_Click);
             // 
             // button_UpdateCustomer
             // 
             this.button_UpdateCustomer.BackColor = System.Drawing.Color.PowderBlue;
+            this.button_UpdateCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button_UpdateCustomer.Location = new System.Drawing.Point(16, 227);
             this.button_UpdateCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.button_UpdateCustomer.Name = "button_UpdateCustomer";
             this.button_UpdateCustomer.Size = new System.Drawing.Size(147, 39);
             this.button_UpdateCustomer.TabIndex = 4;
-            this.button_UpdateCustomer.Text = "Update Customer";
+            this.button_UpdateCustomer.Text = "แก้ไขข้อมูลลูกค้า";
             this.button_UpdateCustomer.UseVisualStyleBackColor = false;
             this.button_UpdateCustomer.Click += new System.EventHandler(this.button_UpdateCustomer_Click);
             // 
@@ -121,11 +123,12 @@
             // button_StockIn
             // 
             this.button_StockIn.BackColor = System.Drawing.Color.PowderBlue;
+            this.button_StockIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button_StockIn.Location = new System.Drawing.Point(16, 140);
             this.button_StockIn.Name = "button_StockIn";
             this.button_StockIn.Size = new System.Drawing.Size(147, 39);
             this.button_StockIn.TabIndex = 3;
-            this.button_StockIn.Text = "Stock In";
+            this.button_StockIn.Text = "ใบนำเข้า";
             this.button_StockIn.UseVisualStyleBackColor = false;
             this.button_StockIn.Click += new System.EventHandler(this.button_StockIn_Click);
             // 
@@ -143,11 +146,12 @@
             // button_WholeSale
             // 
             this.button_WholeSale.BackColor = System.Drawing.Color.PowderBlue;
+            this.button_WholeSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button_WholeSale.Location = new System.Drawing.Point(16, 95);
             this.button_WholeSale.Name = "button_WholeSale";
             this.button_WholeSale.Size = new System.Drawing.Size(147, 39);
             this.button_WholeSale.TabIndex = 2;
-            this.button_WholeSale.Text = "WholeSale";
+            this.button_WholeSale.Text = "ขายส่ง";
             this.button_WholeSale.UseVisualStyleBackColor = false;
             this.button_WholeSale.Click += new System.EventHandler(this.button_WholeSale_Click);
             // 
@@ -167,11 +171,12 @@
             this.button_Retail.BackColor = System.Drawing.Color.PowderBlue;
             this.button_Retail.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
             this.button_Retail.FlatAppearance.BorderSize = 3;
+            this.button_Retail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button_Retail.Location = new System.Drawing.Point(16, 50);
             this.button_Retail.Name = "button_Retail";
             this.button_Retail.Size = new System.Drawing.Size(147, 39);
             this.button_Retail.TabIndex = 1;
-            this.button_Retail.Text = "Retail";
+            this.button_Retail.Text = "ขายปลีก";
             this.button_Retail.UseVisualStyleBackColor = false;
             this.button_Retail.Click += new System.EventHandler(this.button_Retail_Click);
             // 
@@ -189,6 +194,7 @@
             // Print
             // 
             this.Print.BackColor = System.Drawing.Color.PowderBlue;
+            this.Print.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Print.Location = new System.Drawing.Point(16, 184);
             this.Print.Margin = new System.Windows.Forms.Padding(2);
             this.Print.Name = "Print";

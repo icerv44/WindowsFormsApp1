@@ -505,7 +505,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1117, 830);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Retail";
+            this.groupBox1.Text = "WholeSale  ( ขายส่ง )";
             // 
             // label41
             // 

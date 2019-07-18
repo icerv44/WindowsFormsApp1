@@ -322,7 +322,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1117, 830);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Stock In";
+            this.groupBox1.Text = "StockIn ( ใบนำเข้า )";
             // 
             // label41
             // 
@@ -1820,7 +1820,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "StockIn";
-            this.Text = "StockIn";
+            this.Text = "StockIn ( ใบนำเข้า )";
             this.Load += new System.EventHandler(this.StockIn_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
