@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
+
+namespace ReportPrinting
+{
+    public partial class Print_Form : Form
+    {
+       // string Cus_Name, Cus_Address, Inv_No, Inv_date;
+        public Print_Form()
+        {
+            InitializeComponent();
+        }
+        List<Qury> qry = new List<Qury>();
+
+        private void Print_Form_Load(object sender, EventArgs e)
+        {
+           
+           
+
+
+            //this.reportViewer1.LocalReport.SetParameters(new ReportParameter("",""));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_No", "Inv Number 1"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_name", "Customer 1"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Address", "Customer Address 1"));
+
+           // QuryBindingSource.DataSource =  
+            this.reportViewer1.LocalReport.DataSources[0].Value = GetDetail();
+            this.reportViewer1.RefreshReport();
+        }
+
+        public List<Qury> GetDetail()
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Qury qry1 = new Qury();
+                qry1.Cus_Name = "Cus_Name " + i;
+                qry1.Cus_Address = "Cus_Address " + i;
+                qry1.Inv_No = "Inv_No " + i;
+                qry.Add(qry1);
+            }
+
+
+            return qry;
+        }   
+    }
+}
