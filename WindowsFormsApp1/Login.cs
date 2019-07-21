@@ -70,7 +70,8 @@ namespace WindowsFormsApp1
             //}
             int tmp = 0;
             string userName = "";
-            string query = "SELECT User_Level,User_Name FROM [User] WHERE User_Name = '" + user + "' AND User_Pass = '" + pass + "' ;";
+            string NickName = "";
+            string query = "SELECT User_Level,User_Name,User_Nick FROM [User] WHERE User_Name = '" + user + "' AND User_Pass = '" + pass + "' ;";
             bookConn = new OleDbConnection(connParam);
             bookConn.Open();
             User u = new User();
@@ -84,8 +85,10 @@ namespace WindowsFormsApp1
                 {
                     tmp = mdr.GetInt32(0);
                     userName = mdr.GetString(1);
+                    NickName = mdr.GetString(2);
                     u.User_Level = tmp ;
                     u.User_Name = userName;
+                    u.User_NickName = NickName;
                     User1.Add(u);
 
                 }

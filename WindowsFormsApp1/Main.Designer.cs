@@ -89,7 +89,7 @@
             // 
             this.button_UpdateGoods.BackColor = System.Drawing.Color.PowderBlue;
             this.button_UpdateGoods.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button_UpdateGoods.Location = new System.Drawing.Point(17, 270);
+            this.button_UpdateGoods.Location = new System.Drawing.Point(16, 227);
             this.button_UpdateGoods.Margin = new System.Windows.Forms.Padding(2);
             this.button_UpdateGoods.Name = "button_UpdateGoods";
             this.button_UpdateGoods.Size = new System.Drawing.Size(147, 39);
@@ -102,7 +102,7 @@
             // 
             this.button_UpdateCustomer.BackColor = System.Drawing.Color.PowderBlue;
             this.button_UpdateCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button_UpdateCustomer.Location = new System.Drawing.Point(16, 227);
+            this.button_UpdateCustomer.Location = new System.Drawing.Point(16, 184);
             this.button_UpdateCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.button_UpdateCustomer.Name = "button_UpdateCustomer";
             this.button_UpdateCustomer.Size = new System.Drawing.Size(147, 39);
@@ -195,13 +195,14 @@
             // 
             this.Print.BackColor = System.Drawing.Color.PowderBlue;
             this.Print.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Print.Location = new System.Drawing.Point(16, 184);
+            this.Print.Location = new System.Drawing.Point(16, 270);
             this.Print.Margin = new System.Windows.Forms.Padding(2);
             this.Print.Name = "Print";
             this.Print.Size = new System.Drawing.Size(147, 39);
             this.Print.TabIndex = 0;
             this.Print.Text = "Print Receipt";
             this.Print.UseVisualStyleBackColor = false;
+            this.Print.Visible = false;
             // 
             // tabControl1
             // 

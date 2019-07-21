@@ -52,59 +52,6 @@
         <rd:ObjectDataSourceType>WindowsFormsApp1.QuryDetail, WindowsFormsApp1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="Qry_Header">
-      <Query>
-        <DataSourceName>WindowsFormsApp1</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Cus_Address">
-          <DataField>Cus_Address</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Cus_Name">
-          <DataField>Cus_Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Inv_AmtPrice">
-          <DataField>Inv_AmtPrice</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Inv_Date">
-          <DataField>Inv_Date</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Inv_No">
-          <DataField>Inv_No</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Inv_SumCount">
-          <DataField>Inv_SumCount</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Inv_SumItem">
-          <DataField>Inv_SumItem</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Inv_SumWeight">
-          <DataField>Inv_SumWeight</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Inv_ThaiPrice">
-          <DataField>Inv_ThaiPrice</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="User_Name">
-          <DataField>User_Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>WindowsFormsApp1</rd:DataSetName>
-        <rd:TableName>Qury</rd:TableName>
-        <rd:ObjectDataSourceType>WindowsFormsApp1.Qury, WindowsFormsApp1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
-      </rd:DataSetInfo>
-    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -298,7 +245,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>19.47058cm</Top>
+            <Top>12.64433cm</Top>
             <Left>0.28787cm</Left>
             <Height>0.6cm</Height>
             <Width>0.78021cm</Width>
@@ -328,7 +275,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>19.47058cm</Top>
+            <Top>12.64433cm</Top>
             <Left>2.30864cm</Left>
             <Height>0.6cm</Height>
             <Width>1.90798cm</Width>
@@ -358,7 +305,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>19.47058cm</Top>
+            <Top>12.64433cm</Top>
             <Left>7.83781cm</Left>
             <Height>0.6cm</Height>
             <Width>2.16026cm</Width>
@@ -388,7 +335,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>19.47058cm</Top>
+            <Top>12.64433cm</Top>
             <Left>12.18058cm</Left>
             <Height>0.6cm</Height>
             <Width>0.98256cm</Width>
@@ -418,7 +365,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>20.63185cm</Top>
+            <Top>13.8056cm</Top>
             <Left>1.10807cm</Left>
             <Height>0.6cm</Height>
             <Width>6.57459cm</Width>
@@ -448,7 +395,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>20.63185cm</Top>
+            <Top>13.8056cm</Top>
             <Left>11.87662cm</Left>
             <Height>0.6cm</Height>
             <Width>6.76973cm</Width>
@@ -467,24 +414,24 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.70151cm</Width>
+                  <Width>3.63801cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>5.78412cm</Width>
+                  <Width>5.72062cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.4365cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.754cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.52437cm</Width>
+                  <Width>4.09045cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>1cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -639,7 +586,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>1cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -815,10 +762,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Qry_Detail</DataSetName>
-            <Top>1.37597cm</Top>
-            <Left>0.28787cm</Left>
-            <Height>1.2cm</Height>
-            <Width>19.01cm</Width>
+            <Top>6.48243cm</Top>
+            <Left>0.57861cm</Left>
+            <Height>2cm</Height>
+            <Width>18.63958cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -841,7 +788,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Inv_ThaiPrice</rd:DefaultName>
-            <Top>18.47969cm</Top>
+            <Top>11.61816cm</Top>
             <Left>0.79057cm</Left>
             <Height>0.6cm</Height>
             <Width>2.95043cm</Width>
@@ -856,11 +803,185 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox23">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>รวมเป็นเงืน</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox23</rd:DefaultName>
+            <Top>11.65344cm</Top>
+            <Left>12.33901cm</Left>
+            <Height>0.6cm</Height>
+            <Width>1.82594cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line4">
+            <Top>12.25344cm</Top>
+            <Left>13.91454cm</Left>
+            <Height>0cm</Height>
+            <Width>3.55833cm</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>Dashed</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line5">
+            <Top>12.42983cm</Top>
+            <Left>13.91455cm</Left>
+            <Height>0cm</Height>
+            <Width>3.55833cm</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <Border>
+                <Style>Dashed</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Inv_AmtPrice">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!Inv_AmtPrice.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Inv_AmtPrice</rd:DefaultName>
+            <Top>11.61816cm</Top>
+            <Left>14.23551cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inv_SumItem">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!Inv_SumItem.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Inv_SumItem</rd:DefaultName>
+            <Top>12.64433cm</Top>
+            <Left>1.06808cm</Left>
+            <Height>0.6cm</Height>
+            <Width>1.24056cm</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inv_SumCount">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!Inv_SumCount.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Inv_SumCount</rd:DefaultName>
+            <Top>12.64433cm</Top>
+            <Left>4.65412cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>20</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inv_SumWeight">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!Inv_SumWeight.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Inv_SumWeight</rd:DefaultName>
+            <Top>12.64433cm</Top>
+            <Left>10.1039cm</Left>
+            <Height>0.6cm</Height>
+            <Width>1.97084cm</Width>
+            <ZIndex>21</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>11in</Height>
+        <Height>6in</Height>
         <Style />
       </Body>
-      <Width>8in</Width>
+      <Width>7.59759in</Width>
       <Page>
         <PageHeader>
           <Height>5.5413cm</Height>
@@ -1028,9 +1149,9 @@
             </Textbox>
             <Line Name="Line1">
               <Top>3.87112cm</Top>
-              <Left>1.241cm</Left>
+              <Left>0.28787cm</Left>
               <Height>0cm</Height>
-              <Width>19.01cm</Width>
+              <Width>18.35848cm</Width>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border>
@@ -1291,11 +1412,27 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="Inv_AmtPrice">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Inv_SumItem">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Inv_SumCount">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Inv_SumWeight">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
+      <NumberOfRows>3</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -1326,6 +1463,26 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
           <ParameterName>Inv_ThaiPrice</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>Inv_AmtPrice</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>Inv_SumItem</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>Inv_SumCount</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>Inv_SumWeight</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

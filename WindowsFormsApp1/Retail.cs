@@ -51,6 +51,7 @@ namespace WindowsFormsApp1
                 while (mdr.Read())
                 {
                     int InvNO = mdr.GetInt32(0)+1;
+
                     textBox_RetailNo.Text = InvNO.ToString();
 
                     
@@ -546,6 +547,8 @@ namespace WindowsFormsApp1
         }
         private void Retail_Load(object sender, EventArgs e)
         {
+            Inv_QryHead.Clear();
+            Inv_QryDetail.Clear();
             textBox_UserName.Text = userName;
             FillCombobox();
             FillComboboxItem();
@@ -2792,10 +2795,13 @@ namespace WindowsFormsApp1
             InsertINV();
             InsertINVDetail();
 
-            using (Print prt = new Print(Inv_QryHead, Inv_QryDetail))
+            using (Print7 prt = new Print7(Inv_QryHead, Inv_QryDetail))
             {
                 prt.ShowDialog();
             }
+
+            Inv_QryHead.Clear();
+            Inv_QryDetail.Clear();
         }
     }
 

@@ -10,5 +10,6 @@ namespace WindowsFormsApp1
     {
         public int User_Level { get; set; }
         public string User_Name { get; set; }
+        public string User_NickName { get; set; }
     }
 }

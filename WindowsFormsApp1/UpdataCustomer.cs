@@ -174,5 +174,10 @@ namespace WindowsFormsApp1
         {
             Update_Customer();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

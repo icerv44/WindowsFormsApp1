@@ -58,9 +58,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label1.Location = new System.Drawing.Point(30, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 18);
+            this.label1.Size = new System.Drawing.Size(85, 18);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Customer Code     :";
+            this.label1.Text = "รหัสลูกค้า     :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
@@ -102,9 +103,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label4.Location = new System.Drawing.Point(30, 102);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 18);
+            this.label4.Size = new System.Drawing.Size(74, 18);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Customer Address : ";
+            this.label4.Text = "ที่อยู่ลูกค้า : ";
             // 
             // textBox_CusName
             // 
@@ -119,9 +120,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.Location = new System.Drawing.Point(30, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 18);
+            this.label2.Size = new System.Drawing.Size(73, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Customer Name    : ";
+            this.label2.Text = "ชื่อลูกค้า   : ";
             // 
             // UpdataCustomer
             // 

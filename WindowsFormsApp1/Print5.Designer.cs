@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Print
+    partial class Print5
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.QuryDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.QuryDetailBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // QuryDetailBindingSource
+            // 
+            this.QuryDetailBindingSource.DataSource = typeof(WindowsFormsApp1.QuryDetail);
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp1.Invoice.rdlc";
+            reportDataSource1.Name = "Detail";
+            reportDataSource1.Value = this.QuryDetailBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp1.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-           // this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // Print
+            // Print5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Print";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Print";
-            this.Load += new System.EventHandler(this.Print_Load);
+            this.Name = "Print5";
+            this.Text = "Print5";
+            this.Load += new System.EventHandler(this.Print5_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.QuryDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.BindingSource QuryDetailBindingSource;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

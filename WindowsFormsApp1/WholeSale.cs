@@ -37,6 +37,8 @@ namespace WindowsFormsApp1
         }
         private void WholeSale_Load(object sender, EventArgs e)
         {
+            Inv_QryHead.Clear();
+            Inv_QryDetail.Clear();
             textBox_UserName.Text = userName;
             FillCombobox();
             FillComboboxItem();
@@ -2765,5 +2767,519 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            InsertQryInvHeader();
+            InsertQryInvDetail();
+            InsertINV();
+            InsertINVDetail();
+
+            using (Print7 prt = new Print7(Inv_QryHead, Inv_QryDetail))
+            {
+                prt.ShowDialog();
+            }
+
+            Inv_QryHead.Clear();
+            Inv_QryDetail.Clear();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Retail_Price1_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Object selectedItem = combo_Retail_Item1.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count1.Text.ToString() == "" ? "0.00" : textBox_Retail_Count1.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price1.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price1.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount1.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price2_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item1.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count2.Text.ToString() == "" ? "0.00" : textBox_Retail_Count2.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price2.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price2.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount2.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price3_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item3.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count3.Text.ToString() == "" ? "0.00" : textBox_Retail_Count3.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price3.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price3.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount3.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price4_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item4.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count4.Text.ToString() == "" ? "0.00" : textBox_Retail_Count4.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price4.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price4.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount4.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price5_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item5.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count5.Text.ToString() == "" ? "0.00" : textBox_Retail_Count5.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price5.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price5.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount5.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price6_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item6.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count6.Text.ToString() == "" ? "0.00" : textBox_Retail_Count6.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price6.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price6.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount6.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price7_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item7.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count7.Text.ToString() == "" ? "0.00" : textBox_Retail_Count7.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price7.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price7.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount7.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price8_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item8.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count8.Text.ToString() == "" ? "0.00" : textBox_Retail_Count8.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price8.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price8.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount8.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price9_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item9.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count9.Text.ToString() == "" ? "0.00" : textBox_Retail_Count9.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price9.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price9.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount9.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price10_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item10.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count10.Text.ToString() == "" ? "0.00" : textBox_Retail_Count10.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price10.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price10.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount10.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price11_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item11.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count11.Text.ToString() == "" ? "0.00" : textBox_Retail_Count11.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price11.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price11.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount11.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price12_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item12.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count12.Text.ToString() == "" ? "0.00" : textBox_Retail_Count12.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price12.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price12.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount12.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price13_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item13.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count13.Text.ToString() == "" ? "0.00" : textBox_Retail_Count13.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price13.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price13.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount13.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price14_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item14.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count14.Text.ToString() == "" ? "0.00" : textBox_Retail_Count14.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price14.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price14.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount14.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
+
+        private void textBox_Retail_Price15_TextChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Object selectedItem = combo_Retail_Item15.SelectedItem;
+                string textCount = "";
+                double douCount, amount, Price;
+                double costPrice;
+                costPrice = Select_Cost_Price(selectedItem.ToString()) == "" ? 0.00 : Double.Parse(Select_Cost_Price(selectedItem.ToString()));
+                textCount = textBox_Retail_Count15.Text.ToString() == "" ? "0.00" : textBox_Retail_Count15.Text.ToString();
+                douCount = Double.Parse(textCount);
+                Price = textBox_Retail_Price15.Text.ToString() == "" ? 0.00 : Double.Parse(textBox_Retail_Price15.Text.ToString());
+                amount = douCount * Price;
+                if (Price >= costPrice)
+                {
+                    amount = douCount * Price;
+                    textBox_Retail_PriceAmount15.Text = amount.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    Check_PriceRetail = false;
+                }
+                AmountChanged();
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error : " + er);
+            }
+        }
     }
 }

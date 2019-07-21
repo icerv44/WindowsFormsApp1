@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+
 namespace WindowsFormsApp1
 {
     public partial class Print : Form
@@ -18,6 +19,7 @@ namespace WindowsFormsApp1
         List<Qury> _Qury;
         List<QuryDetail> _list;
 
+        
         OleDbConnection bookConn;
         OleDbCommand oleDbCmd;
         OleDbDataReader mdr;
@@ -32,8 +34,8 @@ namespace WindowsFormsApp1
         private void Print_Load(object sender, EventArgs e)
         {
             string invNo = "";
-            
-            
+
+            /*
             foreach (var InvHead in _Qury)
             {
                           
@@ -44,11 +46,28 @@ namespace WindowsFormsApp1
                 this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_No", InvHead.Inv_No.ToString()));
                 this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_Date", InvHead.Inv_Date.ToString()));
                 this.reportViewer1.LocalReport.SetParameters(new ReportParameter("User_Name", "User1"));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_AmtPrice", InvHead.Inv_AmtPrice.ToString()));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumItem", InvHead.Inv_SumItem.ToString()));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumCount", InvHead.Inv_SumCount.ToString()));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumWeight", InvHead.Inv_SumWeight.ToString()));
 
-                this.reportViewer1.RefreshReport();
+               
+               
 
-            }
+            }*/
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Name", "Name 1"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Address", "Address 1"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_ThaiPrice", " Thai Price"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_No", "5"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_Date", "17/07/2019"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("User_Name", "User1"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_AmtPrice", "Amt price"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumItem", "Amtprice"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumCount", "Sum Count"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumWeight", "Sum Weight"));
 
+            this.reportViewer1.LocalReport.DataSources[0].Value = GetDetail();
+            this.reportViewer1.RefreshReport();
 
             /* Microsoft.Reporting.WinForms.ReportParameter[] p = new Microsoft.Reporting.WinForms.ReportParameter[]
           {
@@ -110,16 +129,23 @@ namespace WindowsFormsApp1
 
             //this.reportViewer1.LocalReport.DataSources[0].Value = GetDetail();
 
-           
-
-           
         }
+
+        List<QuryDetail> _list1 = new List<QuryDetail>();
         public List<QuryDetail> GetDetail()
         {
-            
 
-
-            return _list;
+            foreach (var InvDe in _list)
+            {
+                QuryDetail qryD = new QuryDetail();
+                qryD.Goods_Code = InvDe.Goods_Code.ToString() ;
+                qryD.Goods_Des  = InvDe.Goods_Des.ToString();
+                qryD.Goods_SumCount = InvDe.Goods_SumCount.ToString();
+                qryD.Goods_Price = InvDe.Goods_Price.ToString();
+                qryD.Goods_SumPrice = InvDe.Goods_SumPrice.ToString();
+                _list1.Add(qryD);
+            }
+                return _list1;
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)

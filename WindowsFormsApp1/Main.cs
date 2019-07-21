@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             string userName = "";
             foreach (var user in _User)
             {
-                userName = user.User_Name;
+                userName = user.User_NickName;
             }
 
             Retail re = new Retail(userName) ;
@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
             string userName = "";
             foreach (var user in _User)
             {
-                userName = user.User_Name;
+                userName = user.User_NickName;
             }
 
             WholeSale wh = new WholeSale(userName);
