@@ -43,6 +43,7 @@ namespace WindowsFormsApp1
             FillCombobox();
             FillComboboxItem();
             SelectInvNo();
+            dateTimePickerRetail.Value = DateTime.Now;
             //Console.WriteLine(Qry_Date());
             //MessageBox.Show(ThaiBaht("153,456,200"));
         }

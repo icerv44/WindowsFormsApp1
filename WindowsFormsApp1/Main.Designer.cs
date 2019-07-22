@@ -81,7 +81,7 @@
             this.Panel_Menu.Location = new System.Drawing.Point(11, 164);
             this.Panel_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.Panel_Menu.Name = "Panel_Menu";
-            this.Panel_Menu.Size = new System.Drawing.Size(178, 556);
+            this.Panel_Menu.Size = new System.Drawing.Size(178, 539);
             this.Panel_Menu.TabIndex = 0;
             this.Panel_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Menu_Paint);
             // 
@@ -216,7 +216,7 @@
             this.tabControl1.Location = new System.Drawing.Point(223, 10);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(887, 710);
+            this.tabControl1.Size = new System.Drawing.Size(887, 693);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -226,7 +226,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(879, 681);
+            this.tabPage1.Size = new System.Drawing.Size(879, 664);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Invoice";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -237,7 +237,7 @@
             this.dgv_Invoice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Invoice.Location = new System.Drawing.Point(3, 3);
             this.dgv_Invoice.Name = "dgv_Invoice";
-            this.dgv_Invoice.Size = new System.Drawing.Size(873, 675);
+            this.dgv_Invoice.Size = new System.Drawing.Size(873, 658);
             this.dgv_Invoice.TabIndex = 2;
             // 
             // tabPage2
@@ -299,7 +299,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 731);
+            this.ClientSize = new System.Drawing.Size(1122, 714);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.Panel_Menu);
@@ -308,6 +308,7 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice Program";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Menu.PerformLayout();

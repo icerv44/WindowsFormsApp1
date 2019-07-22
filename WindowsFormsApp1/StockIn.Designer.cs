@@ -1814,6 +1814,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1141, 979);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel2);

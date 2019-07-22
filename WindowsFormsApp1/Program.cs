@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Application.Run(new Print7());
-            //Application.Run(new Retail ("User1"));
+           // Application.Run(new Retail ("User1"));
             //Application.Run(new Main( ));
              Application.Run(new Loadding());
         }

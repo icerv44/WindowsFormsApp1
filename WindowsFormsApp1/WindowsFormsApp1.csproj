@@ -234,6 +234,7 @@
     <EmbeddedResource Include="Report123.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="ReportWizard.rdlc" />
     <EmbeddedResource Include="Retail.resx">
       <DependentUpon>Retail.cs</DependentUpon>
     </EmbeddedResource>

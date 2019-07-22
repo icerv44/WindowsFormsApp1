@@ -47,6 +47,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_GoodsTotal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // button_Update
@@ -217,6 +218,16 @@
             this.label9.TabIndex = 25;
             this.label9.Text = "จำนวนรวมสินค้า : ";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Location = new System.Drawing.Point(3, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(364, 426);
+            this.panel1.TabIndex = 27;
+            // 
             // UpdateGoods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +252,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox_GoodsCD);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "UpdateGoods";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -272,5 +284,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox_GoodsTotal;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel1;
     }
 }
