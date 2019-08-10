@@ -48,6 +48,7 @@ namespace WindowsFormsApp1
                 oleDbCmd = new OleDbCommand(query, bookConn);
                 bookConn.Open();
                 oleDbCmd.ExecuteNonQuery();
+                MessageBox.Show("UPDATE COMPLETED");
             }
             catch (Exception er)
             {

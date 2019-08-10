@@ -16,11 +16,13 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            //Application.Run(new Print7());
-           // Application.Run(new Retail ("User1"));
+            List<Qury> _Qury = new List<Qury>();
+            List<QuryDetail> _list = new List<QuryDetail>();
+            Application.Run(new Print7(_Qury, _list));
+            //Application.Run(new UpdateGoods());
+            //Application.Run(new Retail ("User1"));
             //Application.Run(new Main( ));
-             Application.Run(new Loadding());
+            //Application.Run(new Loadding());
         }
     }
 }

@@ -305,7 +305,7 @@ namespace WindowsFormsApp1
                            "SET Goods_Description ='" + textBox_GoodsDes.Text + "' ," +
                            "Goods_Size ='" + textBox_GoodsSize.Text + "' ," +
                            "Goods_Weight =" + Int32.Parse(textBox_GoodsWeight.Text) + " ," +
-                           "Goods_Cost =" + Int32.Parse(textBox_GoodsCost.Text) + " " +
+                           "Goods_Cost =" + Int32.Parse(textBox_GoodsCost.Text) + ", " +
                            "Goods_Whole =" + Int32.Parse(textBox_GoodsWhole.Text) + " ," +
                            "Goods_Retail =" + Int32.Parse(textBox_GoodsRetail.Text) + " ," +
                            "Goods_Type ='" + textBox_GoodsType.Text + "' ," +
@@ -317,6 +317,7 @@ namespace WindowsFormsApp1
                 oleDbCmd = new OleDbCommand(query, bookConn);
                 bookConn.Open();
                 oleDbCmd.ExecuteNonQuery();
+                MessageBox.Show("UPDATE COMPLETED");
             }
             catch (Exception er)
             {

@@ -26,45 +26,59 @@ namespace WindowsFormsApp1
         {
             QuryDetailBindingSource.DataSource = GetDetail();
             //this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Name","CusName123"));
-            try
-            {
-                string inv = "",tmpinv;
-                string Date = "", tmp ;
-                foreach (var InvHead in _Qury)
-                {
-                    this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Name", InvHead.Cus_Name.ToString()));
-                    this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Address", InvHead.Cus_Address.ToString()));
-                    this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_ThaiPrice", InvHead.Inv_ThaiPrice.ToString()));
+            /* try
+             {
+                 string inv = "",tmpinv;
+                 string Date = "", tmp ;
+                 foreach (var InvHead in _Qury)
+                 {
+                     this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Name", InvHead.Cus_Name.ToString()));
+                     this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Address", InvHead.Cus_Address.ToString()));
+                     this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_ThaiPrice", InvHead.Inv_ThaiPrice.ToString()));
 
-                    inv = InvHead.Inv_No.ToString();
-                    Date = InvHead.Inv_Date.ToString();
-                    //this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_No", InvHead.Inv_No.ToString()));
-                    this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_Date", InvHead.Inv_Date.ToString()));
-                    this.reportViewer1.LocalReport.SetParameters(new ReportParameter("User_Name", InvHead.User_Name.ToString()));
-                    this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_AmtPrice", InvHead.Inv_AmtPrice.ToString()));
-                    this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumItem", InvHead.Inv_SumItem.ToString()));
-                    this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumCount", InvHead.Inv_SumCount.ToString()));
-                    this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumWeight", InvHead.Inv_SumWeight.ToString()));
+                     inv = InvHead.Inv_No.ToString();
+                     Date = InvHead.Inv_Date.ToString();
+                     //this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_No", InvHead.Inv_No.ToString()));
+                     this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_Date", InvHead.Inv_Date.ToString()));
+                     this.reportViewer1.LocalReport.SetParameters(new ReportParameter("User_Name", InvHead.User_Name.ToString()));
+                     this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_AmtPrice", InvHead.Inv_AmtPrice.ToString()));
+                     this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumItem", InvHead.Inv_SumItem.ToString()));
+                     this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumCount", InvHead.Inv_SumCount.ToString()));
+                     this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumWeight", InvHead.Inv_SumWeight.ToString()));
 
-                }
-                tmp = Date.Substring(8, 2);
-                tmpinv = tmp + "/" + inv;
-                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_No", tmpinv));
+                 }
+                 tmp = Date.Substring(8, 2);
+                 tmpinv = tmp + "/" + inv;
+                 this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_No", tmpinv));
 
-            }
-            catch (Exception ex)
-            {
+             }
+             catch (Exception ex)
+             {
 
-                MessageBox.Show("ERROR : " + ex);
+                 MessageBox.Show("ERROR : " + ex);
 
-            }
+             }*/
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Name", "Cus_Name"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cus_Address", "Cus_Name"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_ThaiPrice", "Inv_ThaiPrice"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_Date", "Inv_Date"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("User_Name", "User_Name"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_AmtPrice", "Inv_AmtPrice"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumItem", "Inv_SumItem"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumCount", "Inv_SumCount"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_SumWeight", "Inv_SumWeight"));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Inv_No", "Inv_No"));
+
+
+
+
             this.reportViewer1.RefreshReport();
         }
 
         List<QuryDetail> qry = new List<QuryDetail>();
-        /*public List<QuryDetail> GetDetail()
+        public List<QuryDetail> GetDetail()
         {
-            for (int i = 1; i <= 5; i++)
+            for (int i = 1; i <= 25; i++)
             {
                 QuryDetail qry1 = new QuryDetail();
                 qry1.Goods_Code = "Goods_Code " + i;
@@ -72,21 +86,22 @@ namespace WindowsFormsApp1
                 qry1.Goods_Price = "Goods_Price " + i;
                 qry1.Goods_SumCount = "Goods_SumCount " + i;
                 qry1.Goods_SumPrice = "Goods_SumPrice " + i;
+                qry1.Goods_Type = "Type" + i;
 
                 qry.Add(qry1);
             }
 
 
             return qry;
-        }*/
+        }
         List<QuryDetail> _list1 = new List<QuryDetail>();
-        public List<QuryDetail> GetDetail()
+       /* public List<QuryDetail> GetDetail()
         {
 
             foreach (var InvDe in _list)
             {
                 QuryDetail qryD = new QuryDetail();
-                qryD.Goods_Code = InvDe.Goods_Code.ToString();
+                qryD.Goods_Code /= InvDe.Goods_Code.ToString();
                 qryD.Goods_Des = InvDe.Goods_Des.ToString();
                 qryD.Goods_SumCount = InvDe.Goods_SumCount.ToString();
                 qryD.Goods_Price = InvDe.Goods_Price.ToString();
@@ -95,6 +110,6 @@ namespace WindowsFormsApp1
                 _list1.Add(qryD);
             }
             return _list1;
-        }
+        }*/
     }
 }
