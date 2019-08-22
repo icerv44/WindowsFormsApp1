@@ -18,9 +18,9 @@ namespace WindowsFormsApp1
             Application.SetCompatibleTextRenderingDefault(false);
             List<Qury> _Qury = new List<Qury>();
             List<QuryDetail> _list = new List<QuryDetail>();
-            Application.Run(new Print7(_Qury, _list));
+            //Application.Run(new Print7(_Qury, _list));
             //Application.Run(new UpdateGoods());
-            //Application.Run(new Retail ("User1"));
+            Application.Run(new Retail ("User1"));
             //Application.Run(new Main( ));
             //Application.Run(new Loadding());
         }
