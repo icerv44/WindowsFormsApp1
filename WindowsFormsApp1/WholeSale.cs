@@ -3282,5 +3282,10 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Error : " + er);
             }
         }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

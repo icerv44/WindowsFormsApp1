@@ -21,14 +21,15 @@ namespace WindowsFormsApp1
 
         List<Qury> Inv_QryHead = new List<Qury>();
         List<QuryDetail> Inv_QryDetail = new List<QuryDetail>();
-
+        string userName = "";
         OleDbConnection bookConn;
         OleDbCommand oleDbCmd;
         OleDbDataReader mdr;
         String connParam = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Invoice\DB\DB_Invoice.mdb;Persist Security Info=True;User ID=admin";
-        public StockIn()
+        public StockIn(String user)
         {
             InitializeComponent();
+            userName = user;
         }
 
         private void StockIn_Load(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace WindowsFormsApp1
             FillCombobox();
             FillComboboxItem();
             SelectInvNo();
+            textBox_User.Text = userName;
 
             //Console.WriteLine(Qry_Date());
             //MessageBox.Show(ThaiBaht("153,456,200"));
@@ -78,6 +80,7 @@ namespace WindowsFormsApp1
 
             Qury qry = new Qury();
             qry.Cus_Name = comboBox_Name.Text;
+            qry.User_Name = textBox_User.Text;
             qry.Cus_Address = textBox_CusAddress.Text;
             qry.Inv_No = textBox_RetailNo.Text;
             qry.Inv_ThaiPrice = textBox_Retail_ThaiPrice.Text;
@@ -2805,12 +2808,7 @@ namespace WindowsFormsApp1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-          
 
-            using (Print prt = new Print(Inv_QryHead, Inv_QryDetail))
-            {
-                prt.ShowDialog();
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -2820,6 +2818,22 @@ namespace WindowsFormsApp1
             InsertINV();
             InsertINVDetail();
             UpdateGoods();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            InsertQryInvHeader();
+            InsertQryInvDetail();
+            InsertINV();
+            InsertINVDetail(); 
+
+            /*using (Print7 prt = new Print7(Inv_QryHead, Inv_QryDetail))
+            {
+                prt.ShowDialog();
+            }
+
+            Inv_QryHead.Clear();
+            Inv_QryDetail.Clear();*/
         }
     }
 
