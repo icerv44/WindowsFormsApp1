@@ -30,10 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.QuryDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.QuryDetailBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // QuryDetailBindingSource
+            // 
+            this.QuryDetailBindingSource.DataSource = typeof(WindowsFormsApp1.QuryDetail);
             // 
             // reportViewer1
             // 
@@ -45,18 +49,14 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 518);
+            this.reportViewer1.Size = new System.Drawing.Size(925, 653);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // QuryDetailBindingSource
-            // 
-            this.QuryDetailBindingSource.DataSource = typeof(WindowsFormsApp1.QuryDetail);
             // 
             // Print7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 518);
+            this.ClientSize = new System.Drawing.Size(925, 653);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Print7";
             this.Text = "Print7";

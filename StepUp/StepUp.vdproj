@@ -58,13 +58,13 @@
         "Entry"
         {
         "MsmKey" = "8:_4D50BD466BD8A7A39D9BD40816D0ADB4"
-        "OwnerKey" = "8:_8189EE035A75C7C6DFBA54DB764A7962"
+        "OwnerKey" = "8:_A8A31E8E83524058890F11A673E2EACE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4D50BD466BD8A7A39D9BD40816D0ADB4"
-        "OwnerKey" = "8:_A8A31E8E83524058890F11A673E2EACE"
+        "OwnerKey" = "8:_8189EE035A75C7C6DFBA54DB764A7962"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,13 +82,13 @@
         "Entry"
         {
         "MsmKey" = "8:_59F19F3D66CB20ADCFB66C6B4634ED22"
-        "OwnerKey" = "8:_A8A31E8E83524058890F11A673E2EACE"
+        "OwnerKey" = "8:_8189EE035A75C7C6DFBA54DB764A7962"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_59F19F3D66CB20ADCFB66C6B4634ED22"
-        "OwnerKey" = "8:_8189EE035A75C7C6DFBA54DB764A7962"
+        "OwnerKey" = "8:_A8A31E8E83524058890F11A673E2EACE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -250,12 +250,6 @@
         "Entry"
         {
         "MsmKey" = "8:_C5239C261FE190E4D114FD884EBE0416"
-        "OwnerKey" = "8:_A8A31E8E83524058890F11A673E2EACE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C5239C261FE190E4D114FD884EBE0416"
         "OwnerKey" = "8:_3E8EFE8F22D4458DDF4073119F27E964"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -263,6 +257,12 @@
         {
         "MsmKey" = "8:_C5239C261FE190E4D114FD884EBE0416"
         "OwnerKey" = "8:_59F19F3D66CB20ADCFB66C6B4634ED22"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C5239C261FE190E4D114FD884EBE0416"
+        "OwnerKey" = "8:_A8A31E8E83524058890F11A673E2EACE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -322,7 +322,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3E8EFE8F22D4458DDF4073119F27E964"
+        "OwnerKey" = "8:_59F19F3D66CB20ADCFB66C6B4634ED22"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4D50BD466BD8A7A39D9BD40816D0ADB4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -400,18 +406,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4D50BD466BD8A7A39D9BD40816D0ADB4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_59F19F3D66CB20ADCFB66C6B4634ED22"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_BE570A346ECD0A6FECA70AB3789E4355"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -419,12 +413,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3F491A1491C39946FD496455C444F1B1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C5239C261FE190E4D114FD884EBE0416"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -461,6 +449,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E32FC9C35D4638B5809B3461E8444F9F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3E8EFE8F22D4458DDF4073119F27E964"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C5239C261FE190E4D114FD884EBE0416"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -518,6 +518,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -1368,7 +1376,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:StepUp"
         "ProductCode" = "8:{8EC5970C-DD62-4659-AAE3-0B147B01DBF5}"
-        "PackageCode" = "8:{08435CCE-23A8-4934-B5DA-0B9F127FE7EC}"
+        "PackageCode" = "8:{1224B9B0-4330-4668-960B-F8608F82BFB6}"
         "UpgradeCode" = "8:{7DB754A5-27C3-44BE-9176-30CF3FA1BDEC}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -1376,12 +1384,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:SoLoRi Invoice"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:StepUp"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:SoLoRi Invoice"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -1488,6 +1496,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2F069CB5D4E64C5A914DA885BFF3130E"
+            {
+            "Name" = "8:Invoice (Active)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_A8A31E8E83524058890F11A673E2EACE"
+            "Folder" = "8:_0BC0E1187E1049CB834D308D46DC6E5E"
+            "WorkingFolder" = "8:_479AB867BDD34BB9928B6C2FA6B4DC5E"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_EBD28F36EA6A4161BC726BD8A23D6D05"
             {
             "Name" = "8:Invoice (Active)"

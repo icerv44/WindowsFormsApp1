@@ -2299,6 +2299,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price2.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -2395,6 +2396,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price5.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -2810,6 +2812,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price1.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -2876,6 +2879,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price3.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -2909,6 +2913,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price4.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -2975,6 +2980,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price6.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -3008,6 +3014,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price7.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -3041,6 +3048,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price8.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -3074,6 +3082,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price9.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -3107,6 +3116,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price10.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -3140,6 +3150,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price11.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -3173,6 +3184,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price12.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -3206,6 +3218,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price13.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -3239,6 +3252,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price14.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -3272,6 +3286,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("*****ราคาขายห้ามต่ำกว่าต้นทุน*****");
+                    textBox_Retail_Price15.Text = Select_Price_Item(selectedItem.ToString());
                     Check_PriceRetail = false;
                 }
                 AmountChanged();
@@ -3287,5 +3302,7 @@ namespace WindowsFormsApp1
         {
 
         }
+
+      
     }
 }

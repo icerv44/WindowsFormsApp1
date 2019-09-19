@@ -514,7 +514,13 @@ namespace WindowsFormsApp1
 
         private void button_StockIn_Click(object sender, EventArgs e)
         {
-            StockIn Si = new StockIn();
+
+            string userName = "";
+            foreach (var user in _User)
+            {
+                userName = user.User_NickName;
+            }          
+            StockIn Si = new StockIn(userName);
 
             Si.Show();
         }
@@ -531,6 +537,11 @@ namespace WindowsFormsApp1
             UpdateGoods Goods = new UpdateGoods();
 
             Goods.Show();
+        }
+
+        private void dgv_Invoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

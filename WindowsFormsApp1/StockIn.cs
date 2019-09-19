@@ -2825,8 +2825,8 @@ namespace WindowsFormsApp1
             InsertQryInvHeader();
             InsertQryInvDetail();
             InsertINV();
-            InsertINVDetail(); 
-
+            InsertINVDetail();
+            UpdateGoods();
             /*using (Print7 prt = new Print7(Inv_QryHead, Inv_QryDetail))
             {
                 prt.ShowDialog();
@@ -2835,6 +2835,8 @@ namespace WindowsFormsApp1
             Inv_QryHead.Clear();
             Inv_QryDetail.Clear();*/
         }
+
+       
     }
 
 }

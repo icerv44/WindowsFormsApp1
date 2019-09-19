@@ -20,9 +20,9 @@ namespace WindowsFormsApp1
             List<QuryDetail> _list = new List<QuryDetail>();
             //Application.Run(new Print7(_Qury, _list));
             //Application.Run(new UpdateGoods());
-            Application.Run(new Retail ("User1"));
+            //Application.Run(new WholeSale ("User1"));
             //Application.Run(new Main( ));
-            //Application.Run(new Loadding());
+            Application.Run(new Loadding());
         }
     }
 }

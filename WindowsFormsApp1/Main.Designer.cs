@@ -39,7 +39,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_Retail = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Print = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgv_Invoice = new System.Windows.Forms.DataGridView();
@@ -77,11 +76,10 @@
             this.Panel_Menu.Controls.Add(this.button1);
             this.Panel_Menu.Controls.Add(this.button_Retail);
             this.Panel_Menu.Controls.Add(this.label1);
-            this.Panel_Menu.Controls.Add(this.Print);
             this.Panel_Menu.Location = new System.Drawing.Point(11, 164);
             this.Panel_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.Panel_Menu.Name = "Panel_Menu";
-            this.Panel_Menu.Size = new System.Drawing.Size(178, 539);
+            this.Panel_Menu.Size = new System.Drawing.Size(178, 550);
             this.Panel_Menu.TabIndex = 0;
             this.Panel_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Menu_Paint);
             // 
@@ -191,19 +189,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "MENU";
             // 
-            // Print
-            // 
-            this.Print.BackColor = System.Drawing.Color.PowderBlue;
-            this.Print.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Print.Location = new System.Drawing.Point(16, 270);
-            this.Print.Margin = new System.Windows.Forms.Padding(2);
-            this.Print.Name = "Print";
-            this.Print.Size = new System.Drawing.Size(147, 39);
-            this.Print.TabIndex = 0;
-            this.Print.Text = "Print Receipt";
-            this.Print.UseVisualStyleBackColor = false;
-            this.Print.Visible = false;
-            // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -216,7 +201,7 @@
             this.tabControl1.Location = new System.Drawing.Point(223, 10);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(887, 693);
+            this.tabControl1.Size = new System.Drawing.Size(769, 704);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -226,7 +211,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(879, 664);
+            this.tabPage1.Size = new System.Drawing.Size(761, 675);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Invoice";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -237,8 +222,9 @@
             this.dgv_Invoice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Invoice.Location = new System.Drawing.Point(3, 3);
             this.dgv_Invoice.Name = "dgv_Invoice";
-            this.dgv_Invoice.Size = new System.Drawing.Size(873, 658);
+            this.dgv_Invoice.Size = new System.Drawing.Size(755, 669);
             this.dgv_Invoice.TabIndex = 2;
+            this.dgv_Invoice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Invoice_CellContentClick);
             // 
             // tabPage2
             // 
@@ -246,7 +232,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(879, 681);
+            this.tabPage2.Size = new System.Drawing.Size(761, 675);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Warehouse";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -257,7 +243,7 @@
             this.dgv_Warehouse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Warehouse.Location = new System.Drawing.Point(3, 3);
             this.dgv_Warehouse.Name = "dgv_Warehouse";
-            this.dgv_Warehouse.Size = new System.Drawing.Size(873, 675);
+            this.dgv_Warehouse.Size = new System.Drawing.Size(755, 669);
             this.dgv_Warehouse.TabIndex = 1;
             // 
             // tabPage3
@@ -266,7 +252,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(879, 681);
+            this.tabPage3.Size = new System.Drawing.Size(761, 675);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "StockIn";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -277,7 +263,7 @@
             this.dgv_StockIn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_StockIn.Location = new System.Drawing.Point(3, 3);
             this.dgv_StockIn.Name = "dgv_StockIn";
-            this.dgv_StockIn.Size = new System.Drawing.Size(873, 675);
+            this.dgv_StockIn.Size = new System.Drawing.Size(755, 669);
             this.dgv_StockIn.TabIndex = 3;
             // 
             // openFileDialog1
@@ -299,7 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 714);
+            this.ClientSize = new System.Drawing.Size(1004, 725);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.Panel_Menu);
@@ -327,7 +313,6 @@
 
         #endregion
         private System.Windows.Forms.Panel Panel_Menu;
-        private System.Windows.Forms.Button Print;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_WholeSale;
         private System.Windows.Forms.Button button_Retail;

@@ -215,6 +215,7 @@
             // 
             // comboBox_Name
             // 
+            this.comboBox_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.comboBox_Name.FormattingEnabled = true;
             this.comboBox_Name.Location = new System.Drawing.Point(112, 32);
             this.comboBox_Name.Name = "comboBox_Name";
@@ -264,6 +265,7 @@
             // dateTimePickerRetail
             // 
             this.dateTimePickerRetail.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerRetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dateTimePickerRetail.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerRetail.Location = new System.Drawing.Point(99, 31);
             this.dateTimePickerRetail.Name = "dateTimePickerRetail";
@@ -308,6 +310,7 @@
             // 
             // textBox_CusAddress
             // 
+            this.textBox_CusAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_CusAddress.Location = new System.Drawing.Point(112, 61);
             this.textBox_CusAddress.Name = "textBox_CusAddress";
             this.textBox_CusAddress.Size = new System.Drawing.Size(308, 22);
@@ -354,6 +357,7 @@
             // 
             // textBox_UserName
             // 
+            this.textBox_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox_UserName.Location = new System.Drawing.Point(99, 95);
             this.textBox_UserName.Name = "textBox_UserName";
             this.textBox_UserName.ReadOnly = true;
